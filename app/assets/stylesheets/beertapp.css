@@ -1,0 +1,11 @@
+/* line 1, _layout.scss */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/* line 7, _layout.scss */
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; }

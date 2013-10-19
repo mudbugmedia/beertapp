@@ -1,0 +1,15 @@
+// Importing Stylesheets
+// --------------------------------------------------
+    @import "bourbon";                    // Variables 
+    @import "_variables.scss";             // Variables
+    @import "_mixins.scss";                // Mixins
+	@import "_simple_flexbox.scss";		  // Simple Flexbox
+	@import "_layout.scss";                // Layout Specific Styles
+    @import "_global.scss";                // Global Styles
+    
+	
+	
+	// @import "_form.scss";				// Beer attribute styles
+	// @import "_boxes.scss";              // container styles for large regions
+	// @import "_animations.scss";         // custom animations for pizzazz!
+	// @import "search-profile.scss";      // initial search for beer and see its profile

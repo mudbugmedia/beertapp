@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require ordered/normalize.min
- *= require ordered/gridset
  *= require ordered/main
+ *= require ordered/gridset
  *= require_directory .
  */
