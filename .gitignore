@@ -16,6 +16,7 @@
 /tmp
 
 /.vagrant
+database.yml
 
 # Ignore Mac DS_Store
 
