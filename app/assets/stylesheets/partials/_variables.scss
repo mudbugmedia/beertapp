@@ -3,22 +3,18 @@
 
 // Colors
 // -------------------------
-$charcoal: #433E4C;
-$brown: #554439;
-$orange: #F37736;
-$green: #D0CC4C;
-$cream: #EFEEA7;
-$aqua: #63B799;
+$charcoal:			#433E4C;
+$green:				#8A9B0F;
+$yellow:			#F8CA00;
+$orange:			#E97F02;
+$pink:				#BD1550;
+$purple:			#490A3D;
 
 $appearance: #8A9B0F;
 $aroma: #F8CA00;
 $taste: #E97F02;
 $mouthfeel: #BD1550;
 $flavor-chart: #490A3D;
-
-
-
-
 
 // Grayscale
 $white:                     #FFFFFF;
@@ -31,36 +27,54 @@ $grayDarker:                #333333;
 $offBlack:                  #030303;
 $black:                     #000000;
 
-// Primary Color
-$primaryColor:              $orange;
-$primaryColorLighten:		lighten($primaryColor, 5%);
-$primaryColorDarken:		darken($primaryColor, 5%);
-$primaryColorRGBA:          rgba($green, 1);
-$primaryColorTransparent:   rgba($green, .75);
+// Color One
+$colorOne:              	$orange;
+$colorOneLighten:			lighten($colorOne, 5%);
+$colorOneDarken:			darken($colorOne, 5%);
+$colorOneRGBA:          	rgba($orange, 1);
+$colorOneTransparent:   	rgba($orange, .75);
 
-// Secondary Color
-$secondaryColor:            $aqua;
-$secondaryColorLighten:		lighten($secondaryColor, 7%);
-$secondaryColorDarken:		darken($secondaryColor, 7%);
-$secondaryColorRGBA:        rgba($aqua, 1);
-$secondaryColorTransparent: rgba($aqua, .75);
+// Color Two
+$colorTwo:            		$green;
+$colorTwoLighten:			lighten($colorTwo, 7%);
+$colorTwoDarken:			darken($colorTwo, 7%);
+$colorTwoRGBA:        		rgba($green, 1);
+$colorTwoTransparent: 		rgba($green, .75);
 
-// Tertiary Color
-$tertiaryColor:             $charcoal;
-$tertiaryColorDarken:		darken($tertiaryColor, 10%);
-$tertiaryColorRGBA:         rgba($grayDarker, 1);
-$tertiaryColorTransparent:  rgba($grayDarker, .75);
+// Color Three
+$colorThree:             	$yellow;
+$colorThreeDarken:			darken($colorThree, 10%);
+$colorThreeRGBA:         	rgba($yellow, 1);
+$colorThreeTransparent:  	rgba($yellow, .75);
+
+// Color Four
+$colorFour:             	$purple;
+$colorFourDarken:			darken($colorFour, 10%);
+$colorFourRGBA:         	rgba($purple, 1);
+$colorFourTransparent:  	rgba($purple, .75);
+
+// Color Five
+$colorFive:             	$pink;
+$colorFiveDarken:			darken($colorFive, 10%);
+$colorFiveRGBA:         	rgba($pink, 1);
+$colorFiveTransparent:  	rgba($pink, .75);
+
+// Color Six
+$colorSix:             		$charcoal;
+$colorSixDarken:			darken($colorSix, 10%);
+$colorSixRGBA:         		rgba($charcoal, 1);
+$colorSixTransparent:  		rgba($charcoal, .75);
 
 // Scaffolding
 // -------------------------
 $bodyBackground:            $white;
-$textColor:                 $tertiaryColor;
+$textColor:                 $colorSix;
 
 // Links
 // -------------------------
-$linkColor:                 $tertiaryColor;
-$linkColorHover:            $primaryColorLighten;
-$linkColorActive:           $primaryColorDarken;
+$linkColor:                 $colorSix;
+$linkColorHover:            $colorOneLighten;
+$linkColorActive:           $colorOneDarken;
 
 // Typography
 // -------------------------

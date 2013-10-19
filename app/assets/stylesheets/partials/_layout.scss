@@ -15,7 +15,7 @@ input[type="search"] {
 
 body { 
   margin: 0;
-  font-color: $textColor;
+  font-color: $white;
   font-family: $baseFontFamily;
   font-size: $baseFontSize;
   font-weight: normal;
@@ -28,7 +28,9 @@ body {
 }
 
 header {
-	background-color: $primaryColor;
+	background-color: $grayLighter;
+	border-radius: 0 0 6px 6px;
+	height: 30px;
 }
 
 .hero {

@@ -2,6 +2,9 @@
 	h2, h3 {margin: 0; padding: 0}
 	&.box {
 		padding: 0;
+		h2 {
+			margin-top: 20px;
+		}
 	}
 	.tiles {list-style: none; margin: 0; padding: 0;
 		[data-icon] { 

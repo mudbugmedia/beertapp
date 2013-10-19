@@ -1,11 +1,3 @@
-.box {
-	padding: 24px 23px 20px;
-	position: relative;
-	border-radius: 6px;
-	background: $grayLighter;
-	border: $secondaryBorder;
-}
-
 //
 // Global Styles
 // --------------------------------------------------
@@ -13,24 +5,29 @@
 // Headings
 // -------------------------
 h1 { 
-  color: $tertiaryColor;
+  color: $colorSix;
   font-family: $sansHeaderFontFamily;
-  font-size: 60px;
+  font-size: 40px;
+  line-height: 40px;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0;
 }
 
 h2 { 
-  color: $primaryColor;
+  color: $colorOne;
   font-family: $sansHeaderFontFamily;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
-  u {color: $tertiaryColor;}
+  margin-top: 0;
+  margin-bottom: 20px;
+  u {color: $colorSix;}
 }
 
 h3 {
-    color: $tertiaryColor;
+    color: $colorSix;
     font-family: $sansHeaderFontFamily;
     font-weight: 400;
 	font-size: 22px;
@@ -43,7 +40,7 @@ h3 {
 }
 
 h4 { 
-    color: $secondaryColor;
+    color: $colorTwo;
     font-family: $sansHeaderFontFamily;
     font-weight: 400;
 	font-size: 18px;
@@ -57,12 +54,14 @@ p {
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   font-weight: normal;
-  color: $tertiaryColor;
+  color: $white;
 }
+
+small {color: $colorSix;}
 
 em, i { 
 	font-family: $serifFontFamily;
-	color: $primaryColor;
+	color: $colorOne;
 	font-weight: normal;
 }
 
@@ -85,9 +84,9 @@ a {
 //	list-style-type: none;
 //	padding: 0;
 //	a { 
-//		color: $tertiaryColor;
-//		&:hover { color: $primaryColor; }
-//		&:active { color: darken($primaryColor, 10%); }
+//		color: $colorSix;
+//		&:hover { color: $colorOne; }
+//		&:active { color: darken($colorOne, 10%); }
 //	}
 //}
 //
@@ -102,3 +101,16 @@ a {
 a:hover, li:hover a {
   @include transition (all, .3s, ease);
 }
+
+// Containers
+// -------------------------
+.box {
+	padding: 24px 23px 20px;
+	position: relative;
+	border-radius: 6px;
+	background: $grayLighter;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	//border-color: rgba(231, 231, 231, 0.5);
+}
+
