@@ -1,0 +1,4 @@
+<% BeerProfileHelper::PROFILE_ATTRIBUTES[attribute].each do |option| %>
+  <%= f.radio_button field, option %>
+  <%= f.label field, option, value: option %>
+<% end %>
