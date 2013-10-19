@@ -30,6 +30,7 @@ class BeerProfilesController < ApplicationController
   # GET /beer_profiles/1/edit
   def edit
     @beer_profile = BeerProfile.where(:user_id => current_user.id, :id => params[:id]).first
+    @beer = Beer.find(@beer_profile.beer_id)
   end
 
   # POST /beer_profiles
