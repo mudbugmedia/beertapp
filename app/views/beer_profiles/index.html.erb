@@ -136,4 +136,12 @@
 
 <br>
 
-<%= link_to 'New Beer profile', new_beer_profile_path %>
+<div>
+  Search for a new beer profile.
+
+  <%= form_tag search_beers_path, :method => :get do %>
+    <%= text_field_tag 'q' %>
+    <%= submit_tag "Search for beer" %>
+  <% end %>
+
+</div>
