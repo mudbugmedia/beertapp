@@ -4,20 +4,18 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def authenticate_any_user
-    unless session[:guest_user_id]
-      authenticate_user!
-    end
+    authenticate_user! unless session[:guest_user_id]
   end
 
   def current_user
-    super || guest_user
+    session[:guest_user_id].nil? ? super : guest_user
   end
-
-  private
 
   def guest_user
     User.find(session[:guest_user_id].nil? ? session[:guest_user_id] = create_guest_user.id : session[:guest_user_id])
   end
+
+  private
 
   def create_guest_user
     u = User.create(:email => "guest_#{Time.now.to_i}#{rand(99)}@example.com")
