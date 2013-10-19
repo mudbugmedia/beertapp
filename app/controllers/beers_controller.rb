@@ -18,9 +18,9 @@ class BeersController < ApplicationController
 
   def search
     uri = URI("http://api.untappd.com/v4/search/beer")
-    params = { :q => request[:q], 
-               :client_id => APP_CONFIG["client_id"],
-               :client_secret => APP_CONFIG["client_secret"] }
+    params = { :q => request[:q],
+               :client_id => Rails.application.config.untapped_api['client_id'],
+               :client_secret => Rails.application.config.untapped_api['client_secret'] }
     uri.query = URI.encode_www_form(params)
 
     @result = Net::HTTP.get_response(uri)
