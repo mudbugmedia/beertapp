@@ -12,9 +12,9 @@
 			* frothy
 			* fizzy
 		### Color
-			* white 
+			* white
 			* yellow
-			* tan 
+			* tan
 			* dark
 		### Retention
 			* Short
@@ -86,6 +86,7 @@
 			* Rye
 			* Toffee
 		### Hops
+			* Dank
 			* Flowers
 			* Geranium
 			* Grapefruit
@@ -96,7 +97,7 @@
 			* Pine
 			* Resinous
 			* Spicy
-			* Perfume 
+			* Perfume
 		### Fruit
 			* Apple
 			* Apricot
@@ -105,7 +106,7 @@
 			* Blueberry
 			* Cassis
 			* Cherry
-			* Cranberry 
+			* Cranberry
 			* Orange
 			* Peach
 			* Raspberry
@@ -150,7 +151,7 @@
 			* eggs
 	## Notes
 
-# Mouthfeel 
+# Mouthfeel
 	## Body
 		* Light
 		* Medium
@@ -176,3 +177,21 @@
 		* Medium
 		* Dry
 	## Notes
+
+# Flavor Wheel
+
+	* Esters
+	* Alcoholic
+	* Citrus
+	* Hoppy
+	* Floral
+	* Spicy
+	* Malty
+	* Toffee
+	* Burnt
+	* Sweet
+	* Sour
+	* Bitter
+	* Astringent
+	* Full-Bodied
+	* Lingers
