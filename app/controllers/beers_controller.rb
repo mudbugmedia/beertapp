@@ -2,6 +2,8 @@ require 'net/http'
 
 class BeersController < ApplicationController
 
+  before_filter :authenticate_any_user
+
   def index
   end
 
