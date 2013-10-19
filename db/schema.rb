@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019042209) do
+ActiveRecord::Schema.define(version: 20131019160534) do
 
   create_table "beer_profiles", force: true do |t|
     t.string   "appearance_head_size"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20131019042209) do
     t.string   "mouth_richness"
     t.string   "mouth_astringency"
     t.string   "mouth_finish"
-    t.string   "mouth_notes"
+    t.text     "mouth_notes"
     t.integer  "flavor_esthers"
     t.integer  "flavor_alcoholic"
     t.integer  "flavor_citrus"
