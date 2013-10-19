@@ -1,15 +1,17 @@
 class BeerProfilesController < ApplicationController
   before_action :set_beer_profile, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_any_user
 
   # GET /beer_profiles
   # GET /beer_profiles.json
   def index
-    @beer_profiles = BeerProfile.all
+    @beer_profiles = BeerProfile.where(:user_id => current_user.id)
   end
 
   # GET /beer_profiles/1
   # GET /beer_profiles/1.json
   def show
+    @beer_profile = BeerProfile.find(params[:id])
   end
 
   # GET /beer_profiles/new
