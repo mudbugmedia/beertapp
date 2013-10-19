@@ -31,51 +31,51 @@ module BeerProfileHelper
   }
 
   COLOR_ATTRIBUTES = {
-    '2' => {
+    1 => {
       name: 'Pale Straw',
       hex_value: 'F9FF2D'
     },
-    '3' => {
+    2 => {
       name: 'Straw',
       hex_value: 'FEEF20'
     },
-    '4' => {
+    3 => {
       name: 'Pale Gold',
       hex_value: 'FFDB34'
     },
-    '6' => {
+    4 => {
       name: 'Deep Gold',
       hex_value: 'FFA42F'
     },
-    '9' => {
+    5 => {
       name: 'Pale Amber',
       hex_value: 'FF9A2F'
     },
-    '12' => {
+    6 => {
       name: 'Medium Amber',
       hex_value: 'E27750'
     },
-    '15' => {
+    7 => {
       name: 'Deep Amber',
       hex_value: '9D4B33'
     },
-    '18' => {
+    8 => {
       name: 'Amber-Brown',
       hex_value: '883D3D'
     },
-    '20' => {
+    9 => {
       name: 'Brown',
       hex_value: '60302D'
     },
-    '24' => {
+    10 => {
       name: 'Ruby Brown',
       hex_value: '4E3A29'
     },
-    '30' => {
+    11 => {
       name: 'Deep Brown',
       hex_value: '392F2E'
     },
-    '40' => {
+    12 => {
       name: 'Black',
       hex_value: '31302C'
     }

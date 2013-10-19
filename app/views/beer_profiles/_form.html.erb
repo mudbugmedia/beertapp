@@ -95,7 +95,14 @@
   </div>
   <h2>Color</h2>
   <div class="field">
-    <%= f.text_field :appearance_color %>
+    <%
+      color_value = @beer_profile.appearance_color || 1
+      color_attribute = BeerProfileHelper::COLOR_ATTRIBUTES[color_value]
+    %>
+    <div id="color-demo" style="width: 30px; height: 30px; background-color: #<%= color_attribute[:hex_value] %>"></div>
+    <span id="color-name"><%= color_attribute[:name] %></span>
+    <br />
+    <%= f.range_field :appearance_color, in: 1..12, value: color_value %>
   </div>
   <h2>Notes</h2>
   <div class="field">
@@ -470,9 +477,18 @@
 <% end %>
 <script type="text/javascript">
   $(function() {
-    $('.slider').change(function(){
+    $('.rating-slider').change(function(){
       slider_value = $(this).val()
-      $(this).prev('.range').text(slider_value)
+      $(this).prev('.slider-value').text(slider_value)
+    })
+
+    color_attributes = <%= BeerProfileHelper::COLOR_ATTRIBUTES.to_json.html_safe %>
+
+    $('#beer_profile_appearance_color').change(function() {
+      slider_value = $(this).val()
+      attribute = color_attributes[slider_value]
+      $('#color-demo').css('background-color', '#'+attribute['hex_value'])
+      $('#color-name').text(attribute['name'])
     })
   })
 </script>
