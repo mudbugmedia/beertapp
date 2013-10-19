@@ -10,7 +10,7 @@ class BeersController < ApplicationController
   def create
     @beer = Beer.new(beer_params)
     if @beer.save
-      redirect_to beer_profile_path(@beer.id)
+      redirect_to(new_beer_profile_path + "?beer_id=" + @beer.id.to_s)
     else
       redirect_to :new, :flash => "There was a problem saving the beer."
     end
