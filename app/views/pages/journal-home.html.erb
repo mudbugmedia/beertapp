@@ -18,66 +18,69 @@
 <div class="lg5-lg8">
 	<div class="journal-panel box lg-all clearfix">
 		<h2>Journal</h2>
-		<ul class="tiles">
-			<li class="appearance">
-				<div class="front">
-					<div>Appearance</div>
-				</div>
-				<div class="back">
-					<div>Rate It!</div>
-				</div>
-				<div class="all-content">
-					<h1>What is Lorem ipsum?</h1>
-				</div>
-			</li>
+		<div class="responsive">
+			<ul class="tiles">
+				<li class="appearance">
+					<div class="front">
+						<div>Appearance</div>
+					</div>
+					<div class="back">
+						<div>Rate It!</div>
+					</div>
+					<div class="all-content">
+						<h1>HOW THIS SHIT SMELL?</h1>
+					</div>
+				</li>
 
-			<li class="aroma">
-				<div class="front">
-					<div>Aroma</div>
-				</div>
-				<div class="back">
-					<div>Rate It!</div>
-				</div>
-				<!-- <div class="all-content">
-					<h1>What is Lorem ipsum?</h1>
-				</div> -->
-			</li>
+				<li class="aroma">
+					<div class="front">
+						<div>Aroma</div>
+					</div>
+					<div class="back">
+						<div>Rate It!</div>
+					</div>
+					<!-- <div class="all-content">
+						<h1>What is Lorem ipsum?</h1>
+					</div> -->
+				</li>
 
-			<li class="taste">
-				<div class="front">
-					<div>Taste</div>
-				</div>
-				<div class="back">
-					<div>Rate It!</div>
-				</div>
-				<!-- <div class="all-content">
-					<h1>What is Lorem ipsum?</h1>
-				</div> -->
-			</li>
+				<li class="taste">
+					<div class="front">
+						<div>Taste</div>
+					</div>
+					<div class="back">
+						<div>Rate It!</div>
+					</div>
+					<!-- <div class="all-content">
+						<h1>What is Lorem ipsum?</h1>
+					</div> -->
+				</li>
 
-			<li class="mouthfeel">
-				<div class="front">
-					<div>Mouthfeel</div>
-				</div>
-				<div class="back">
-					<div>Rate It!</div>
-				</div>
-				<!-- <div class="all-content">
-					<h1>What is Lorem ipsum?</h1>
-				</div> -->
-			</li>
+				<li class="mouthfeel">
+					<div class="front">
+						<div>Mouthfeel</div>
+					</div>
+					<div class="back">
+						<div>Rate It!</div>
+					</div>
+					<!-- <div class="all-content">
+						<h1>What is Lorem ipsum?</h1>
+					</div> -->
+				</li>
 
-			<li class="flavor-chart">
-				<div class="front">
-					<div>Flavor-Chart</div>
-				</div>
-				<div class="back">
-					<div>Rate It!</div>
-				</div>
-				<!-- <div class="all-content">
-					<h1>What is Lorem ipsum?</h1>
-				</div> -->
-			</li>
+				<li class="flavor-chart">
+					<div class="front">
+						<div>Flavor-Chart</div>
+					</div>
+					<div class="back">
+						<div>Rate It!</div>
+					</div>
+					<!-- <div class="all-content">
+						<h1>What is Lorem ipsum?</h1>
+					</div> -->
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
 
@@ -85,7 +88,7 @@
 $('.all-content').hide();
 
 var bgColor;
-var effect = 'animated bounceInLeft'; /* bounceIn, bounceInUp, bounceInDown, bounceInLeft,
+var effect = 'animated bounceIn'; /* bounceIn, bounceInUp, bounceInDown, bounceInLeft,
 										 bounceInRight, rotateIn, rotateInUpLeft, rotateInDownLeft,
 										 rotateInUpRight, rotateInDownRight  */
 
@@ -106,8 +109,8 @@ $('.responsive').on('click', '.close', function(){
 	bgColor = $('.active .front').css('background-color');
 	$('.responsive').removeClass(effect);
 	$('.all-content').hide();
-	$('.tiles li').removeClass('active').show().css({ 'border-bottom':'1px solid #2c2c2c',
-													    'border-left':'1px solid #2c2c2c' });
+	$('.tiles li').removeClass('active').show().css({ 'border-bottom':'none',
+													    'border-left':'none' });
 	$('.front, .back').show();
 	$('.tiles').css('background-color',bgColor);
 });
