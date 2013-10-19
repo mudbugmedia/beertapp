@@ -9,8 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require ordered/normalize.min
- *= require ordered/main
- *= require ordered/gridset
- *= require_directory .
+ *= require normalize.min
+ *= require gridset
+ *= require main
+ *= require beertap
  */

@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Beertap</title>
-  <%= stylesheet_link_tag    "beertap", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="//use.typekit.net/ytd8xnd.js"></script>
@@ -22,8 +22,9 @@
 		</header>
 	</div>
 
-<%= yield %>
-
+<div class="wrapper clearfix">
+	<%= yield %>
+</div>
 <%= javascript_include_tag "gridset/gridset-overlay", "data-turbolinks-track" => true %>
 </body>
 </html>
