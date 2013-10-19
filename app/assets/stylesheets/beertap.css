@@ -1,0 +1,15 @@
+/* line 1, partials/_layout.scss */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/* line 7, partials/_layout.scss */
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/* line 13, partials/_layout.scss */
+header {
+  background-color: #CCC; }

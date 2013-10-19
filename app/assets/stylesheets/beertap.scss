@@ -1,11 +1,11 @@
 // Importing Stylesheets
 // --------------------------------------------------
     @import "bourbon";                    // Variables 
-    @import "_variables.scss";             // Variables
-    @import "_mixins.scss";                // Mixins
-	@import "_simple_flexbox.scss";		  // Simple Flexbox
-	@import "_layout.scss";                // Layout Specific Styles
-    @import "_global.scss";                // Global Styles
+    @import "partials/_variables.scss";             // Variables
+    @import "partials/_mixins.scss";                // Mixins
+	@import "partials/_simple_flexbox.scss";		  // Simple Flexbox
+	@import "partials/_layout.scss";                // Layout Specific Styles
+    @import "partials/_global.scss";                // Global Styles
     
 	
 	

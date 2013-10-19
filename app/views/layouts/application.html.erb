@@ -2,11 +2,23 @@
 <html>
 <head>
   <title>Beertap</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "beertap", :media => "all" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="wrapper">
+		<header class="lg-all md-all sm-all clearfix">
+			<div class="lg1-lg4">
+				<h1>BeerTap</h1>
+			</div>
+			<div class="lg5-lg8">
+				<a href="#">link1</a>
+				<a href="#">link2</a>
+				<a href="#">link3</a>
+			</div>
+		</header>
+	</div>
 
 <%= yield %>
 
