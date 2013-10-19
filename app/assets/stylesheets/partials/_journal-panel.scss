@@ -97,7 +97,45 @@
 	}
 }
 
+.all-content h2 {
+    font-size: 28px;
+    float: right;
+    width: 100%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-top: 20px; }
+    .all-content h2 b {
+      float: right;
+      width: 55%; }
+  .all-content p {
+    line-height: 1.3em;
+    color: #3d3d3d;
+    width: 90%;
+    float: right;
+    margin-right: 20px; }
 
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 20px; }
+
+.active {
+  width: 100% !important;
+  height: 100% !important; }
+  .active .all-content {
+    position: absolute;
+    left: 10px;
+    top: 20px; }
+    .active .all-content h1 {
+      font-size: 80px;
+      width: 50%; }
 
 
 

@@ -20,63 +20,95 @@
 		<h2>Journal</h2>
 		<ul class="tiles">
 			<li class="appearance">
-				<a class="front" href="#">
+				<div class="front">
 					<div>Appearance</div>
-				</a>
-				<a class="back" href="#">
+				</div>
+				<div class="back">
 					<div>Rate It!</div>
-				</a>
-				<!-- <div class="all-content">
+				</div>
+				<div class="all-content">
 					<h1>What is Lorem ipsum?</h1>
-				</div> -->
+				</div>
 			</li>
 
 			<li class="aroma">
-				<a class="front" href="#">
+				<div class="front">
 					<div>Aroma</div>
-				</a>
-				<a class="back" href="#">
+				</div>
+				<div class="back">
 					<div>Rate It!</div>
-				</a>
+				</div>
 				<!-- <div class="all-content">
 					<h1>What is Lorem ipsum?</h1>
 				</div> -->
 			</li>
 
 			<li class="taste">
-				<a class="front" href="#">
+				<div class="front">
 					<div>Taste</div>
-				</a>
-				<a class="back" href="#">
+				</div>
+				<div class="back">
 					<div>Rate It!</div>
-				</a>
+				</div>
 				<!-- <div class="all-content">
 					<h1>What is Lorem ipsum?</h1>
 				</div> -->
 			</li>
 
 			<li class="mouthfeel">
-				<a class="front" href="#">
+				<div class="front">
 					<div>Mouthfeel</div>
-				</a>
-				<a class="back" href="#">
+				</div>
+				<div class="back">
 					<div>Rate It!</div>
-				</a>
+				</div>
 				<!-- <div class="all-content">
 					<h1>What is Lorem ipsum?</h1>
 				</div> -->
 			</li>
 
 			<li class="flavor-chart">
-				<a class="front" href="#">
+				<div class="front">
 					<div>Flavor-Chart</div>
-				</a>
-				<a class="back" href="#">
+				</div>
+				<div class="back">
 					<div>Rate It!</div>
-				</a>
+				</div>
 				<!-- <div class="all-content">
 					<h1>What is Lorem ipsum?</h1>
 				</div> -->
 			</li>
 	</div>
 </div>
+
+<script>
+$('.all-content').hide();
+
+var bgColor;
+var effect = 'animated bounceInLeft'; /* bounceIn, bounceInUp, bounceInDown, bounceInLeft,
+										 bounceInRight, rotateIn, rotateInUpLeft, rotateInDownLeft,
+										 rotateInUpRight, rotateInDownRight  */
+
+$('.tiles li').click(function(){
+	$('.front, .back').hide();
+	$('.tiles li').removeClass('active').hide().css('border','none');
+	$(this).addClass('active').show();
+	bgColor = $('.active .back').css('background-color');
+	$('.tiles').css('background-color',bgColor);
+	$('.close, .all-content').show();
+	$('.responsive').append('<span class="close">close</span>').addClass(effect);
+});
+
+
+$('.responsive').on('click', '.close', function(){
+
+	$('.close').remove();
+	bgColor = $('.active .front').css('background-color');
+	$('.responsive').removeClass(effect);
+	$('.all-content').hide();
+	$('.tiles li').removeClass('active').show().css({ 'border-bottom':'1px solid #2c2c2c',
+													    'border-left':'1px solid #2c2c2c' });
+	$('.front, .back').show();
+	$('.tiles').css('background-color',bgColor);
+});
+</script>
