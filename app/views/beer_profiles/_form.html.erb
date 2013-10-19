@@ -336,67 +336,121 @@
   <div class="field">
     <%= f.text_area :mouth_notes %>
   </div>
+  <h1>Flavors</h1>
   <div class="field">
-    <%= f.label :flavor_esthers %><br>
-    <%= f.number_field :flavor_esthers %>
+    <h2>Esters</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_esters
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_alcoholic %><br>
-    <%= f.number_field :flavor_alcoholic %>
+    <h2>Alcoholic</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_alcoholic
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_citrus %><br>
-    <%= f.number_field :flavor_citrus %>
+    <h2>Citrus</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_citrus
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_hoppy %><br>
-    <%= f.number_field :flavor_hoppy %>
+    <h2>Hoppy</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_hoppy
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_floral %><br>
-    <%= f.number_field :flavor_floral %>
+    <h2>Floral</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_floral
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_spicy %><br>
-    <%= f.number_field :flavor_spicy %>
+    <h2>Spicy</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_spicy
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_malty %><br>
-    <%= f.number_field :flavor_malty %>
+    <h2>Malty</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_malty
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_toffee %><br>
-    <%= f.number_field :flavor_toffee %>
+    <h2>Toffee</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_toffee
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_burnt %><br>
-    <%= f.number_field :flavor_burnt %>
+    <h2>Burnt</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_burnt
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_sweet %><br>
-    <%= f.number_field :flavor_sweet %>
+    <h2>Sweet</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_sweet
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_sour %><br>
-    <%= f.number_field :flavor_sour %>
+    <h2>Sour</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_sour
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_bitter %><br>
-    <%= f.number_field :flavor_bitter %>
+    <h2>Bitter</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_bitter
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_astringent %><br>
-    <%= f.number_field :flavor_astringent %>
+    <h2>Astringent</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_astringent
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_full_bodied %><br>
-    <%= f.number_field :flavor_full_bodied %>
+    <h2>Full-Bodied</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_full_bodied
+    } %>
   </div>
   <div class="field">
-    <%= f.label :flavor_lingers %><br>
-    <%= f.number_field :flavor_lingers %>
+    <h2>Lingers</h2>
+    <%= render partial: 'slider', locals: {
+      f: f,
+      field: :flavor_lingers
+    } %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<script type="text/javascript">
+  $(function() {
+    $('.slider').change(function(){
+      slider_value = $(this).val()
+      $(this).prev('.range').text(slider_value)
+    })
+  })
+</script>
