@@ -1,7 +1,7 @@
 <% unless @json.nil? %>
   <ul>
     <% @json['response']['beers']['items'].each do |item| %>
-      <li>
+      <li class="beer-choice">
         <img src="<%= item['beer']['beer_label'] %>" />
         <%= item['brewery']['brewery_name'] %>
         <%= item['beer']['beer_name'] %>
@@ -11,16 +11,22 @@
           <%= f.hidden_field :brewery, :value => item['brewery']['brewery_name'] %>
           <%= f.hidden_field :abv, :value => item['beer']['beer_abv'] %>
           <%= f.hidden_field :image_path, :value => item['beer']['beer_label'] %>
-          <%= f.submit 'Choose' %>
         <% end %>
       </li>
     <% end %>
-    <li>
+    <li class="beer-choice">
       <div>Not found? Input a custom beer.</div>
       <%= form_for @beer do |f| %>
         <%= f.text_field :name, :value => params['q'] %>
-        <%= f.submit 'Create new beer' %>
       <% end %>
     </li>
   </ul>
 <% end %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.beer-choice').click(function(){
+      $(this).find('form').submit()
+    })
+  })
+</script>
