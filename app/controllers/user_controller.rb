@@ -1,6 +1,6 @@
 class UserController < ApplicationController
   def guest_sign_in
-    current_user
-    redirect_to "welcome#index"
+    guest_user
+    redirect_to "/pages/basu"
   end
 end

@@ -1,0 +1,71 @@
+// Variables
+// --------------------------------------------------
+
+// Colors
+// -------------------------
+$green:						#C1C47B;
+$blue:                    	#8CABB0;
+$orange: 					#D49A59;
+$gold: 						#F0CF8C;
+$charcoal: 					#45404D;
+
+// Grayscale
+$white:                     #FFFFFF;
+$offWhite:                  #FEFEFE;
+$grayLighter:               #E7E7E7;
+$grayLight:                 #D9D9D9;
+$gray:                      #888888;
+$grayDark:                  #666666;
+$grayDarker:                #333333;
+$offBlack:                  #030303;
+$black:                     #000000;
+
+// Primary Color
+$primaryColor:              $orange;
+$primaryColorLighten:		lighten($primaryColor, 5%);
+$primaryColorDarken:		darken($primaryColor, 5%);
+$primaryColorRGBA:          rgba($green, 1);
+$primaryColorTransparent:   rgba($green, .75);
+
+// Secondary Color
+$secondaryColor:            $blue;
+$secondaryColorLighten:		lighten($secondaryColor, 7%);
+$secondaryColorDarken:		darken($secondaryColor, 7%);
+$secondaryColorRGBA:        rgba($blue, 1);
+$secondaryColorTransparent: rgba($blue, .75);
+
+// Tertiary Color
+$tertiaryColor:             $charcoal;
+$tertiaryColorDarken:		darken($tertiaryColor, 10%);
+$tertiaryColorRGBA:         rgba($grayDarker, 1);
+$tertiaryColorTransparent:  rgba($grayDarker, .75);
+
+// Scaffolding
+// -------------------------
+$bodyBackground:            $white;
+$textColor:                 $tertiaryColor;
+
+// Links
+// -------------------------
+$linkColor:                 $primaryColor;
+$linkColorHover:            $primaryColorLighten;
+$linkColorActive:           $primaryColorDarken;
+
+// Typography
+// -------------------------
+$sansFontFamily:            'europa', Arial, 'Helvetica Neue', Helvetica, sans-serif; // 300, 300 (i), 400, 400 (i), 700
+$serifFontFamily:           'ff-more-web-pro', Arial, 'Helvetica Neue', Helvetica, serif; // 400, 400 (i)
+$sansHeaderFontFamily:		'franklin-gothic-urw-comp', Arial, 'Helvetica Neue', Helvetica, sans-serif; // 400
+$baseFontFamily:            $sansFontFamily; // 400, 400 (i), 600, 700
+
+$baseFontSize:              14px;
+$baseLineHeight:            20px;
+$baseSansFontWeight:        400;
+$baseSerifFontWeight:       400;
+
+// Other
+// -------------------------
+$navHeight:   				60px;
+$defaultBorder:             1px solid $gray;
+$secondaryBorder:           1px solid #CCCCCC;
+$baseBorderRadius:          5px;

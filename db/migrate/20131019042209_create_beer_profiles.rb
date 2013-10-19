@@ -58,6 +58,8 @@ class CreateBeerProfiles < ActiveRecord::Migration
       t.integer :flavor_astringent
       t.integer :flavor_full_bodied
       t.integer :flavor_lingers
+
+      t.timestamps
     end
   end
 end

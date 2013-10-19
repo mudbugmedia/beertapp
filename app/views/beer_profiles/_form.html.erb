@@ -1,0 +1,245 @@
+<%= form_for(@beer_profile) do |f| %>
+  <% if @beer_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@beer_profile.errors.count, "error") %> prohibited this beer_profile from being saved:</h2>
+
+      <ul>
+      <% @beer_profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :appearance_head_size %><br>
+    <%= f.text_field :appearance_head_size %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance_head_texture %><br>
+    <%= f.text_field :appearance_head_texture %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance_head_color %><br>
+    <%= f.text_field :appearance_head_color %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance_head_retention %><br>
+    <%= f.text_field :appearance_head_retention %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance_lacing %><br>
+    <%= f.text_field :appearance_lacing %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance_body_opacity %><br>
+    <%= f.text_field :appearance_body_opacity %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance_body_carbonation %><br>
+    <%= f.text_field :appearance_body_carbonation %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance_color %><br>
+    <%= f.text_field :appearance_color %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance_notes %><br>
+    <%= f.text_area :appearance_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_malt %><br>
+    <%= f.text_field :aroma_malt %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_hops %><br>
+    <%= f.text_field :aroma_hops %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_esters %><br>
+    <%= f.text_field :aroma_esters %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_phenols %><br>
+    <%= f.text_field :aroma_phenols %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_bitterness %><br>
+    <%= f.text_field :aroma_bitterness %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_flavor_grain %><br>
+    <%= f.text_field :aroma_flavor_grain %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_flavor_hops %><br>
+    <%= f.text_field :aroma_flavor_hops %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_flavor_fruit %><br>
+    <%= f.text_field :aroma_flavor_fruit %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_flavor_herbs %><br>
+    <%= f.text_field :aroma_flavor_herbs %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_flavor_funk %><br>
+    <%= f.text_field :aroma_flavor_funk %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_flavor_mineral %><br>
+    <%= f.text_field :aroma_flavor_mineral %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_flavor_other %><br>
+    <%= f.text_field :aroma_flavor_other %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma_notes %><br>
+    <%= f.text_area :aroma_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_malt %><br>
+    <%= f.text_field :taste_malt %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_hops %><br>
+    <%= f.text_field :taste_hops %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_esters %><br>
+    <%= f.text_field :taste_esters %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_phenols %><br>
+    <%= f.text_field :taste_phenols %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_bitterness %><br>
+    <%= f.text_field :taste_bitterness %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_flavor_grain %><br>
+    <%= f.text_field :taste_flavor_grain %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_flavor_hops %><br>
+    <%= f.text_field :taste_flavor_hops %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_flavor_fruit %><br>
+    <%= f.text_field :taste_flavor_fruit %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_flavor_herbs %><br>
+    <%= f.text_field :taste_flavor_herbs %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_flavor_funk %><br>
+    <%= f.text_field :taste_flavor_funk %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_flavor_mineral %><br>
+    <%= f.text_field :taste_flavor_mineral %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_flavor_other %><br>
+    <%= f.text_field :taste_flavor_other %>
+  </div>
+  <div class="field">
+    <%= f.label :taste_notes %><br>
+    <%= f.text_area :taste_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :mouth_body %><br>
+    <%= f.text_field :mouth_body %>
+  </div>
+  <div class="field">
+    <%= f.label :mouth_carbonation %><br>
+    <%= f.text_field :mouth_carbonation %>
+  </div>
+  <div class="field">
+    <%= f.label :mouth_alcohol %><br>
+    <%= f.text_field :mouth_alcohol %>
+  </div>
+  <div class="field">
+    <%= f.label :mouth_richness %><br>
+    <%= f.text_field :mouth_richness %>
+  </div>
+  <div class="field">
+    <%= f.label :mouth_astringency %><br>
+    <%= f.text_field :mouth_astringency %>
+  </div>
+  <div class="field">
+    <%= f.label :mouth_finish %><br>
+    <%= f.text_field :mouth_finish %>
+  </div>
+  <div class="field">
+    <%= f.label :mouth_notes %><br>
+    <%= f.text_field :mouth_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_esthers %><br>
+    <%= f.number_field :flavor_esthers %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_alcoholic %><br>
+    <%= f.number_field :flavor_alcoholic %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_citrus %><br>
+    <%= f.number_field :flavor_citrus %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_hoppy %><br>
+    <%= f.number_field :flavor_hoppy %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_floral %><br>
+    <%= f.number_field :flavor_floral %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_spicy %><br>
+    <%= f.number_field :flavor_spicy %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_malty %><br>
+    <%= f.number_field :flavor_malty %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_toffee %><br>
+    <%= f.number_field :flavor_toffee %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_burnt %><br>
+    <%= f.number_field :flavor_burnt %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_sweet %><br>
+    <%= f.number_field :flavor_sweet %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_sour %><br>
+    <%= f.number_field :flavor_sour %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_bitter %><br>
+    <%= f.number_field :flavor_bitter %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_astringent %><br>
+    <%= f.number_field :flavor_astringent %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_full_bodied %><br>
+    <%= f.number_field :flavor_full_bodied %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_lingers %><br>
+    <%= f.number_field :flavor_lingers %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
