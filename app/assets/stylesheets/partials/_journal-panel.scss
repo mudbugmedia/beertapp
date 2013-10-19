@@ -3,31 +3,38 @@
 		padding: 0;
 	}
 	.tiles {list-style: none; margin: 0; padding: 0;
+		[data-icon] { 
+			display: block;
+			color: $white;
+		}
 		li {
 			list-style: none;
+			font-family: $sansHeaderFontFamily;
 			width: 50%;
 			height: 180px;
 			float: left;
 			display: inline-block;
-			color: #00f;
+			color: $white;
 			padding: 0;
 			text-align: center;
 			margin: 0;
-			font-size: 42px;
+			font-size: 35px;
 			position: relative;
-			&.appearance 	{background: $green;
+			text-transform: uppercase;
+			&.appearance 	{
+							background: $appearance;
 								.back {background: $charcoal;}
 							}
-			&.aroma 		{background: $blue;
+			&.aroma 		{background: $aroma;
 								.back {background: $charcoal;}
 							}
-			&.taste 		{background: $orange;
+			&.taste 		{background: $taste;
 								.back {background: $charcoal;}
 							}
-			&.mouthfeel 	{background: $gold;
+			&.mouthfeel 	{background: $mouthfeel;
 								.back {background: $charcoal;}
 							}
-			&.flavor-chart	{background: $charcoal; width: 100%;
+			&.flavor-chart	{background: $flavor-chart; width: 100%;
 								.back {background: $charcoal;}
 							}
 			a {

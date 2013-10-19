@@ -3,11 +3,22 @@
 
 // Colors
 // -------------------------
-$green:						#C1C47B;
-$blue:                    	#8CABB0;
-$orange: 					#D49A59;
-$gold: 						#F0CF8C;
-$charcoal: 					#45404D;
+$charcoal: #433E4C;
+$brown: #554439;
+$orange: #F37736;
+$green: #D0CC4C;
+$cream: #EFEEA7;
+$aqua: #63B799;
+
+$appearance: #8A9B0F;
+$aroma: #F8CA00;
+$taste: #E97F02;
+$mouthfeel: #BD1550;
+$flavor-chart: #490A3D;
+
+
+
+
 
 // Grayscale
 $white:                     #FFFFFF;
@@ -28,11 +39,11 @@ $primaryColorRGBA:          rgba($green, 1);
 $primaryColorTransparent:   rgba($green, .75);
 
 // Secondary Color
-$secondaryColor:            $blue;
+$secondaryColor:            $aqua;
 $secondaryColorLighten:		lighten($secondaryColor, 7%);
 $secondaryColorDarken:		darken($secondaryColor, 7%);
-$secondaryColorRGBA:        rgba($blue, 1);
-$secondaryColorTransparent: rgba($blue, .75);
+$secondaryColorRGBA:        rgba($aqua, 1);
+$secondaryColorTransparent: rgba($aqua, .75);
 
 // Tertiary Color
 $tertiaryColor:             $charcoal;
@@ -47,7 +58,7 @@ $textColor:                 $tertiaryColor;
 
 // Links
 // -------------------------
-$linkColor:                 $primaryColor;
+$linkColor:                 $tertiaryColor;
 $linkColorHover:            $primaryColorLighten;
 $linkColorActive:           $primaryColorDarken;
 
