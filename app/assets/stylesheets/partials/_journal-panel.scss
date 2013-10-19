@@ -1,4 +1,5 @@
 .journal-panel {
+	h2, h3 {margin: 0; padding: 0}
 	&.box {
 		padding: 0;
 	}
@@ -130,8 +131,8 @@
   position: absolute;
   right: 0;
   top: 0;
-  background: #fff;
-  color: #111;
+  background: #000;
+  color: #fff;
   text-decoration: none;
   font-size: 20px;
   padding: 10px 20px; }
@@ -141,8 +142,9 @@
   height: 100% !important; }
   .active .all-content {
     position: absolute;
-    left: 10px;
-    top: 20px; }
+    // left: 10px;
+    // top: 20px; 
+}
     .active .all-content h1 {
       font-size: 80px;
       width: 50%; }

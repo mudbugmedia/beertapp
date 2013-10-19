@@ -15,9 +15,11 @@
 	</div>
 </div>
 
-<div class="lg5-lg8">
-	<div class="journal-panel box lg-all clearfix">
-		<h2>Journal</h2>
+<div class="journal-panel lg5-lg8">
+	<h2>Journal Entry</h2>
+	<h3>Journal what you thought about this beer, and if you're feeling extra frisky, graph your thoughts</h3>
+	<div class="lg-all clearfix">
+		
 		<div class="responsive">
 			<ul class="tiles">
 				<li class="appearance">
@@ -99,7 +101,7 @@ $('.tiles li').click(function(){
 	bgColor = $('.active .back').css('background-color');
 	$('.tiles').css('background-color',bgColor);
 	$('.close, .all-content').show();
-	$('.responsive').append('<span class="close">close</span>').addClass(effect);
+	$('.responsive').append('<span class="close">save &amp; continue</span>').addClass(effect);
 });
 
 
