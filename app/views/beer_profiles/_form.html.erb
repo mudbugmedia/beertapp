@@ -13,6 +13,8 @@
 
   <h1>Profile</h1>
 
+  <img src="<%= @beer_profile.image_path %>" />
+
   <div class="field">
     <h3>Name</h3>
     <%= f.text_field :name %>
@@ -471,6 +473,8 @@
       field: :flavor_lingers
     } %>
   </div>
+  <%= f.hidden_field :image_path %>
+  <%= f.hidden_field :beer_id %>
   <div class="actions">
     <%= f.submit %>
   </div>

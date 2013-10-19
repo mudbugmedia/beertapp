@@ -1,5 +1,24 @@
 <p id="notice"><%= notice %></p>
 
+<img src="<%= @beer_profile.image_path %>" />
+
+<p>
+  <strong>Name</strong>
+  <%= @beer_profile.name %>
+</p>
+<p>
+  <strong>Style</strong>
+  <%= @beer_profile.style %>
+</p>
+<p>
+  <strong>Brewery</strong>
+  <%= @beer_profile.brewery %>
+</p>
+<p>
+  <strong>ABV</strong>
+  <%= @beer_profile.abv %>
+</p>
+
 <p>
   <strong>Appearance head size:</strong>
   <%= @beer_profile.appearance_head_size %>
