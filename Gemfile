@@ -31,6 +31,8 @@ gem 'bourbon'
 gem 'jbuilder', '~> 1.2'
 
 gem 'pry-rails'
+gem 'capistrano', '~> 2.15'
+gem 'therubyracer'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
