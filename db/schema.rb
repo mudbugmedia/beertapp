@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20131019191128) do
     t.string   "name"
     t.string   "style"
     t.string   "brewery"
-    t.decimal  "abv",                         precision: 10, scale: 0
+    t.decimal  "abv",                         precision: 7, scale: 2
   end
 
   create_table "beers", force: true do |t|

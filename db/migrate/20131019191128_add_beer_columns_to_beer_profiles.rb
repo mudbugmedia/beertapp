@@ -3,7 +3,7 @@ class AddBeerColumnsToBeerProfiles < ActiveRecord::Migration
     add_column :beer_profiles, :name, :string
     add_column :beer_profiles, :style, :string
     add_column :beer_profiles, :brewery, :string
-    add_column :beer_profiles, :abv, :decimal
+    add_column :beer_profiles, :abv, :decimal, :scale => 2, :precision => 7
   end
 
   def down
