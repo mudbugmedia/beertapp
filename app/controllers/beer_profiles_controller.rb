@@ -16,9 +16,13 @@ class BeerProfilesController < ApplicationController
 
   # GET /beer_profiles/new
   def new
-    @beer_profile = BeerProfile.new
-    @beer_profile.user_id = current_user.id
-    @beer_profile.beer_id = params["beer_id"]
+    if params["beer_id"].nil? or Beer.where(:id => params["beer_id"]).count == 0
+      redirect_to :action => :index
+    else
+      @beer_profile = BeerProfile.new
+      @beer_profile.user_id = current_user.id
+      @beer_profile.beer_id = params["beer_id"]
+    end
   end
 
   # GET /beer_profiles/1/edit
