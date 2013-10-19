@@ -1,6 +1,7 @@
 *, 
 *:before, 
-*:after {
+*:after,
+input[type="search"] {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
@@ -21,3 +22,31 @@
 header {
 	background-color: #f00;
 }
+
+.hero {
+	text-align: center;
+}
+
+/* ==========================================================================
+   Utilities and Helpers
+   ========================================================================== */
+
+/* Floats
+   ========================================================================== */
+
+   .fr {
+   	float: right;
+   }
+
+   .fl {
+   	float: left;
+   }
+
+   .fn {
+   	float: none;
+   }
+
+   .dac {
+   	text-align: center;
+   	margin: auto;
+   }
