@@ -102,13 +102,18 @@ a:hover, li:hover a {
   @include transition (all, .3s, ease);
 }
 
+
+// Photos
+// -------------------------
+.photos {border: 5px solid #f0f;}
+
 // Containers
 // -------------------------
 .box {
 	padding: 24px 23px 20px;
 	position: relative;
 	border-radius: 6px;
-	background: $grayLighter;
+	background: $colorSix;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	//border-color: rgba(231, 231, 231, 0.5);

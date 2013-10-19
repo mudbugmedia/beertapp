@@ -1,10 +1,12 @@
 <% unless @json.nil? %>
-  <ul>
+  <ul class="search-results">
     <% @json['response']['beers']['items'].each do |item| %>
       <li class="beer-choice">
         <img src="<%= item['beer']['beer_label'] %>" />
-        <%= item['brewery']['brewery_name'] %>
-        <%= item['beer']['beer_name'] %>
+		<div class="beer-brewery-names">
+        <h3><%= item['brewery']['brewery_name'] %></h3>
+        <h4><%= item['beer']['beer_name'] %></h4>
+		</div>
         <%= form_for @beer do |f| %>
           <%= f.hidden_field :name, :value => item['beer']['beer_name'] %>
           <%= f.hidden_field :style, :value => item['beer']['beer_style']%>
