@@ -1,14 +1,14 @@
 // Importing Stylesheets
 // --------------------------------------------------
-    @import "bourbon";                    // Variables 
+    @import "bourbon";                    			// Variables 
     @import "partials/_variables.scss";             // Variables
     @import "partials/_mixins.scss";                // Mixins
-	@import "partials/_simple_flexbox.scss";		  // Simple Flexbox
+	@import "partials/_simple_flexbox.scss";		// Simple Flexbox
 	@import "partials/_layout.scss";                // Layout Specific Styles
     @import "partials/_global.scss";                // Global Styles
-    @import "partials/_forms.scss";                // Forms
-    @import "partials/_animate.scss";                // Journal Panel
-    @import "partials/_journal-panel.scss";                // Journal Panel
+    @import "partials/_forms.scss";                 // Forms
+    @import "partials/_journal-panel.scss";         // Journal Panel
+	@import "partials/_icomoon.scss";         		// Icomoon
     
 	
 	

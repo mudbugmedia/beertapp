@@ -16,14 +16,21 @@ class BeerProfilesController < ApplicationController
 
   # GET /beer_profiles/new
   def new
-    @beer_profile = BeerProfile.new
-    @beer_profile.user_id = current_user.id
-    @beer_profile.beer_id = params["beer_id"]
+    @beers = Beer.where(:id => params["beer_id"])
+    if params["beer_id"].nil? or @beers.count == 0
+      redirect_to :action => :index
+    else
+      @beer = @beers.first
+      @beer_profile = BeerProfile.new
+      @beer_profile.user_id = current_user.id
+      @beer_profile.beer_id = params["beer_id"]
+    end
   end
 
   # GET /beer_profiles/1/edit
   def edit
     @beer_profile = BeerProfile.where(:user_id => current_user.id, :id => params[:id]).first
+    @beer = Beer.find(@beer_profile.beer_id)
   end
 
   # POST /beer_profiles
