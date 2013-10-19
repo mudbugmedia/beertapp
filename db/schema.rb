@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 20131019180444) do
     t.string   "mouth_astringency"
     t.string   "mouth_finish"
     t.text     "mouth_notes"
-    t.integer  "flavor_esthers"
+    t.integer  "flavor_esters"
     t.integer  "flavor_alcoholic"
     t.integer  "flavor_citrus"
     t.integer  "flavor_hoppy"
