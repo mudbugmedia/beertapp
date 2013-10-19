@@ -1,6 +1,104 @@
 .box {
-	background-color: #edeff1;
 	padding: 24px 23px 20px;
 	position: relative;
 	border-radius: 6px;
+	background: $grayLighter;
+	border: $secondaryBorder;
+}
+
+//
+// Global Styles
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+h1 { 
+  color: $tertiaryColor;
+  font-family: $sansHeaderFontFamily;
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 { 
+  color: $primaryColor;
+  font-family: $sansHeaderFontFamily;
+  font-weight: 400;
+  font-size: 40px;
+  text-transform: uppercase;
+  u {color: $tertiaryColor;}
+}
+
+h3 {
+    color: $tertiaryColor;
+    font-family: $sansHeaderFontFamily;
+    font-weight: 400;
+	font-size: 22px;
+	line-height: 22px;
+    text-transform: uppercase;
+	&.border {
+		border-bottom: $defaultBorder;
+		padding-bottom: 10px;
+	}
+}
+
+h4 { 
+    color: $secondaryColor;
+    font-family: $sansHeaderFontFamily;
+    font-weight: 400;
+	font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+// Paragraphs & Em & Strong
+// -------------------------
+p { 
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-weight: normal;
+  color: $tertiaryColor;
+}
+
+em, i { 
+	font-family: $serifFontFamily;
+	color: $primaryColor;
+	font-weight: normal;
+}
+
+strong, b { font-weight: bold; }
+
+// Links
+// -------------------------
+a { 
+  color: $linkColor;
+  text-decoration: none;
+  outline: 0;
+  &:hover { color: $linkColorHover; }
+  &:active { color: $linkColorActive; }
+  &:focus { outline: 0; background-color: transparent; }
+} // End a
+
+// Lists
+// -------------------------
+//ul {
+//	list-style-type: none;
+//	padding: 0;
+//	a { 
+//		color: $tertiaryColor;
+//		&:hover { color: $primaryColor; }
+//		&:active { color: darken($primaryColor, 10%); }
+//	}
+//}
+//
+//ol {
+//	padding-left: 22px;
+//	font-weight: bold;
+//}
+
+
+// Transitions
+// -------------------------
+a:hover, li:hover a {
+  @include transition (all, .3s, ease);
 }

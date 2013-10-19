@@ -13,6 +13,15 @@ input[type="search"] {
 	border: 0;
 }
 
+body { 
+  margin: 0;
+  background-color: $grayLighter;
+  font-color: $textColor;
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  font-weight: normal;
+}
+
 .wrapper {
 	width: 90%;
 	max-width: 1200px;
@@ -20,7 +29,7 @@ input[type="search"] {
 }
 
 header {
-	background-color: #f00;
+	background-color: $primaryColor;
 }
 
 .hero {
