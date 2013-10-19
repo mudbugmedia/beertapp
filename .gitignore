@@ -23,3 +23,5 @@ database.yml
 .DS_Store
 
 /app/assets/stylesheets/beertapp.css
+
+/app/assets/stylesheets/beertap.css
