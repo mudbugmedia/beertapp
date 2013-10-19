@@ -17,10 +17,13 @@ class BeerProfilesController < ApplicationController
   # GET /beer_profiles/new
   def new
     @beer_profile = BeerProfile.new
+    @beer_profile.user_id = current_user.id
+    @beer_profile.beer_id = params["beer_id"]
   end
 
   # GET /beer_profiles/1/edit
   def edit
+    @beer_profile = BeerProfile.where(:user_id => current_user.id, :id => params[:id]).first
   end
 
   # POST /beer_profiles
