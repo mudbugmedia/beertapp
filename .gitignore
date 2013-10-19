@@ -21,3 +21,5 @@ database.yml
 # Ignore Mac DS_Store
 
 .DS_Store
+
+/app/assets/stylesheets/beertapp.css
