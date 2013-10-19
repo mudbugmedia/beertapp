@@ -25,3 +25,5 @@ database.yml
 /app/assets/stylesheets/beertapp.css
 
 /app/assets/stylesheets/beertap.css
+
+config.yml

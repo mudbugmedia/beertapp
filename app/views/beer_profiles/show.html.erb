@@ -210,80 +210,27 @@
   <%= @beer_profile.mouth_notes %>
 </p>
 
-<p>
-  <strong>Flavor esthers:</strong>
-  <%= @beer_profile.flavor_esthers %>
-</p>
+<canvas id="flavor-wheel" width="400" height="400"></canvas>
 
-<p>
-  <strong>Flavor alcoholic:</strong>
-  <%= @beer_profile.flavor_alcoholic %>
-</p>
+<script type="text/javascript">
+  $(function(){
+    chart_context = document.getElementById('flavor-wheel').getContext('2d');
+    chart_data = {
+      labels : ["Esters", "Alcoholic", "Citrus", "Hoppy", "Floral", "Spicy", "Malty", "Toffee", "Burnt", "Sweet", "Sour", "Bitter", "Astringent", "Full-Bodied", "Lingers"],
+      datasets : [
+        {
+          fillColor : "rgba(220,220,220,0.5)",
+          strokeColor : "rgba(220,220,220,1)",
+          pointColor : "rgba(220,220,220,1)",
+          pointStrokeColor : "#fff",
+          data : <%= @beer_profile.flavors.to_s %>
+        }
+      ]
+    }
 
-<p>
-  <strong>Flavor citrus:</strong>
-  <%= @beer_profile.flavor_citrus %>
-</p>
-
-<p>
-  <strong>Flavor hoppy:</strong>
-  <%= @beer_profile.flavor_hoppy %>
-</p>
-
-<p>
-  <strong>Flavor floral:</strong>
-  <%= @beer_profile.flavor_floral %>
-</p>
-
-<p>
-  <strong>Flavor spicy:</strong>
-  <%= @beer_profile.flavor_spicy %>
-</p>
-
-<p>
-  <strong>Flavor malty:</strong>
-  <%= @beer_profile.flavor_malty %>
-</p>
-
-<p>
-  <strong>Flavor toffee:</strong>
-  <%= @beer_profile.flavor_toffee %>
-</p>
-
-<p>
-  <strong>Flavor burnt:</strong>
-  <%= @beer_profile.flavor_burnt %>
-</p>
-
-<p>
-  <strong>Flavor sweet:</strong>
-  <%= @beer_profile.flavor_sweet %>
-</p>
-
-<p>
-  <strong>Flavor sour:</strong>
-  <%= @beer_profile.flavor_sour %>
-</p>
-
-<p>
-  <strong>Flavor bitter:</strong>
-  <%= @beer_profile.flavor_bitter %>
-</p>
-
-<p>
-  <strong>Flavor astringent:</strong>
-  <%= @beer_profile.flavor_astringent %>
-</p>
-
-<p>
-  <strong>Flavor full bodied:</strong>
-  <%= @beer_profile.flavor_full_bodied %>
-</p>
-
-<p>
-  <strong>Flavor lingers:</strong>
-  <%= @beer_profile.flavor_lingers %>
-</p>
+    flavor_wheel = new Chart(chart_context).Radar(chart_data);
+  })
+</script>
 
 <%= link_to 'Edit', edit_beer_profile_path(@beer_profile) %> |
 <%= link_to 'Back', beer_profiles_path %>
