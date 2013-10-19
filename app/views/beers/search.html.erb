@@ -1,23 +1,25 @@
 <% unless @json.nil? %>
   <ul>
-    <% @json["response"]["beers"]["items"].each do |item| %>
+    <% @json['response']['beers']['items'].each do |item| %>
       <li>
-        <%= item["beer"]["beer_name"] %>
+        <img src="<%= item['beer']['beer_label'] %>" />
+        <%= item['brewery']['brewery_name'] %>
+        <%= item['beer']['beer_name'] %>
         <%= form_for @beer do |f| %>
-          <%= f.hidden_field :name, :value => item["beer"]["beer_name"] %>
-          <%= f.hidden_field :style, :value => item["beer"]["beer_style"]%>
-          <%= f.hidden_field :brewery, :value => item["brewery"]["brewery_name"] %>
-          <%= f.hidden_field :abv, :value => item["beer"]["beer_abv"] %>
-          <%= f.hidden_field :image_path, :value => item["beer"]["beer_label"] %>
-          <%= f.submit "Choose" %>
+          <%= f.hidden_field :name, :value => item['beer']['beer_name'] %>
+          <%= f.hidden_field :style, :value => item['beer']['beer_style']%>
+          <%= f.hidden_field :brewery, :value => item['brewery']['brewery_name'] %>
+          <%= f.hidden_field :abv, :value => item['beer']['beer_abv'] %>
+          <%= f.hidden_field :image_path, :value => item['beer']['beer_label'] %>
+          <%= f.submit 'Choose' %>
         <% end %>
       </li>
     <% end %>
     <li>
       <div>Not found? Input a custom beer.</div>
       <%= form_for @beer do |f| %>
-        <%= f.text_field :name, :value => params["q"] %>
-        <%= f.submit "Create new beer" %>
+        <%= f.text_field :name, :value => params['q'] %>
+        <%= f.submit 'Create new beer' %>
       <% end %>
     </li>
   </ul>
