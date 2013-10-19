@@ -18,10 +18,18 @@
 			&.appearance 	{background: $green;
 								.back {background: $charcoal;}
 							}
-			&.aroma 		{background: $blue}
-			&.taste 		{background: $orange}
-			&.mouthfeel 	{background: $gold}
-			&.flavor-wheel	{background: $charcoal; width: 100%}
+			&.aroma 		{background: $blue;
+								.back {background: $charcoal;}
+							}
+			&.taste 		{background: $orange;
+								.back {background: $charcoal;}
+							}
+			&.mouthfeel 	{background: $gold;
+								.back {background: $charcoal;}
+							}
+			&.flavor-chart	{background: $charcoal; width: 100%;
+								.back {background: $charcoal;}
+							}
 			a {
 				padding: 40px 10px;
 				display: block;
@@ -34,7 +42,7 @@
 				-ms-backface-visibility: hidden;
 				-o-backface-visibility: hidden;
 				backface-visibility: hidden;
-				-webkit-transition: -webkit-transform 1400ms;
+				-webkit-transition: -webkit-transform 400ms;
 				-moz-transition: -moz-transform 400ms;
 				-o-transition: -o-transform 400ms;
 				transition: transform 400ms;
