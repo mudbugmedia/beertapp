@@ -15,3 +15,7 @@
 /log/*.log
 /tmp
 /.vagrant
+
+# Ignore Mac DS_Store
+
+.DS_Store

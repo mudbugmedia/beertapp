@@ -1,0 +1,178 @@
+# Appearance
+	## Head
+		### Size
+			* spare
+			* small
+			* average
+			* large
+			* huge
+		### Texture
+			* rocky
+			* creamy
+			* frothy
+			* fizzy
+		### Color
+			* white 
+			* yellow
+			* tan 
+			* dark
+		### Retention
+			* Short
+			* Long
+	## Lacing
+		* None
+		* Faint
+		* Good
+		* Great
+	## Body
+		### Opacity
+			* Clear
+			* Hazy
+			* Cloudy
+			* Opaque
+		### Carbonation
+			* Flat
+			* Light
+			* Average
+			* Heavy
+	## Color
+		* 2 	Pale Straw		#F9FF2D
+		* 3		Straw			#FEEF20
+		* 4		Pale Gold		#FFDB34
+		* 6		Deep Gold		#FFA42F
+		* 9		Pale Amber 		#FF9A2F
+		* 12 	Medium Amber 	#E27750
+		* 15 	Deep Amber 		#9D4B33
+		* 18 	Amber-Brown 	#883D3D
+		* 20 	Brown 			#60302D
+		* 24 	Ruby Brown 		#4E3A29
+		* 30 	Deep Brown 		#392F2E
+		* 40 	Black 			#31302C
+	## Notes
+
+# Aroma + # Taste
+	## Malt
+		* Faint
+		* Average
+		* Strong
+	## Hops
+		* Faint
+		* Average
+		* Strong
+	## Esters
+		* Faint
+		* Average
+		* Strong
+	## Phenols
+		* Faint
+		* Average
+		* Strong
+	## Bitterness
+		* Faint
+		* Average
+		* Strong
+	## Flavor Tags
+		### Grain
+			* Bread/Biscuit
+			* Burnt
+			* Caramel
+			* Cereal
+			* Chocolate
+			* Coffee/Espresso
+			* Malt
+			* Nutty
+			* Oat
+			* Roasted
+			* Rye
+			* Toffee
+		### Hops
+			* Flowers
+			* Geranium
+			* Grapefruit
+			* Herbal
+			* Lemon
+			* Lemongrass
+			* Orange Blossom
+			* Pine
+			* Resinous
+			* Spicy
+			* Perfume 
+		### Fruit
+			* Apple
+			* Apricot
+			* Bananna
+			* Blackberry
+			* Blueberry
+			* Cassis
+			* Cherry
+			* Cranberry 
+			* Orange
+			* Peach
+			* Raspberry
+			* Strawberry
+			* Plum
+			* Prune
+			* Pear
+			* Pineapple
+		### Herbs and Spices
+			* Anise
+			* Caraway
+			# Chamomille
+			* Clove
+			* Cinnamon
+			* Coriander
+			* Grains of Paradise
+			* Lavender
+			* Orange Peel
+			* Rose Hips
+			* Sassafras
+			* Nutmeg
+		### Funk
+			* Barnyard
+			* Horse
+			* Leather
+			* Wood
+			* Sweat
+			* Cheese
+			* Vinegar
+		### Mineral
+			* Bloody
+			* Chalk
+			* Copper
+			* Iron
+			* Salty
+		### Other
+			* bubble gum
+			* soy sauce
+			* licorice
+			* cola
+			* tobacoo
+			* eggs
+	## Notes
+
+# Mouthfeel 
+	## Body
+		* Light
+		* Medium
+		* Full
+	## Carbonation
+		* Faint
+		* Average
+		* Strong
+	## Alcohol
+		* Faint
+		* Average
+		* Strong
+	## Richness
+		* Thin
+		* Creamy
+		* Chewy
+	## Astringincy
+		* Faint
+		* Average
+		* Strong
+	## Finish
+		* Sweet
+		* Medium
+		* Dry
+	## Notes
