@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019180444) do
+ActiveRecord::Schema.define(version: 20131019191128) do
 
   create_table "beer_profiles", force: true do |t|
     t.string   "appearance_head_size"
@@ -75,6 +75,10 @@ ActiveRecord::Schema.define(version: 20131019180444) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "beer_id"
+    t.string   "name"
+    t.string   "style"
+    t.string   "brewery"
+    t.decimal  "abv",                         precision: 7, scale: 2
   end
 
   create_table "beers", force: true do |t|

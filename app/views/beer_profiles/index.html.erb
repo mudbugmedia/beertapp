@@ -3,63 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>Appearance head size</th>
-      <th>Appearance head texture</th>
-      <th>Appearance head color</th>
-      <th>Appearance head retention</th>
-      <th>Appearance lacing</th>
-      <th>Appearance body opacity</th>
-      <th>Appearance body carbonation</th>
-      <th>Appearance color</th>
-      <th>Appearance notes</th>
-      <th>Aroma malt</th>
-      <th>Aroma hops</th>
-      <th>Aroma esters</th>
-      <th>Aroma phenols</th>
-      <th>Aroma bitterness</th>
-      <th>Aroma flavor grain</th>
-      <th>Aroma flavor hops</th>
-      <th>Aroma flavor fruit</th>
-      <th>Aroma flavor herbs</th>
-      <th>Aroma flavor funk</th>
-      <th>Aroma flavor mineral</th>
-      <th>Aroma flavor other</th>
-      <th>Aroma notes</th>
-      <th>Taste malt</th>
-      <th>Taste hops</th>
-      <th>Taste esters</th>
-      <th>Taste phenols</th>
-      <th>Taste bitterness</th>
-      <th>Taste flavor grain</th>
-      <th>Taste flavor hops</th>
-      <th>Taste flavor fruit</th>
-      <th>Taste flavor herbs</th>
-      <th>Taste flavor funk</th>
-      <th>Taste flavor mineral</th>
-      <th>Taste flavor other</th>
-      <th>Taste notes</th>
-      <th>Mouth body</th>
-      <th>Mouth carbonation</th>
-      <th>Mouth alcohol</th>
-      <th>Mouth richness</th>
-      <th>Mouth astringency</th>
-      <th>Mouth finish</th>
-      <th>Mouth notes</th>
-      <th>Flavor esters</th>
-      <th>Flavor alcoholic</th>
-      <th>Flavor citrus</th>
-      <th>Flavor hoppy</th>
-      <th>Flavor floral</th>
-      <th>Flavor spicy</th>
-      <th>Flavor malty</th>
-      <th>Flavor toffee</th>
-      <th>Flavor burnt</th>
-      <th>Flavor sweet</th>
-      <th>Flavor sour</th>
-      <th>Flavor bitter</th>
-      <th>Flavor astringent</th>
-      <th>Flavor full bodied</th>
-      <th>Flavor lingers</th>
+      <th>Name</th>
+      <th>Brewery</th>
+      <th>Style</th>
+      <th>ABV</th>
       <th></th>
       <th></th>
       <th></th>
@@ -69,63 +16,10 @@
   <tbody>
     <% @beer_profiles.each do |beer_profile| %>
       <tr>
-        <td><%= beer_profile.appearance_head_size %></td>
-        <td><%= beer_profile.appearance_head_texture %></td>
-        <td><%= beer_profile.appearance_head_color %></td>
-        <td><%= beer_profile.appearance_head_retention %></td>
-        <td><%= beer_profile.appearance_lacing %></td>
-        <td><%= beer_profile.appearance_body_opacity %></td>
-        <td><%= beer_profile.appearance_body_carbonation %></td>
-        <td><%= beer_profile.appearance_color %></td>
-        <td><%= beer_profile.appearance_notes %></td>
-        <td><%= beer_profile.aroma_malt %></td>
-        <td><%= beer_profile.aroma_hops %></td>
-        <td><%= beer_profile.aroma_esters %></td>
-        <td><%= beer_profile.aroma_phenols %></td>
-        <td><%= beer_profile.aroma_bitterness %></td>
-        <td><%= beer_profile.aroma_flavor_grain %></td>
-        <td><%= beer_profile.aroma_flavor_hops %></td>
-        <td><%= beer_profile.aroma_flavor_fruit %></td>
-        <td><%= beer_profile.aroma_flavor_herbs %></td>
-        <td><%= beer_profile.aroma_flavor_funk %></td>
-        <td><%= beer_profile.aroma_flavor_mineral %></td>
-        <td><%= beer_profile.aroma_flavor_other %></td>
-        <td><%= beer_profile.aroma_notes %></td>
-        <td><%= beer_profile.taste_malt %></td>
-        <td><%= beer_profile.taste_hops %></td>
-        <td><%= beer_profile.taste_esters %></td>
-        <td><%= beer_profile.taste_phenols %></td>
-        <td><%= beer_profile.taste_bitterness %></td>
-        <td><%= beer_profile.taste_flavor_grain %></td>
-        <td><%= beer_profile.taste_flavor_hops %></td>
-        <td><%= beer_profile.taste_flavor_fruit %></td>
-        <td><%= beer_profile.taste_flavor_herbs %></td>
-        <td><%= beer_profile.taste_flavor_funk %></td>
-        <td><%= beer_profile.taste_flavor_mineral %></td>
-        <td><%= beer_profile.taste_flavor_other %></td>
-        <td><%= beer_profile.taste_notes %></td>
-        <td><%= beer_profile.mouth_body %></td>
-        <td><%= beer_profile.mouth_carbonation %></td>
-        <td><%= beer_profile.mouth_alcohol %></td>
-        <td><%= beer_profile.mouth_richness %></td>
-        <td><%= beer_profile.mouth_astringency %></td>
-        <td><%= beer_profile.mouth_finish %></td>
-        <td><%= beer_profile.mouth_notes %></td>
-        <td><%= beer_profile.flavor_esters %></td>
-        <td><%= beer_profile.flavor_alcoholic %></td>
-        <td><%= beer_profile.flavor_citrus %></td>
-        <td><%= beer_profile.flavor_hoppy %></td>
-        <td><%= beer_profile.flavor_floral %></td>
-        <td><%= beer_profile.flavor_spicy %></td>
-        <td><%= beer_profile.flavor_malty %></td>
-        <td><%= beer_profile.flavor_toffee %></td>
-        <td><%= beer_profile.flavor_burnt %></td>
-        <td><%= beer_profile.flavor_sweet %></td>
-        <td><%= beer_profile.flavor_sour %></td>
-        <td><%= beer_profile.flavor_bitter %></td>
-        <td><%= beer_profile.flavor_astringent %></td>
-        <td><%= beer_profile.flavor_full_bodied %></td>
-        <td><%= beer_profile.flavor_lingers %></td>
+        <td><%= beer_profile.name %></td>
+        <td><%= beer_profile.brewery %></td>
+        <td><%= beer_profile.style %></td>
+        <td><%= beer_profile.abv %></td>
         <td><%= link_to 'Show', beer_profile %></td>
         <td><%= link_to 'Edit', edit_beer_profile_path(beer_profile) %></td>
         <td><%= link_to 'Destroy', beer_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
