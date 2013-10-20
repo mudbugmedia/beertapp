@@ -5,11 +5,11 @@
   </div>
 </div>
 <div class="clearfix"></div>
-<div class="search-landing-page clearfix lg2-lg7 lg-padinfull md-all md-padinfull sm-all sm-padinfull">
+<div class="search-landing-page clearfix lg2-lg7 md-all sm-all">
   <h3>Search for a beer to profile:</h3>
 
   <%= form_tag search_beers_path, :method => :get do%>
     <%= text_field_tag 'q', '', :class=> "form-text lg2-lg5"%>
-    <%= submit_tag "Search for beer", :class => "button push-effect lg6-lg7" %>
+    <%= submit_tag "Search for beer", :class => "button push-effect beer-search lg6-lg7" %>
   <% end %>
 </div>

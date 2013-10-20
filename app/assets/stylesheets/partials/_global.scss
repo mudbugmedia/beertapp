@@ -98,14 +98,17 @@ a:hover, li:hover a {
 .search-landing-page {
 	background: $colorSix;
 	border-radius: $baseBorderRadius;
-	//padding-bottom: 25px;
 	color: $white;
-	padding: 25px;
+	padding: 0 25px 25px 25px;
+	margin-bottom: 30px;
 	h3 {
 		color: $colorOne;
 		border-bottom: none;
 	}
-	.form-text {margin-top: 10px;}
+	.form-text {
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
 	.sign-in-buttons {margin-top: 10px;}
 	.actions {
 		margin-top: 20px;
@@ -123,9 +126,7 @@ a:hover, li:hover a {
 // Buttons
 // -------------------------  
   .button,
-  a.button,
-  .reset-password-button,
-  a.reset-password-button {
+  a.button {
      display: inline-block;
      border: 0;
      border-radius: 0;
@@ -171,7 +172,7 @@ a:hover, li:hover a {
 			@include linear-gradient($colorTwoLighten 0, $colorTwo 80%);
    			box-shadow:1px 0px 1px $colorTwoLighten,0px 1px 1px $colorTwoDarken,2px 1px 1px $colorTwoLighten,1px 2px 1px $colorTwoDarken,3px 2px 1px $colorTwoLighten;
  		}
-  } // End .callout, a.callout, .reset-password-button, a.reset-password-button
+  } // End .callout, a.callout
  
 		// Callout Active state (removes push effect on touch devices)
 		.no-touch .push-effect .active,
@@ -183,11 +184,7 @@ a:hover, li:hover a {
 		 	-o-transform:translate(3px, 3px);
 		 	transform:translate(3px, 3px) 
 		}
-		@media (max-width: 500px) {
-		    .reset-password-button,
-		    a.reset-password-button {font-size: 16px;}
-		}
-
+		.beer-search {margin-top: 10px;}
 
 // Appearance - Beer Color
 // -------------------------  
@@ -229,6 +226,8 @@ a:hover, li:hover a {
 		font-size: 22px;
 		line-height: 22px;
 	}
-	ul {color: $colorSix;}
+	ul {
+		color: $colorSix;
+	}
 }
 
