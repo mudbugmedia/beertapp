@@ -109,57 +109,77 @@
       </div>
     <% end %>
 
-    <div class="secondary-section">
-      <h3>esters</h3>
-      <%= @beer_profile.aroma_esters %>
-    </div>
+    <% unless @beer_profile.aroma_esters.blank? %>
+      <div class="secondary-section">
+        <h3>esters</h3>
+        <%= @beer_profile.aroma_esters %>
+      </div>
+    <% end %>
 
-    <div class="secondary-section">
-      <h3>phenols</h3>
-      <%= @beer_profile.aroma_phenols %>
-    </div>
+    <% unless @beer_profile.aroma_phenols.blank? %>
+      <div class="secondary-section">
+        <h3>phenols</h3>
+        <%= @beer_profile.aroma_phenols %>
+      </div>
+    <% end %>
 
-    <div class="secondary-section">
-      <h3>bitterness</h3>
-      <%= @beer_profile.aroma_bitterness %>
-    </div>
+    <% unless @beer_profile.aroma_bitterness.blank? %>
+      <div class="secondary-section">
+        <h3>bitterness</h3>
+        <%= @beer_profile.aroma_bitterness %>
+      </div>
+    <% end %>
 
     <div class="secondary-section">
       <h3>Flavor</h3>
-      <div class="tertiary-section">
-        <h4>grain</h4>
-        <%= @beer_profile.aroma_flavor_grain %>
-      </div>
+      <% unless @beer_profile.aroma_flavor_grain.blank? %>
+        <div class="tertiary-section">
+          <h4>grain</h4>
+          <%= @beer_profile.aroma_flavor_grain %>
+        </div>
+      <% end %>
 
-      <div class="tertiary-section">
-        <h4>hops</h4>
-        <%= @beer_profile.aroma_flavor_hops %>
-      </div>
+      <% unless @beer_profile.aroma_flavor_hops.blank? %>
+        <div class="tertiary-section">
+          <h4>hops</h4>
+          <%= @beer_profile.aroma_flavor_hops %>
+        </div>
+      <% end %>
 
-      <div class="tertiary-section">
-        <h4>fruit</h4>
-        <%= @beer_profile.aroma_flavor_fruit %>
-      </div>
+      <% unless @beer_profile.aroma_flavor_fruit.blank? %>
+        <div class="tertiary-section">
+          <h4>fruit</h4>
+          <%= @beer_profile.aroma_flavor_fruit %>
+        </div>
+      <% end %>
 
-      <div class="tertiary-section">
-        <h4>herbs</h4>
-        <%= @beer_profile.aroma_flavor_herbs %>
-      </div>
+      <% unless @beer_profile.aroma_flavor_herbs.blank? %>
+        <div class="tertiary-section">
+          <h4>herbs</h4>
+          <%= @beer_profile.aroma_flavor_herbs %>
+        </div>
+      <% end %>
 
-      <div class="tertiary-section">
-        <h4>funk</h4>
-        <%= @beer_profile.aroma_flavor_funk %>
-      </div>
+      <% unless @beer_profile.aroma_flavor_funk.blank? %>
+        <div class="tertiary-section">
+          <h4>funk</h4>
+          <%= @beer_profile.aroma_flavor_funk %>
+        </div>
+      <% end %>
 
-      <div class="tertiary-section">
-        <h4>mineral</h4>
-        <%= @beer_profile.aroma_flavor_mineral %>
-      </div>
+      <% unless @beer_profile.aroma_flavor_mineral.blank? %>
+        <div class="tertiary-section">
+          <h4>mineral</h4>
+          <%= @beer_profile.aroma_flavor_mineral %>
+        </div>
+      <% end %>
 
-      <div class="tertiary-section">
-        <h4>other</h4>
-        <%= @beer_profile.aroma_flavor_other %>
-      </div>
+      <% unless @beer_profile.aroma_flavor_other.blank? %>
+        <div class="tertiary-section">
+          <h4>other</h4>
+          <%= @beer_profile.aroma_flavor_other %>
+        </div>
+      <% end %>
    </div>
 
     <div class="secondary-section">
@@ -207,7 +227,7 @@
     <% end %>
 
     <div class="secondary-section">
-      <% unless flavor_section_blank? %>?
+      <% unless taste_flavor_section_blank? %>?
         <h3>Flavor</h3>
         <% unless @beer_profile.taste_flavor_grain.blank? %>
           <div class="tertiary-section">
@@ -323,8 +343,7 @@
       </div>
     <% end %>
 
-
-    <% if display_empty_message_for_mouthfeel? %>
+    <% if mouthfeel_section_blank? %>
       No thoughts?  Tell us how your heart feels.
     <% end %>
   </div>

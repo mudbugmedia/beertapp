@@ -90,7 +90,7 @@ module BeerProfileHelper
   end
 
   def taste_section_blank?
-    flavor_section_blank? &&
+    taste_flavor_section_blank? &&
       @beer_profile.taste_notes.blank?
       @beer_profile.taste_malt.blank?
       @beer_profile.taste_hops.blank?
@@ -99,7 +99,7 @@ module BeerProfileHelper
       @beer_profile.taste_bitterness.blank?
   end
 
-  def flavor_section_blank?
+  def taste_flavor_section_blank?
     @beer_profile.taste_flavor_grain.blank? &&
       @beer_profile.taste_flavor_hops.blank? &&
       @beer_profile.taste_flavor_fruit.blank? &&
@@ -109,7 +109,7 @@ module BeerProfileHelper
       @beer_profile.taste_flavor_other.blank?
   end
 
-  def display_empty_message_for_mouthfeel?
+  def mouthfeel_section_blank?
     @beer_profile.mouth_body.blank? &&
       @beer_profile.mouth_carbonation.blank? &&
       @beer_profile.mouth_alcohol.blank? &&
