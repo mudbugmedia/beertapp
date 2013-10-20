@@ -1,6 +1,6 @@
 class BeerProfilesController < ApplicationController
   before_action :set_beer_profile, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_any_user
+  before_action :authenticate_any_user, except: [:users, :show]
 
   def index
     @beer_profiles = BeerProfile.where(:user_id => current_user.id)
