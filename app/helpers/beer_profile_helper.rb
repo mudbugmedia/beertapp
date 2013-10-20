@@ -89,4 +89,34 @@ module BeerProfileHelper
     end
   end
 
+  def taste_section_blank?
+    flavor_section_blank? &&
+      @beer_profile.taste_notes.blank?
+      @beer_profile.taste_malt.blank?
+      @beer_profile.taste_hops.blank?
+      @beer_profile.taste_esters.blank?
+      @beer_profile.taste_phenols.blank?
+      @beer_profile.taste_bitterness.blank?
+  end
+
+  def flavor_section_blank?
+    @beer_profile.taste_flavor_grain.blank? &&
+      @beer_profile.taste_flavor_hops.blank? &&
+      @beer_profile.taste_flavor_fruit.blank? &&
+      @beer_profile.taste_flavor_herbs.blank? &&
+      @beer_profile.taste_flavor_funk.blank? &&
+      @beer_profile.taste_flavor_mineral.blank? &&
+      @beer_profile.taste_flavor_other.blank?
+  end
+
+  def display_empty_message_for_mouthfeel?
+    @beer_profile.mouth_body.blank? &&
+      @beer_profile.mouth_carbonation.blank? &&
+      @beer_profile.mouth_alcohol.blank? &&
+      @beer_profile.mouth_richness.blank? &&
+      @beer_profile.mouth_astringency.blank? &&
+      @beer_profile.mouth_finish.blank? &&
+      @beer_profile.mouth_notes.blank?
+  end
+
 end
