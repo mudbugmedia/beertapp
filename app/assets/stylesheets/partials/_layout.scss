@@ -32,6 +32,17 @@ header {
 	border-radius: 0 0 6px 6px;
 	height: auto;
 	padding: 10px;
+	.header-links {
+		text-align: right;
+		font-size: 14px;
+		text-transform: uppercase;
+		a {margin-right: 25px;}
+		[data-icon] {
+			color: $colorOne;
+			font-size: 20px;
+			padding-right: 5px;
+		}
+	}
 }
 
 .hero {
