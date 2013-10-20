@@ -27,6 +27,17 @@
       <h3>ABV</h3>
       <%= profile_field(f, :abv, @beer_profile, @from_untapped) %><%= "%" if @from_untapped %>
     </div>
+    <h2>Quick Review</h2>
+    <div class="field">
+      <h3>Rating</h3>
+      <% value = @beer_profile.rating || 1 %>
+      <span class='slider-value'><%= value %></span>
+      <%= f.range_field :rating, in: 1..10, value: value, class: 'rating-slider' %>
+    </div>
+    <div class="field">
+      <h3>Notes</h3>
+      <%= f.text_area :notes %>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>
