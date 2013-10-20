@@ -87,7 +87,7 @@ a:hover, li:hover a {
 // Containers
 // -------------------------
 .box {
-	padding: 24px 23px 20px;
+	padding: 24px 23px 24px;
 	position: relative;
 	border-radius: $baseBorderRadius;
 	background: $colorFour;
@@ -126,7 +126,7 @@ a:hover, li:hover a {
 // Buttons
 // -------------------------  
   .button,
-  a.button {
+  button {
      display: inline-block;
      border: 0;
      border-radius: 0;
@@ -158,9 +158,8 @@ a:hover, li:hover a {
 		text-shadow: $white 1px 1px 0;
   	 }
 	 
- 		// Hover/focus state
- 		&:hover,
- 		&:focus {
+ 		// Hover state
+ 		&:hover {
 	        box-shadow: 1px 0px 1px $colorTwoLighten, 0px 1px 1px $colorTwoDarken, 2px 1px 1px $colorTwoLighten, 1px 2px 1px $colorTwoDarken, 3px 2px 1px $colorTwoLighten, 2px 3px 1px $colorTwoDarken,4px 3px 1px $colorTwoLighten,3px 4px 1px $colorTwoDarken,5px 4px 1px $colorTwoLighten,4px 5px 1px $colorTwoDarken, 6px 5px 1px $colorTwoLighten;
 			@include linear-gradient($colorTwoLighten 0, $colorTwo 80%);
 			@include transition (all, .3s, ease);
@@ -212,6 +211,9 @@ a:hover, li:hover a {
 	margin-top: 20px;
 }
 
+
+// Error Message Styling
+// ------------------------- 
 #error_explanation {
 	padding: 10px;
 	width: 100%;
@@ -231,3 +233,24 @@ a:hover, li:hover a {
 	}
 }
 
+// My Friends Styles
+// ------------------------- 
+@media (max-width: 900px) and (min-width: 600px) {
+	.friends-search {margin-top: 0;}
+}
+.friends {
+	h1 {
+		text-align: left;
+		border-bottom: 5px solid $colorOne;
+		@media (max-width: 400px) {font-size: 35px;}
+	}
+	.box {
+		color: $white;
+	}
+	.unfollow {
+		margin-top: 0;
+		&:hover {color: $white;}
+		&:active {color: $white;}
+		@media (max-width: 600px) {margin-top: 15px;}
+	}
+}
