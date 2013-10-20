@@ -81,4 +81,12 @@ module BeerProfileHelper
     }
   }
 
+  def profile_field(form, field, profile, from_untapped)
+    if from_untapped
+      profile.send(field)
+    else
+      form.text_field field
+    end
+  end
+
 end

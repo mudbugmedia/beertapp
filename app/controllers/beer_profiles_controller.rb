@@ -11,15 +11,15 @@ class BeerProfilesController < ApplicationController
   end
 
   def new
-    @beers = Beer.where(:id => params['beer_id'])
-    if params['beer_id'].nil? or @beers.count == 0
+    @beer = Beer.where(:id => params['beer_id']).first
+    if @beer.nil?
       redirect_to action: :index
     else
-      @beer = @beers.first
       @beer_profile = BeerProfile.new
       @beer_profile.user_id = current_user.id
       @beer_profile.beer_id = @beer['id']
       @beer_profile.attributes = @beer.attributes
+      @from_untapped = @beer.brewery.present?
     end
   end
 

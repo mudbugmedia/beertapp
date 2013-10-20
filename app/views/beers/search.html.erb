@@ -1,3 +1,8 @@
+<%= form_tag search_beers_path, :method => :get do %>
+  <%= text_field_tag 'q', params[:q] %>
+  <%= submit_tag "Search for beer" %>
+<% end %>
+
 <% unless @json.nil? %>
 
   <ul class="search-results box clearfix lg-all">
@@ -5,10 +10,10 @@
     <% @json['response']['beers']['items'].each do |item| %>
       <li class="beer-choice beer-options <%= cycle 'lg1-lg4 md-all sm-all', 'lg5-lg8 md-all sm-all' %>">
         <img src="<%= item['beer']['beer_label'] %>" />
-		<div class="beer-brewery-names">
-		<h3><%= item['beer']['beer_name'] %></h3>
-        <h4><%= item['brewery']['brewery_name'] %></h4>
-		</div>
+		    <div class="beer-brewery-names">
+		      <h3><%= item['beer']['beer_name'] %></h3>
+          <h4><%= item['brewery']['brewery_name'] %></h4>
+		    </div>
         <%= form_for @beer do |f| %>
           <%= f.hidden_field :name, :value => item['beer']['beer_name'] %>
           <%= f.hidden_field :style, :value => item['beer']['beer_style']%>
@@ -18,11 +23,14 @@
         <% end %>
       </li>
     <% end %>
-	<div class="clearfix"></div>
-    <li class="beer-choice clearfix">
-		<h2>Not found? Enter a custom beer.</h2>
+    <div class="clearfix"></div>
+    <li class="beer-choice beer-options">
+      <div class="beer-brewery-names">
+		    <h3>Can't find your beer?</h3>
+        <h4>Add <%= params['q'] %> to the system.</h4>
+      </div>
       <%= form_for @beer do |f| %>
-        <%= f.text_field :name, :class => "form-text", :value => params['q'] %>
+        <%= f.hidden_field :name, :value => params['q'] %>
       <% end %>
     </li>
   </ul>

@@ -17,22 +17,22 @@
 
   <div class="field">
     <h3>Name</h3>
-    <%= f.text_field :name %>
+    <%= profile_field(f, :name, @beer_profile, @from_untapped) %>
   </div>
 
   <div class="field">
     <h3>Style</h3>
-    <%= f.text_field :style %>
+    <%= profile_field(f, :style, @beer_profile, @from_untapped) %>
   </div>
 
   <div class="field">
     <h3>Brewery</h3>
-    <%= f.text_field :brewery %>
+    <%= profile_field(f, :brewery, @beer_profile, @from_untapped) %>
   </div>
 
   <div class="field">
     <h3>ABV</h3>
-    <%= f.text_field :abv %>
+    <%= profile_field(f, :abv, @beer_profile, @from_untapped) %>
   </div>
 
   <h1>Appearance</h1>
