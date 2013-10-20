@@ -2,19 +2,14 @@ class BeerProfilesController < ApplicationController
   before_action :set_beer_profile, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_any_user
 
-  # GET /beer_profiles
-  # GET /beer_profiles.json
   def index
     @beer_profiles = BeerProfile.where(:user_id => current_user.id)
   end
 
-  # GET /beer_profiles/1
-  # GET /beer_profiles/1.json
   def show
     @beer_profile = BeerProfile.find(params[:id])
   end
 
-  # GET /beer_profiles/new
   def new
     @beers = Beer.where(:id => params['beer_id'])
     if params['beer_id'].nil? or @beers.count == 0
@@ -28,49 +23,37 @@ class BeerProfilesController < ApplicationController
     end
   end
 
-  # GET /beer_profiles/1/edit
   def edit
     @beer_profile = BeerProfile.where(:user_id => current_user.id, :id => params[:id]).first
     @beer = Beer.find(@beer_profile.beer_id)
   end
 
-  # POST /beer_profiles
-  # POST /beer_profiles.json
   def create
     @beer_profile = BeerProfile.new(beer_profile_params)
 
     respond_to do |format|
       if @beer_profile.save
-        format.html { redirect_to @beer_profile, notice: 'Beer profile was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @beer_profile }
+        redirect_to @beer_profile, notice: 'Beer profile was successfully created.'
       else
-        format.html { render action: 'new' }
-        format.json { render json: @beer_profile.errors, status: :unprocessable_entity }
+        render action: 'new'
       end
     end
   end
 
-  # PATCH/PUT /beer_profiles/1
-  # PATCH/PUT /beer_profiles/1.json
   def update
     respond_to do |format|
       if @beer_profile.update(beer_profile_params)
-        format.html { redirect_to @beer_profile, notice: 'Beer profile was successfully updated.' }
-        format.json { head :no_content }
+        redirect_to @beer_profile, notice: 'Beer profile was successfully updated.'
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @beer_profile.errors, status: :unprocessable_entity }
+        render action: 'edit'
       end
     end
   end
 
-  # DELETE /beer_profiles/1
-  # DELETE /beer_profiles/1.json
   def destroy
     @beer_profile.destroy
     respond_to do |format|
-      format.html { redirect_to beer_profiles_url }
-      format.json { head :no_content }
+      redirect_to beer_profiles_url
     end
   end
 
