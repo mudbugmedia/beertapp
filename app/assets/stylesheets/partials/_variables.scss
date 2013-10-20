@@ -45,7 +45,9 @@ $colorTwoTransparent: 		rgba($green, .75);
 
 // Color Three
 $colorThree:             	$yellow;
+$colorThreeLighten:			lighten($colorThree, 7%);
 $colorThreeDarken:			darken($colorThree, 10%);
+$colorThreeDesaturate:		desaturate($colorThree, 50%);
 $colorThreeRGBA:         	rgba($yellow, 1);
 $colorThreeTransparent:  	rgba($yellow, .75);
 
