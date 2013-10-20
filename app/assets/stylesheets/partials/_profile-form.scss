@@ -1,7 +1,6 @@
 // Profile Form
 // --------------------------------------------------
-#beer-profile-form {
-	.beer-type-profile {
+ .beer-type-profile {
 		margin-top: 30px;
 		background-color: $colorSix;
 		border-radius: $baseBorderRadius;
@@ -32,9 +31,3 @@
 			color: $white;
 		}
 	}
-	.color-srm:before {
-		content: "\e60a";
-		font-family: 'icomoon';
-		font-size: 50px;
-	}
-}
