@@ -1,235 +1,254 @@
 <p id="notice"><%= notice %></p>
+<div id="result journal-entry">
+  <div class="box lg1-lg4 md1-md2 sm-all">
+    <h2>Profile</h2>
+    <img src="<%= @beer_profile.image_path %>" />
+    <p>
+      <strong>Name</strong>
+      <%= @beer_profile.name %>
+    </p>
+    <p>
+      <strong>Style</strong>
+      <%= @beer_profile.style %>
+    </p>
+    <p>
+      <strong>Brewery</strong>
+      <%= @beer_profile.brewery %>
+    </p>
+    <p>
+      <strong>ABV</strong>
+      <%= @beer_profile.abv %>
+    </p>
+  </div>
 
-<img src="<%= @beer_profile.image_path %>" />
+  <div class="box lg5-lg8 md3-md4 sm-all">
+    <h2>Flavor Chart</h2>
+    <canvas id="flavor-wheel" width="400" height="400"></canvas>
+  </div>
 
-<p>
-  <strong>Name</strong>
-  <%= @beer_profile.name %>
-</p>
-<p>
-  <strong>Style</strong>
-  <%= @beer_profile.style %>
-</p>
-<p>
-  <strong>Brewery</strong>
-  <%= @beer_profile.brewery %>
-</p>
-<p>
-  <strong>ABV</strong>
-  <%= @beer_profile.abv %>
-</p>
+  <div class="box lg1-lg4 md1-md2 sm-all">
+    <h2>Apperance</h2>
+    <p>
+      <strong>head size</strong>
+      <%= @beer_profile.appearance_head_size %>
+    </p>
 
-<p>
-  <strong>Appearance head size:</strong>
-  <%= @beer_profile.appearance_head_size %>
-</p>
+    <p>
+      <strong>head texture</strong>
+      <%= @beer_profile.appearance_head_texture %>
+    </p>
 
-<p>
-  <strong>Appearance head texture:</strong>
-  <%= @beer_profile.appearance_head_texture %>
-</p>
+    <p>
+      <strong>head color</strong>
+      <%= @beer_profile.appearance_head_color %>
+    </p>
 
-<p>
-  <strong>Appearance head color:</strong>
-  <%= @beer_profile.appearance_head_color %>
-</p>
+    <p>
+      <strong>head retention</strong>
+      <%= @beer_profile.appearance_head_retention %>
+    </p>
 
-<p>
-  <strong>Appearance head retention:</strong>
-  <%= @beer_profile.appearance_head_retention %>
-</p>
+    <p>
+      <strong>lacing</strong>
+      <%= @beer_profile.appearance_lacing %>
+    </p>
 
-<p>
-  <strong>Appearance lacing:</strong>
-  <%= @beer_profile.appearance_lacing %>
-</p>
+    <p>
+      <strong>body opacity</strong>
+      <%= @beer_profile.appearance_body_opacity %>
+    </p>
 
-<p>
-  <strong>Appearance body opacity:</strong>
-  <%= @beer_profile.appearance_body_opacity %>
-</p>
+    <p>
+      <strong>body carbonation</strong>
+      <%= @beer_profile.appearance_body_carbonation %>
+    </p>
 
-<p>
-  <strong>Appearance body carbonation:</strong>
-  <%= @beer_profile.appearance_body_carbonation %>
-</p>
+    <p>
+      <strong>color</strong>
+      <%= @beer_profile.appearance_color %>
+    </p>
 
-<p>
-  <strong>Appearance color:</strong>
-  <%= @beer_profile.appearance_color %>
-</p>
+    <p>
+      <strong>notes</strong>
+      <%= @beer_profile.appearance_notes %>
+    </p>
+  </div>
 
-<p>
-  <strong>Appearance notes:</strong>
-  <%= @beer_profile.appearance_notes %>
-</p>
 
-<p>
-  <strong>Aroma malt:</strong>
-  <%= @beer_profile.aroma_malt %>
-</p>
+  <div class="box lg5-lg8 md3-md4 sm-all">
+  <h2>Aroma</h2>
+    <p>
+      <strong>malt</strong>
+      <%= @beer_profile.aroma_malt %>
+    </p>
 
-<p>
-  <strong>Aroma hops:</strong>
-  <%= @beer_profile.aroma_hops %>
-</p>
+    <p>
+      <strong>hops</strong>
+      <%= @beer_profile.aroma_hops %>
+    </p>
 
-<p>
-  <strong>Aroma esters:</strong>
-  <%= @beer_profile.aroma_esters %>
-</p>
+    <p>
+      <strong>esters</strong>
+      <%= @beer_profile.aroma_esters %>
+    </p>
 
-<p>
-  <strong>Aroma phenols:</strong>
-  <%= @beer_profile.aroma_phenols %>
-</p>
+    <p>
+      <strong>phenols</strong>
+      <%= @beer_profile.aroma_phenols %>
+    </p>
 
-<p>
-  <strong>Aroma bitterness:</strong>
-  <%= @beer_profile.aroma_bitterness %>
-</p>
+    <p>
+      <strong>bitterness</strong>
+      <%= @beer_profile.aroma_bitterness %>
+    </p>
 
-<p>
-  <strong>Aroma flavor grain:</strong>
-  <%= @beer_profile.aroma_flavor_grain %>
-</p>
+    <p>
+      <strong>flavor grain</strong>
+      <%= @beer_profile.aroma_flavor_grain %>
+    </p>
 
-<p>
-  <strong>Aroma flavor hops:</strong>
-  <%= @beer_profile.aroma_flavor_hops %>
-</p>
+    <p>
+      <strong>flavor hops</strong>
+      <%= @beer_profile.aroma_flavor_hops %>
+    </p>
 
-<p>
-  <strong>Aroma flavor fruit:</strong>
-  <%= @beer_profile.aroma_flavor_fruit %>
-</p>
+    <p>
+      <strong>flavor fruit</strong>
+      <%= @beer_profile.aroma_flavor_fruit %>
+    </p>
 
-<p>
-  <strong>Aroma flavor herbs:</strong>
-  <%= @beer_profile.aroma_flavor_herbs %>
-</p>
+    <p>
+      <strong>flavor herbs</strong>
+      <%= @beer_profile.aroma_flavor_herbs %>
+    </p>
 
-<p>
-  <strong>Aroma flavor funk:</strong>
-  <%= @beer_profile.aroma_flavor_funk %>
-</p>
+    <p>
+      <strong>flavor funk</strong>
+      <%= @beer_profile.aroma_flavor_funk %>
+    </p>
 
-<p>
-  <strong>Aroma flavor mineral:</strong>
-  <%= @beer_profile.aroma_flavor_mineral %>
-</p>
+    <p>
+      <strong>flavor mineral</strong>
+      <%= @beer_profile.aroma_flavor_mineral %>
+    </p>
 
-<p>
-  <strong>Aroma flavor other:</strong>
-  <%= @beer_profile.aroma_flavor_other %>
-</p>
+    <p>
+      <strong>flavor other</strong>
+      <%= @beer_profile.aroma_flavor_other %>
+    </p>
 
-<p>
-  <strong>Aroma notes:</strong>
-  <%= @beer_profile.aroma_notes %>
-</p>
+    <p>
+      <strong>notes</strong>
+      <%= @beer_profile.aroma_notes %>
+    </p>
+  </div>
 
-<p>
-  <strong>Taste malt:</strong>
-  <%= @beer_profile.taste_malt %>
-</p>
+  <div class="box lg1-lg4 md1-md2 sm-all">
+    <h2>Taste</h2>
+    <p>
+      <strong>malt</strong>
+      <%= @beer_profile.taste_malt %>
+    </p>
 
-<p>
-  <strong>Taste hops:</strong>
-  <%= @beer_profile.taste_hops %>
-</p>
+    <p>
+      <strong>hops</strong>
+      <%= @beer_profile.taste_hops %>
+    </p>
 
-<p>
-  <strong>Taste esters:</strong>
-  <%= @beer_profile.taste_esters %>
-</p>
+    <p>
+      <strong>esters</strong>
+      <%= @beer_profile.taste_esters %>
+    </p>
 
-<p>
-  <strong>Taste phenols:</strong>
-  <%= @beer_profile.taste_phenols %>
-</p>
+    <p>
+      <strong>phenols</strong>
+      <%= @beer_profile.taste_phenols %>
+    </p>
 
-<p>
-  <strong>Taste bitterness:</strong>
-  <%= @beer_profile.taste_bitterness %>
-</p>
+    <p>
+      <strong>bitterness</strong>
+      <%= @beer_profile.taste_bitterness %>
+    </p>
 
-<p>
-  <strong>Taste flavor grain:</strong>
-  <%= @beer_profile.taste_flavor_grain %>
-</p>
+    <p>
+      <strong>flavor grain</strong>
+      <%= @beer_profile.taste_flavor_grain %>
+    </p>
 
-<p>
-  <strong>Taste flavor hops:</strong>
-  <%= @beer_profile.taste_flavor_hops %>
-</p>
+    <p>
+      <strong>flavor hops</strong>
+      <%= @beer_profile.taste_flavor_hops %>
+    </p>
 
-<p>
-  <strong>Taste flavor fruit:</strong>
-  <%= @beer_profile.taste_flavor_fruit %>
-</p>
+    <p>
+      <strong>flavor fruit</strong>
+      <%= @beer_profile.taste_flavor_fruit %>
+    </p>
 
-<p>
-  <strong>Taste flavor herbs:</strong>
-  <%= @beer_profile.taste_flavor_herbs %>
-</p>
+    <p>
+      <strong>flavor herbs</strong>
+      <%= @beer_profile.taste_flavor_herbs %>
+    </p>
 
-<p>
-  <strong>Taste flavor funk:</strong>
-  <%= @beer_profile.taste_flavor_funk %>
-</p>
+    <p>
+      <strong>flavor funk</strong>
+      <%= @beer_profile.taste_flavor_funk %>
+    </p>
 
-<p>
-  <strong>Taste flavor mineral:</strong>
-  <%= @beer_profile.taste_flavor_mineral %>
-</p>
+    <p>
+      <strong>flavor mineral</strong>
+      <%= @beer_profile.taste_flavor_mineral %>
+    </p>
 
-<p>
-  <strong>Taste flavor other:</strong>
-  <%= @beer_profile.taste_flavor_other %>
-</p>
+    <p>
+      <strong>flavor other</strong>
+      <%= @beer_profile.taste_flavor_other %>
+    </p>
 
-<p>
-  <strong>Taste notes:</strong>
-  <%= @beer_profile.taste_notes %>
-</p>
+    <p>
+      <strong>notes</strong>
+      <%= @beer_profile.taste_notes %>
+    </p>
+  </div>
 
-<p>
-  <strong>Mouth body:</strong>
-  <%= @beer_profile.mouth_body %>
-</p>
+  <div class="box lg5-lg8 md3-md4 sm-all">
+    <h2>Mouthfeel</h2>
+    <p>
+      <strong>body</strong>
+      <%= @beer_profile.mouth_body %>
+    </p>
 
-<p>
-  <strong>Mouth carbonation:</strong>
-  <%= @beer_profile.mouth_carbonation %>
-</p>
+    <p>
+      <strong>carbonation</strong>
+      <%= @beer_profile.mouth_carbonation %>
+    </p>
 
-<p>
-  <strong>Mouth alcohol:</strong>
-  <%= @beer_profile.mouth_alcohol %>
-</p>
+    <p>
+      <strong>alcohol</strong>
+      <%= @beer_profile.mouth_alcohol %>
+    </p>
 
-<p>
-  <strong>Mouth richness:</strong>
-  <%= @beer_profile.mouth_richness %>
-</p>
+    <p>
+      <strong>richness</strong>
+      <%= @beer_profile.mouth_richness %>
+    </p>
 
-<p>
-  <strong>Mouth astringency:</strong>
-  <%= @beer_profile.mouth_astringency %>
-</p>
+    <p>
+      <strong>astringency</strong>
+      <%= @beer_profile.mouth_astringency %>
+    </p>
 
-<p>
-  <strong>Mouth finish:</strong>
-  <%= @beer_profile.mouth_finish %>
-</p>
+    <p>
+      <strong>finish</strong>
+      <%= @beer_profile.mouth_finish %>
+    </p>
 
-<p>
-  <strong>Mouth notes:</strong>
-  <%= @beer_profile.mouth_notes %>
-</p>
-
-<canvas id="flavor-wheel" width="400" height="400"></canvas>
+    <p>
+      <strong>notes</strong>
+      <%= @beer_profile.mouth_notes %>
+    </p>
+  </div>
+</div>
 
 <script type="text/javascript">
   $(function(){
@@ -251,5 +270,7 @@
   })
 </script>
 
-<%= link_to 'Edit', edit_beer_profile_path(@beer_profile) %> |
-<%= link_to 'Back', beer_profiles_path %>
+<div class="lg-all md-all sm-all">
+  <%= link_to 'Edit', edit_beer_profile_path(@beer_profile) %> |
+  <%= link_to 'Back', beer_profiles_path %>
+</div>
