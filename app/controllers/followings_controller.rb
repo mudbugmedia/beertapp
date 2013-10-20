@@ -25,21 +25,17 @@ class FollowingsController < ApplicationController
     @following = Following.new(following_params)
     @following.user_id = current_user.id
 
-    respond_to do |format|
-      if @following.save
-        format.html { redirect_to :action => :index, notice: 'Following was successfully created.' }
-      else
-        format.html { render action: 'new' }
-      end
+    if @following.save
+      format.html { redirect_to :action => :index, notice: 'Following was successfully created.' }
+    else
+      format.html { render action: 'new' }
     end
   end
 
   # DELETE /followings/1
   def destroy
     @following.destroy
-    respond_to do |format|
-      format.html { redirect_to followings_url }
-    end
+    redirect_to followings_url
   end
 
   def search

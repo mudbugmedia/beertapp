@@ -12,16 +12,16 @@
   <% end %>
 
   <div id="beer-profile-form">
-  	
+
   <div class="beer-type-profile clearfix lg3-lg6">
     	<h1>
     	  <%= @beer.name %>
     	</h1>
 		<h4><%= @beer.brewery %></h4>
   	<h2>Profile</h2>
-  	
+
   	<img src="<%= @beer_profile.image_path %>" />
-  	
+
   <div class="field">
     <h3>Name</h3>
     <%= f.text_field :name %>
@@ -117,8 +117,8 @@
   <div class="field">
     <%= f.text_area :appearance_notes %>
   </div>
-  
-  
+
+
   <h1>Aroma</h1>
   <div class="field">
     <h2>Malt</h2>
