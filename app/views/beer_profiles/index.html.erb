@@ -37,9 +37,9 @@
 
   Search for a new beer profile.
 
-  <%= form_tag search_beers_path, :method => :get do %>
-    <%= text_field_tag 'q' %>
-    <%= submit_tag "Search for beer" %>
+  <%= form_tag search_beers_path, :method => :get do%>
+    <%= text_field_tag 'q'%>
+    <%= submit_tag "Search for beer", :class => "button" %>
   <% end %>
 
 </div>
