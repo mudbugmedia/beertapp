@@ -26,9 +26,9 @@ class FollowingsController < ApplicationController
     @following.user_id = current_user.id
 
     if @following.save
-      format.html { redirect_to :action => :index, notice: 'Following was successfully created.' }
+      redirect_to action: 'index' , notice: 'Following was successfully created.'
     else
-      format.html { render action: 'new' }
+      render action: 'new'
     end
   end
 
