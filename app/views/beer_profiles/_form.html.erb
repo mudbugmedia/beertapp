@@ -48,12 +48,14 @@
   <div class="lg-all clearfix">
     <div class="responsive">
       <ul class="tiles">
-        <li class="appearance">
-          <div class="front">
-            <div><span data-icon="&#xe61a;" aria-hidden="true"></span>Appearance</div>
-          </div>
-          <div class="back">
-            <div><span data-icon="&#xe61a;" aria-hidden="true"></span>Rate It!</div>
+        <li class="appearance flip-container vertical">
+          <div class="flipper">
+            <div class="front">
+              <div><span data-icon="&#xe61a;" aria-hidden="true"></span>Appearance</div>
+            </div>
+            <div class="back">
+              <div><span data-icon="&#xe61a;" aria-hidden="true"></span>Rate It!</div>
+            </div>
           </div>
           <div class="all-content lg-padinfull md-padinfull sm-padin">
              <h2>Head</h2>
@@ -129,17 +131,19 @@
               <div class="field clearfix notes-area">
                 <%= f.text_area :appearance_notes, :placeholder => 'not enough things to pick from? jot down your own special thoughts' %>
               </div>
-
+              
           </div>
         </li>
 
-        <li class="aroma">
-          <div class="front">
-            <div><span data-icon="&#xe606;" aria-hidden="true"></span>Aroma</div>
-          </div>
-          <div class="back">
-            <div><span data-icon="&#xe606;" aria-hidden="true"></span>Rate It!</div>
-          </div>
+        <li class="aroma flip-container vertical">
+          <div class="flipper">
+              <div class="front">
+                <div><span data-icon="&#xe606;" aria-hidden="true"></span>Aroma</div>
+              </div>
+              <div class="back">
+                <div><span data-icon="&#xe606;" aria-hidden="true"></span>Rate It!</div>
+              </div>
+        </div>
           <div class="all-content lg-padinfull md-padinfull sm-padin">
             <div class="field clearfix group three-options ">
                 <h2>Malt</h2>
@@ -252,13 +256,15 @@
           </div>
         </li>
 
-        <li class="taste">
-          <div class="front">
-            <div><span data-icon="&#xe602;" aria-hidden="true"></span>Taste</div>
-          </div>
-          <div class="back">
-            <div><span data-icon="&#xe602;" aria-hidden="true"></span>Rate It!</div>
-          </div>
+        <li class="taste flip-container vertical">
+          <div class="flipper">
+            <div class="front">
+              <div><span data-icon="&#xe602;" aria-hidden="true"></span>Taste</div>
+            </div>
+            <div class="back">
+              <div><span data-icon="&#xe602;" aria-hidden="true"></span>Rate It!</div>
+            </div>
+        </div>
           <div class="all-content lg-padinfull md-padinfull sm-padin">
             <h2>Malt</h2>
               <div class="field clearfix group three-options">
@@ -371,12 +377,14 @@
           </div>
         </li>
 
-        <li class="mouthfeel">
-          <div class="front">
-            <div><span data-icon="&#xe608;" aria-hidden="true"></span>Mouthfeel</div>
-          </div>
-          <div class="back">
-            <div><span data-icon="&#xe608;" aria-hidden="true"></span>Rate It!</div>
+        <li class="mouthfeel flip-container vertical">
+          <div class="flipper">
+            <div class="front">
+              <div><span data-icon="&#xe608;" aria-hidden="true"></span>Mouthfeel</div>
+            </div>
+            <div class="back">
+              <div><span data-icon="&#xe608;" aria-hidden="true"></span>Rate It!</div>
+            </div>
           </div>
           <div class="all-content lg-padinfull md-padinfull sm-padin">
             <div class="field clearfix group three-options">
@@ -434,13 +442,15 @@
           </div>
         </li>
 
-        <li class="flavor-chart">
-          <div class="front">
-            <div><span data-icon="&#xe60f;" aria-hidden="true"></span>Flavor-Chart</div>
-          </div>
-          <div class="back">
-            <div><span data-icon="&#xe60f;" aria-hidden="true"></span>Rate It!</div>
-          </div>
+        <li class="flavor-chart flip-container vertical">
+          <div class="flipper">
+            <div class="front">
+              <div><span data-icon="&#xe60f;" aria-hidden="true"></span>Flavor-Chart</div>
+            </div>
+            <div class="back">
+              <div><span data-icon="&#xe60f;" aria-hidden="true"></span>Rate It!</div>
+            </div>
+        </div>
           <div class="all-content lg-padinfull md-padinfull sm-padin">
             <div class="field clearfix">
                 <h2>Esters</h2>
@@ -559,6 +569,8 @@
 
 <script type="text/javascript">
   $(function() {
+    $('.all-content').hide()
+
     var bgColor
     var effect = 'animated bounceInRight'
 
