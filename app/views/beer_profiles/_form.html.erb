@@ -1,5 +1,7 @@
+<h1>Super Crazy Review Time</h1>
 <%= form_for(@beer_profile) do |f| %>
 <div id="beer-profile-form" class="lg1-lg3 md2-md3 sm-all">
+<%= link_to 'Get Me Outta Here!', beer_profiles_path, :class => "button push-effect lg1-lg3"%>
   <div class="box lg-all clearfix beer-type-profile">
     <h1>
       <%= @beer.name %>
@@ -33,8 +35,8 @@
 
 <div class="journal-panel lg4-lg8 md-all sm-all">
   <h2>Journal Entry</h2>
-  <h3>Journal what you thought about this beer, and if you're feeling extra frisky, graph your thoughts</h3>
-  <br>
+  <p>Journal what you thought about this beer, and if you're feeling extra frisky, graph your thoughts.</p>
+
   <div class="lg-all clearfix">
     <div class="responsive">
       <ul class="tiles">

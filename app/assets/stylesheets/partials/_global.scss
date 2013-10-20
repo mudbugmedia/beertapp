@@ -55,7 +55,7 @@ p {
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   font-weight: normal;
-  color: $white;
+  color: $colorSix;
 }
 
 small {color: $colorSix;}
@@ -115,9 +115,10 @@ a:hover, li:hover a {
      color: $white;
      white-space: nowrap;
      font-family: $sansHeaderFontFamily;
+	 text-align: center;
      font-weight: 400;
      padding: 8px 16px 8px 16px;
-     margin-bottom: 1.25em;
+     //margin-bottom: 1.25em;
      position: relative;
 	 width: 100%;
 	 font-size: 22px;
