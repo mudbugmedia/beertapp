@@ -12,7 +12,7 @@
 	<div class="header-container clearfix">
 		<div class="wrapper">
 		<header class="lg-all md-all sm-all clearfix">
-<% unless hide_logo?(params) %>
+<% unless hide_logo? %>
 			<a href="/"><img class="lg1-lg2 md1 sm1" src="/images/horizontal-logo.png" alt="Beer Tap"></a>
 <% end %>
 			<div class="header-links lg4-lg8 md2-md4 sm-all">
@@ -25,7 +25,7 @@
           <%= link_to destroy_user_session_path, :method => :delete do %>
             <span data-icon="&#xe61b;" aria-hidden="true"></span> Sign Out</a>
           <% end %>
-        <% else %>
+        <% elsif !sign_in_page? %>
           <%= link_to new_user_session_path do%>
             <span data-icon="&#xe61c;" aria-hidden="true"></span> Sign In
           <% end %>
