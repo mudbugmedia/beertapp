@@ -1,3 +1,5 @@
+<% @beer_profile = BeerProfile.new %>
+<%= form_for(@beer_profile) do |f| %>
 <div class="lg1-lg3">
 	<div class="solo profile box lg-all clearfix">
 		<h2>Profile</h2>
@@ -30,19 +32,79 @@
 						<div><span data-icon="&#xe610;" aria-hidden="true"></span>Rate It!</div>
 					</div>
 					<div class="all-content">
-						<div class="field">
-							<h3>Size</h3>
-						    <input id="beer_profile_appearance_head_size_spare" name="beer_profile[appearance_head_size]" type="radio" value="Spare">
-						 	<label for="beer_profile_appearance_head_size_spare">Spare</label>
-						  	<input id="beer_profile_appearance_head_size_small" name="beer_profile[appearance_head_size]" type="radio" value="Small">
-						  	<label for="beer_profile_appearance_head_size_small">Small</label>
-						  	<input id="beer_profile_appearance_head_size_average" name="beer_profile[appearance_head_size]" type="radio" value="Average">
-						 	 <label for="beer_profile_appearance_head_size_average">Average</label>
-						 	 <input id="beer_profile_appearance_head_size_large" name="beer_profile[appearance_head_size]" type="radio" value="Large">
-						 	 <label for="beer_profile_appearance_head_size_large">Large</label>
-						  	<input id="beer_profile_appearance_head_size_huge" name="beer_profile[appearance_head_size]" type="radio" value="Huge">
-						  	<label for="beer_profile_appearance_head_size_huge">Huge</label>
-						</div>
+						 <h2>Head</h2>
+						  <div class="field">
+						    <h3>Size</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :appearance_head_size,
+						      attribute: :size
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Texture</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :appearance_head_texture,
+						      attribute: :texture
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Color</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :appearance_head_color,
+						      attribute: :color
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Retention</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :appearance_head_retention,
+						      attribute: :retention
+						    } %>
+						  </div>
+						  <h2>Lacing</h2>
+						  <div class="field">
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :appearance_lacing,
+						      attribute: :lacing
+						    } %>
+						  </div>
+						  <h2>Body</h2>
+						  <div class="field">
+						    <h3>Retention</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :appearance_body_opacity,
+						      attribute: :opacity
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Carbonation</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :appearance_body_carbonation,
+						      attribute: :body_carbonation
+						    } %>
+						  </div>
+						  <h2>Color</h2>
+						  <div class="field">
+						    <%
+						      color_value = @beer_profile.appearance_color || 1
+						      color_attribute = BeerProfileHelper::COLOR_ATTRIBUTES[color_value]
+						    %>
+						    <div id="color-demo" style="width: 30px; height: 30px; background-color: #<%= color_attribute[:hex_value] %>"></div>
+						    <span id="color-name"><%= color_attribute[:name] %></span>
+						    <br />
+						    <%= f.range_field :appearance_color, in: 1..12, value: color_value %>
+						  </div>
+						  <h2>Notes</h2>
+						  <div class="field">
+						    <%= f.text_area :appearance_notes %>
+						  </div>
 					</div>
 				</li>
 
@@ -97,6 +159,7 @@
 		</div>
 	</div>
 </div>
+<% end %>
 
 <script>
 $('.all-content').hide();

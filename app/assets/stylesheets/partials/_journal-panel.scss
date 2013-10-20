@@ -112,15 +112,14 @@
 	background: $charcoal;
 	width: 100%;
 	padding-top: 50px;
+	h2, h3 {
+		color: #FFF;
+		font-size: 16px;
+	}
 }
-.all-content h2 {
-    font-size: 28px;
-    float: right;
-    width: 100%;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    margin-right: 20px;
-    margin-top: 20px; }
+
+
+
     .all-content h2 b {
       float: right;
       width: 55%; }
