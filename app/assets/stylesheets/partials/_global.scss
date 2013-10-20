@@ -247,7 +247,6 @@ a:hover, li:hover a {
 	.box {
 		color: $white;
 	}
-	.unfollow,
 	.add {
 		margin-top: 0;
 		&:hover {color: $white;}
@@ -258,6 +257,12 @@ a:hover, li:hover a {
 		a {
 			color: $white;
 			&:hover {color: $colorOne;}
+		}
+		.unfollow {
+			margin-top: 0;
+			&:hover {color: $white;}
+			&:active {color: $white;}
+			@media (max-width: 600px) {margin-top: 15px;}
 		}
 	}
 }
