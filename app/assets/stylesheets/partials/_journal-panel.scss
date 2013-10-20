@@ -82,6 +82,8 @@
 
 
 .close {
+  font-family: $sansHeaderFontFamily;
+  text-transform: uppercase;
   cursor: pointer;
   position: absolute;
   right: 0;
@@ -90,7 +92,9 @@
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  &:hover {background: $colorTwo;}
+}
 
 .active {
   width: 100% !important;
