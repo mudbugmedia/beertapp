@@ -1,3 +1,8 @@
+<%= form_tag search_beers_path, :method => :get do %>
+  <%= text_field_tag 'q', params[:q] %>
+  <%= submit_tag "Search for beer" %>
+<% end %>
+
 <% unless @json.nil? %>
 
   <ul class="search-results box clearfix lg-all">
