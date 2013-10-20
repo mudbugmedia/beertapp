@@ -1,30 +1,22 @@
-<h1>Listing beer_profiles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Brewery</th>
-      <th>Style</th>
-      <th>ABV</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<% if @beer_profiles.empty? %>
+  <h1>You Haven't Profiled Any Beers Yet</h1>
+  <%= render partial: 'beers/search_again' %>
+<% else %>
+  <h1>My Profiled Beers</h1>
+  <ul class="search-results box clearfix lg-all">
     <% @beer_profiles.each do |beer_profile| %>
-      <tr>
-        <td><%= beer_profile.name %></td>
-        <td><%= beer_profile.brewery %></td>
-        <td><%= beer_profile.style %></td>
-        <td><%= beer_profile.abv %></td>
-        <td><%= link_to 'Show', beer_profile %></td>
-        <td><%= link_to 'Edit', edit_beer_profile_path(beer_profile) %></td>
-        <td><%= link_to 'Destroy', beer_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <a href="<%= beer_profile_path(beer_profile) %>">
+        <li class="beer-choice beer-options <%= cycle 'lg1-lg4 md-all sm-all', 'lg5-lg8 md-all sm-all' %>">
+          <% image_path = beer_profile.image_path.nil? ? 'https://untappd.s3.amazonaws.com/site/assets/images/temp/badge-beer-default.png' : beer_profile.image_path %>
+          <img src="<%= image_path %>" />
+          <div class="beer-brewery-names">
+            <h3><%= beer_profile.name %></h3>
+            <% unless beer_profile.brewery.nil? %>
+              <h4><%= beer_profile.brewery %></h4>
+            <% end %>
+          </div>
+        </li>
+      </a>
     <% end %>
-  </tbody>
-</table>
-
+  </ul>
+<% end %>
