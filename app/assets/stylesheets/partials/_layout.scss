@@ -27,18 +27,20 @@ body {
 	margin: 0 auto;
 }
 
-header {
+.header-container {
 	background-color: $grayLighter;
-	border-radius: 0 0 6px 6px;
 	height: auto;
 	padding: 10px;
+}
+
+header {
 	.header-links {
 		text-align: right;
 		font-size: 14px;
 		text-transform: uppercase;
 		a {margin-right: 25px;}
 		[data-icon] {
-			color: $colorOne;
+			color: $colorFive;
 			font-size: 20px;
 			padding-right: 5px;
 		}

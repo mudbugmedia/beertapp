@@ -9,19 +9,20 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-	<div class="wrapper">
+	<div class="header-container clearfix">
+		<div class="wrapper">
 		<header class="lg-all md-all sm-all clearfix">
 			<a href="/"><img src="/images/logo.png" alt="Beer Tap" width="100px" height="100px"></a>
 			<div class="header-links lg4-lg8">
 				<a href="#"><span data-icon="&#xe617;" aria-hidden="true"></span> My Friends</a>
 				<a href="#"><span data-icon="&#xe616;" aria-hidden="true"></span> My Journal</a>
-				<% if user_signed_in? %>
+<% if user_signed_in? %>
           <%= link_to destroy_user_session_path, :method => :delete do %>
             <span data-icon="&#xe619;" aria-hidden="true"></span> Sign Out</a>
           <% end %>
-        <% end %>
-			</div>
+        <% end %>			</div>
 		</header>
+	</div>
 	</div>
 
 <div class="wrapper clearfix">
