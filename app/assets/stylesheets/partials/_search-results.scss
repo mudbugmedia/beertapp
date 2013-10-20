@@ -20,7 +20,7 @@
 				h4 {font-size: 14px;}
 			}
 			&:after {
-				content: "\e612";
+				content: "\e613";
 				font-family: 'icomoon';
 				position: absolute;
 				right: 10px;
@@ -36,7 +36,7 @@
 			&:hover {
 				border: 2px solid $colorTwo;
 				&:after {
-					content: "\e616";
+					content: "\e610";
 					font-family: 'icomoon';
 				}
 			} // End &:hover

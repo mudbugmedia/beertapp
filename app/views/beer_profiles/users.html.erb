@@ -1,0 +1,40 @@
+<% if @user.nil? %>
+  <div class="errors">
+    User not found
+  </div>
+<% else %>
+  <h1>Listing Beer Profiles For <%= @user.email %></h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Brewery</th>
+        <th>Style</th>
+        <th>ABV</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @beer_profiles.each do |beer_profile| %>
+        <tr>
+          <td><%= beer_profile.name %></td>
+          <td><%= beer_profile.brewery %></td>
+          <td><%= beer_profile.style %></td>
+          <td><%= beer_profile.abv %></td>
+          <td><%= link_to 'Show', beer_profile %></td>
+        </tr>
+      <% end %>
+      <% if @beer_profiles.count == 0 %>
+        <tr>
+          <td colspan='5'>
+            No profiles yet for this user.
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

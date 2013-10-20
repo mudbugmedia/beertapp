@@ -282,7 +282,12 @@
 <div class="clearfix"></div>
 <div class="lg-all md-all sm-all clearfix">
   <%= link_to 'Edit', edit_beer_profile_path(@beer_profile) %> |
-  <%= link_to 'Back', beer_profiles_path %>
+  <% if @beer_profile.user_id == current_user.id %>
+    <%= link_to 'Back', beer_profiles_path %>
+  <% else %>
+    <%= link_to 'Back', "/beer_profiles/users/" + @beer_profile.user_id.to_s %>
+  <% end %>
+    
   <br><br><br><br><br><br><br><br><br><br>
 </div>
 <div class="clearfix"></div>

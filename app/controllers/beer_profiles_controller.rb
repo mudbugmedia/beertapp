@@ -54,6 +54,11 @@ class BeerProfilesController < ApplicationController
     redirect_to beer_profiles_url
   end
 
+  def users
+    @beer_profiles = BeerProfile.where(:user_id => params[:id])
+    @user = User.where(:id => params[:id]).first
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_beer_profile
