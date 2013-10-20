@@ -17,7 +17,7 @@ class BeerProfilesController < ApplicationController
     else
       @beer_profile = BeerProfile.new
       @beer_profile.beer_id = @beer[:id]
-      @beer_profile.attributes = beer_propeties(@beer)
+      @beer_profile.attributes = beer_properties(@beer)
       @from_untapped = @beer.brewery.present?
     end
   end
