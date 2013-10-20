@@ -119,10 +119,16 @@
 /* entire container, keeps perspective */
 .flip-container {
 	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
 		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		transform: rotateY(180deg);
 	}
 
 .flip-container, .front, .back {
@@ -142,12 +148,24 @@
 	-webkit-transition: 0.6s;
 	-webkit-transform-style: preserve-3d;
 
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+
+	-ms-transition: 0.6s;
+	-ms-transform-style: preserve-3d;
+
+	-transition: 0.6s;
+	-transform-style: preserve-3d;
+
 	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
 
 	position: absolute;
 	top: 0;
@@ -162,6 +180,9 @@
 /* back, initially hidden pane */
 .back {
 	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
  
 // 
@@ -172,13 +193,22 @@
 
 	.vertical .back {
 		-webkit-transform: rotateX(180deg);
+		-moz-transform: rotateX(180deg);
+		-ms-transform: rotateX(180deg);
+		-transform: rotateX(180deg);
 	}
 
 	.vertical.flip-container .flipper {
 		-webkit-transform-origin: 100% 90px; /* half of height */
+		-moz-transform-origin: 100% 90px; /* half of height */
+		-ms-transform-origin: 100% 90px; /* half of height */
+		transform-origin: 100% 90px; /* half of height */
 	}
 
 	.vertical.flip-container:hover .flipper {
 		-webkit-transform: rotateX(-180deg);
+		-moz-transform: rotateX(-180deg);
+		-ms-transform: rotateX(-180deg);
+		transform: rotateX(-180deg);
 	}
 
