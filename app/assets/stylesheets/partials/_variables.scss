@@ -31,6 +31,7 @@ $black:                     #000000;
 $colorOne:              	$orange;
 $colorOneLighten:			lighten($colorOne, 5%);
 $colorOneDarken:			darken($colorOne, 5%);
+$colorOneDesaturate:		desaturate($colorOne, 50%);
 $colorOneRGBA:          	rgba($orange, 1);
 $colorOneTransparent:   	rgba($orange, .75);
 
@@ -38,6 +39,7 @@ $colorOneTransparent:   	rgba($orange, .75);
 $colorTwo:            		$green;
 $colorTwoLighten:			lighten($colorTwo, 7%);
 $colorTwoDarken:			darken($colorTwo, 7%);
+$colorTwoDesaturate:		desaturate($colorTwo, 50%);
 $colorTwoRGBA:        		rgba($green, 1);
 $colorTwoTransparent: 		rgba($green, .75);
 
@@ -93,4 +95,4 @@ $baseSerifFontWeight:       400;
 $navHeight:   				60px;
 $defaultBorder:             1px solid $gray;
 $secondaryBorder:           1px solid #CCCCCC;
-$baseBorderRadius:          5px;
+$baseBorderRadius:          6px;

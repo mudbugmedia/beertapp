@@ -24,7 +24,7 @@ h2 {
   margin-top: 0;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 5px solid $colorSix;
+  border-bottom: 5px solid $colorOneDesaturate;
   u {color: $colorSix;}
 }
 
@@ -127,10 +127,9 @@ a:hover, li:hover a {
 .box {
 	padding: 24px 23px 20px;
 	position: relative;
-	border-radius: 6px;
-	background: $grayLighter;
+	border-radius: $baseBorderRadius;
+	background: $colorFour;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	//border-color: rgba(231, 231, 231, 0.5);
 }
 
