@@ -59,7 +59,9 @@ $colorFourTransparent:  	rgba($purple, .75);
 
 // Color Five
 $colorFive:             	$blue;
+$colorFiveLighten:			lighten($colorFive, 7%);
 $colorFiveDarken:			darken($colorFive, 10%);
+$colorFiveDesaturate:		desaturate($colorFive, 50%);
 $colorFiveRGBA:         	rgba($blue, 1);
 $colorFiveTransparent:  	rgba($blue, .75);
 

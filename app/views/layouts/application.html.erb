@@ -12,10 +12,10 @@
 	<div class="wrapper">
 		<header class="lg-all md-all sm-all clearfix">
 			<a href="/"><img src="/images/logo.png" alt="Beer Tap" width="100px" height="100px"></a>
-			<div class="lg5-lg8">
-				<a href="#">link1</a>
-				<a href="#">link2</a>
-				<a href="#">link3</a>
+			<div class="header-links lg4-lg8">
+				<a href="#"><span data-icon="&#xe617;" aria-hidden="true"></span> My Friends</a>
+				<a href="#"><span data-icon="&#xe616;" aria-hidden="true"></span> My Journal</a>
+				<a href="#"><span data-icon="&#xe619;" aria-hidden="true"></span> Sign Out</a>
 			</div>
 		</header>
 	</div>
@@ -23,16 +23,18 @@
 
 
 <div class="wrapper clearfix">
-	
-<div class="clearfix"></div>
+  <div class="clearfix"></div>
 	<%= yield %>
 </div>
 
 <div class="clearfix"></div>
 <footer class="clearfix lg-all md-all sm-all">
-	<p>badgers</p>
 </footer>
-
+<!-- Place this before your </body> tag. -->
+<script type="text/javascript">
+  var rumbleBannerPlacement = "bottom";
+</script>
+<script src="http://s0.railsrumble.com/banner.js" type="text/javascript"></script>
 <%= javascript_include_tag "gridset/gridset-overlay", "data-turbolinks-track" => true %>
 </body>
 </html>

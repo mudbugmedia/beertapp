@@ -8,7 +8,7 @@ h1 {
   color: $colorSix;
   font-family: $sansHeaderFontFamily;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 50px;
   font-weight: 400;
   text-transform: uppercase;
   //margin: 0;
@@ -79,34 +79,11 @@ a {
   &:focus { outline: 0; background-color: transparent; }
 } // End a
 
-// Lists
-// -------------------------
-//ul {
-//	list-style-type: none;
-//	padding: 0;
-//	a { 
-//		color: $colorSix;
-//		&:hover { color: $colorOne; }
-//		&:active { color: darken($colorOne, 10%); }
-//	}
-//}
-//
-//ol {
-//	padding-left: 22px;
-//	font-weight: bold;
-//}
-
-
 // Transitions
 // -------------------------
 a:hover, li:hover a {
   @include transition (all, .3s, ease);
 }
-
-
-// Photos
-// -------------------------
-.photos {border: 5px solid #f0f;}
 
 // Containers
 // -------------------------
@@ -119,6 +96,13 @@ a:hover, li:hover a {
 	margin-bottom: 20px;
 }
 
+.search-landing-page {
+	background: $colorSix;
+	border-radius: $baseBorderRadius;
+	h3 {color: $colorOne;}
+}
+
+.search-container {margin-top: 20px;}
 // Buttons
 // -------------------------  
   .button,
@@ -127,8 +111,8 @@ a:hover, li:hover a {
      border: 0;
      border-radius: 0;
      outline: 0;
-     box-shadow: 1px 0px 1px #bbbbbb, 0px 1px 1px $grayDark, 2px 1px 1px #bbbbbb, 1px 2px 1px $grayDark, 3px 2px 1px #bbbbbb, 2px 3px 1px $grayDark,4px 3px 1px #bbbbbb,3px 4px 1px $grayDark,5px 4px 1px #bbbbbb,4px 5px 1px $grayDark, 6px 5px 1px #bbbbbb;
-     color: $colorOne;
+     box-shadow: 1px 0px 1px $colorFiveLighten, 0px 1px 1px $colorFiveDarken, 2px 1px 1px $colorFiveLighten, 1px 2px 1px $colorFiveDarken, 3px 2px 1px $colorFiveLighten, 2px 3px 1px $colorFiveDarken,4px 3px 1px $colorFiveLighten,3px 4px 1px $colorFiveDarken,5px 4px 1px $colorFiveLighten,4px 5px 1px $colorFiveDarken, 6px 5px 1px $colorFiveLighten;
+     color: $white;
      white-space: nowrap;
      font-family: $sansHeaderFontFamily;
      font-weight: 400;
@@ -138,7 +122,9 @@ a:hover, li:hover a {
 	 width: 100%;
 	 font-size: 22px;
 	 line-height: 25px;
-     @include linear-gradient($grayLighter 0, $grayLight 80%);
+	 text-transform: uppercase;
+     @include linear-gradient($colorFiveLighten 0, $colorFive 80%);
+	 @media (max-width: 900px) {margin-top: 15px;}
    
      & span {
   	   text-transform: uppercase;
@@ -171,14 +157,14 @@ a:hover, li:hover a {
  		// Active state
  		&.active,
  		&:active {
-   			box-shadow:1px 0px 1px #bbbbbb,0px 1px 1px $grayDark,2px 1px 1px #bbbbbb,1px 2px 1px $grayDark,3px 2px 1px #bbbbbb;
+   			box-shadow:1px 0px 1px $colorFiveLighten,0px 1px 1px $colorFiveDarken,2px 1px 1px $colorFiveLighten,1px 2px 1px $colorFiveDarken,3px 2px 1px $colorFiveLighten;
  		}
   } // End .callout, a.callout
  
 		// Callout Active state (removes push effect on touch devices)
 		.no-touch .push-effect .active,
 		.no-touch .push-effect:active {
-			box-shadow:1px 0px 1px #bbbbbb,0px 1px 1px $grayDark,2px 1px 1px #bbbbbb,1px 2px 1px $grayDark,3px 2px 1px #bbbbbb;
+			box-shadow:1px 0px 1px $colorFiveLighten,0px 1px 1px $colorFiveDarken,2px 1px 1px $colorFiveLighten,1px 2px 1px $colorFiveDarken,3px 2px 1px $colorFiveLighten;
 		 	-webkit-transform:translate(3px, 3px);
 		 	-moz-transform:translate(3px, 3px);
 		 	-ms-transform:translate(3px, 3px);

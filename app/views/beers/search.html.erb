@@ -1,8 +1,9 @@
+<div class="search-container clearfix">
 <%= form_tag search_beers_path, :method => :get do %>
-  <%= text_field_tag 'q', params[:q] %>
-  <%= submit_tag "Search for beer" %>
+  <%= text_field_tag 'q', params[:q], :class => "form-text lg1-lg5" %>
+  <%= submit_tag "Search for beer", :class => "button push-effect lg6-lg8" %>
 <% end %>
-
+</div>
 <% unless @json.nil? %>
 
   <ul class="search-results box clearfix lg-all">
