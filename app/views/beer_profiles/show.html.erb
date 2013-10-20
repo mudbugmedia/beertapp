@@ -1,31 +1,31 @@
 <p id="notice"><%= notice %></p>
-<h1>A Selected Entry From The Beer Journal Of A Deranged Mad Man</h1>
+<h1>A Selected Entry From the Beer Journal of a demented mad man</h1>
 <div id="result" class="journal-entry-single">
   <div class="box beer-type-profile lg1-lg4 md1-md2 sm-all">
     <h2>Profile</h2>
-    <img src="<%= @beer_profile.image_path %>" />
-    <div class="secondary-section">
-      <strong>Name</strong>
-      <%= @beer_profile.name %>
+    
+    <div class="secondary-section logo-name">
+      <img src="<%= @beer_profile.image_path %>" />
+      <h1><%= @beer_profile.name %></h1>
+      <h4><%= @beer_profile.brewery %></h4>
     </div>
     <div class="secondary-section">
-      <strong>Style</strong>
+      <h3>Style</h3>
       <%= @beer_profile.style %>
     </div>
     <div class="secondary-section">
-      <strong>Brewery</strong>
-      <%= @beer_profile.brewery %>
+      
     </div>
     <div class="secondary-section">
-      <strong>ABV</strong>
+      <h3>ABV</h3>
       <%= @beer_profile.abv %>
     </div>
     <div class="secondary-section">
-      <strong>Rating</strong>
+      <h3>Rating</h3>
       <%= @beer_profile.rating %>
     </div>
     <div class="secondary-section">
-      <strong>Notes</strong>
+      <h3>Notes</h3>
       <%= @beer_profile.notes %>
     </div>
   </div>
@@ -292,7 +292,11 @@
       ]
     }
 
-    flavor_wheel = new Chart(chart_context).Radar(chart_data);
+    flavor_wheel = new Chart(chart_context).Radar(chart_data, {
+      pointLabelFontColor: '#FFF',
+      scaleLineColor: '#FFF',
+      angleLineColor: '#FFF'
+    });
   })
 </script>
 
