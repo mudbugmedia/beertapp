@@ -115,9 +115,109 @@
 					<div class="back">
 						<div><span data-icon="&#xe606;" aria-hidden="true"></span>Rate It!</div>
 					</div>
-					<!-- <div class="all-content">
-						<h1>What is Lorem ipsum?</h1>
-					</div> -->
+					<div class="all-content">
+						<div class="field">
+						    <h2>Malt</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_malt,
+						      attribute: :malt
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Hops</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_hops,
+						      attribute: :hops
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Esters</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_esters,
+						      attribute: :esters
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Phenols</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_phenols,
+						      attribute: :phenols
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Bitterness</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_bitterness,
+						      attribute: :bitterness
+						    } %>
+						  </div>
+						  <h2>Flavor</h2>
+						  <div class="field">
+						    <h3>Grain</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_flavor_grain,
+						      attribute: :grain
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Hops</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_flavor_hops,
+						      attribute: :hops
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Fruit</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_flavor_fruit,
+						      attribute: :fruit
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Herbs &amp; Spices</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_flavor_herbs,
+						      attribute: :herbs
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Funk</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_flavor_funk,
+						      attribute: :funk
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Mineral</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_flavor_mineral,
+						      attribute: :mineral
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Other</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :aroma_flavor_other,
+						      attribute: :other
+						    } %>
+						  </div>
+						  <h2>Notes</h2>
+						  <div class="field">
+						    <%= f.text_area :aroma_notes %>
+						  </div>
+					</div>
 				</li>
 
 				<li class="taste">
@@ -127,9 +227,109 @@
 					<div class="back">
 						<div><span data-icon="&#xe602;" aria-hidden="true"></span>Rate It!</div>
 					</div>
-					<!-- <div class="all-content">
-						<h1>What is Lorem ipsum?</h1>
-					</div> -->
+					<div class="all-content">
+						<h2>Malt</h2>
+							<div class="field">
+							    <%= render partial: 'beer_profiles/radio_group', locals: {
+							      f: f,
+							      field: :taste_malt,
+							      attribute: :malt
+							    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Hops</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_hops,
+						      attribute: :hops
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Esters</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_esters,
+						      attribute: :esters
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Phenols</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_phenols,
+						      attribute: :phenols
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Bitterness</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_bitterness,
+						      attribute: :bitterness
+						    } %>
+						  </div>
+						  <h2>Flavor</h2>
+						  <div class="field">
+						    <h3>Grain</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_flavor_grain,
+						      attribute: :grain
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Hops</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_flavor_hops,
+						      attribute: :hops
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Fruit</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_flavor_fruit,
+						      attribute: :fruit
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Herbs &amp; Spices</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_flavor_herbs,
+						      attribute: :herbs
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Funk</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_flavor_funk,
+						      attribute: :funk
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Mineral</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_flavor_mineral,
+						      attribute: :mineral
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h3>Other</h3>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :taste_flavor_other,
+						      attribute: :other
+						    } %>
+						  </div>
+						  <h2>Notes</h2>
+						  <div class="field">
+						    <%= f.text_area :taste_notes %>
+						  </div>
+					</div>
 				</li>
 
 				<li class="mouthfeel">
@@ -139,9 +339,60 @@
 					<div class="back">
 						<div><span data-icon="&#xe608;" aria-hidden="true"></span>Rate It!</div>
 					</div>
-					<!-- <div class="all-content">
-						<h1>What is Lorem ipsum?</h1>
-					</div> -->
+					<div class="all-content">
+						<div class="field">
+						    <h2>Body</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :mouth_body,
+						      attribute: :body
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Carbonation</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :mouth_carbonation,
+						      attribute: :mouth_carbonation
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Alcohol</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :mouth_alcohol,
+						      attribute: :alcohol
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Richness</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :mouth_richness,
+						      attribute: :richness
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Astringency</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :mouth_astringency,
+						      attribute: :astringency
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Finish</h2>
+						    <%= render partial: 'beer_profiles/radio_group', locals: {
+						      f: f,
+						      field: :mouth_finish,
+						      attribute: :finish
+						    } %>
+						  </div>
+						  <h2>Notes</h2>
+						  <div class="field">
+						    <%= f.text_area :mouth_notes %>
+						  </div>
+					</div>
 				</li>
 
 				<li class="flavor-chart">
@@ -151,9 +402,113 @@
 					<div class="back">
 						<div><span data-icon="&#xe60f;" aria-hidden="true"></span>Rate It!</div>
 					</div>
-					<!-- <div class="all-content">
-						<h1>What is Lorem ipsum?</h1>
-					</div> -->
+					<div class="all-content">
+						<div class="field">
+						    <h2>Esters</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_esters
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Alcoholic</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_alcoholic
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Citrus</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_citrus
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Hoppy</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_hoppy
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Floral</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_floral
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Spicy</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_spicy
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Malty</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_malty
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Toffee</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_toffee
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Burnt</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_burnt
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Sweet</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_sweet
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Sour</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_sour
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Bitter</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_bitter
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Astringent</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_astringent
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Full-Bodied</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_full_bodied
+						    } %>
+						  </div>
+						  <div class="field">
+						    <h2>Lingers</h2>
+						    <%= render partial: 'beer_profiles/slider', locals: {
+						      f: f,
+						      field: :flavor_lingers
+						    } %>
+						  </div>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -191,4 +546,22 @@ $('.responsive').on('click', '.close', function(){
 	$('.front, .back').show();
 	$('.tiles').css('background-color',bgColor);
 });
+</script>
+
+<script type="text/javascript">
+  $(function() {
+    $('.rating-slider').change(function(){
+      slider_value = $(this).val()
+      $(this).prev('.slider-value').text(slider_value)
+    })
+
+    color_attributes = <%= BeerProfileHelper::COLOR_ATTRIBUTES.to_json.html_safe %>
+
+    $('#beer_profile_appearance_color').change(function() {
+      slider_value = $(this).val()
+      attribute = color_attributes[slider_value]
+      $('#color-demo').css('background-color', '#'+attribute['hex_value'])
+      $('#color-name').text(attribute['name'])
+    })
+  })
 </script>
