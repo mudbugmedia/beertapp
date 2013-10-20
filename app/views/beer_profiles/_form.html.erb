@@ -50,7 +50,7 @@
       <ul class="tiles">
         <li class="appearance">
           <div class="front">
-            <div><span data-icon="&#xe610;" aria-hidden="true"></span>Appearance</div>
+            <div><span data-icon="&#xe61a;" aria-hidden="true"></span>Appearance</div>
           </div>
           <div class="back">
             <div><span data-icon="&#xe610;" aria-hidden="true"></span>Rate It!</div>
@@ -149,12 +149,12 @@
                   attribute: :malt
                 } %>
               </div>
-              <div class="field clearfix non-group">
+              <div class="field clearfix group three-options">
                 <h2>Hops</h2>
                 <%= render partial: 'radio_group', locals: {
                   f: f,
                   field: :aroma_hops,
-                  attribute: :hops,
+                  attribute: :aroma_hops,
                   label_group: true
                 } %>
               </div>
@@ -197,7 +197,7 @@
                 <%= render partial: 'radio_group', locals: {
                   f: f,
                   field: :aroma_flavor_hops,
-                  attribute: :hops,
+                  attribute: :flavor_hops,
                   label_group: true
                 } %>
               </div>
@@ -269,12 +269,12 @@
                     attribute: :malt
                   } %>
               </div>
-              <div class="field clearfix non-group">
+              <div class="field clearfix group three-options">
                 <h2>Hops</h2>
                 <%= render partial: 'radio_group', locals: {
                   f: f,
                   field: :taste_hops,
-                  attribute: :hops,
+                  attribute: :aroma_hops,
                   label_group: true
                 } %>
               </div>
@@ -317,7 +317,7 @@
                 <%= render partial: 'radio_group', locals: {
                   f: f,
                   field: :taste_flavor_hops,
-                  attribute: :hops,
+                  attribute: :flavor_hops,
                   label_group: true
                 } %>
               </div>

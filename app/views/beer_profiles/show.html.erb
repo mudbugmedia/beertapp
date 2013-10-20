@@ -3,7 +3,7 @@
 <div id="result" class="journal-entry-single">
   <div class="box beer-type-profile lg1-lg4 md1-md2 sm-all">
     <h2>Profile</h2>
-    
+
     <div class="secondary-section logo-name">
       <img src="<%= @beer_profile.image_path %>" />
       <h1><%= @beer_profile.name %></h1>
@@ -14,11 +14,11 @@
       <%= @beer_profile.style %>
     </div>
     <div class="secondary-section">
-      
+
     </div>
     <div class="secondary-section">
       <h3>ABV</h3>
-      <%= @beer_profile.abv %>
+      <%= @beer_profile.abv %>%
     </div>
     <div class="secondary-section">
       <h3>Rating</h3>
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    
+
     <div class="secondary-section">
       <h3>lacing</h3>
       <%= @beer_profile.appearance_lacing %>
@@ -274,7 +274,7 @@
       <%= @beer_profile.mouth_notes %>
     </div>
   </div>
-</div>  
+</div>
 
 <script type="text/javascript">
   $(function(){
@@ -313,7 +313,7 @@
    <div class="lg5-lg7">
     <%= link_to 'Edit this Review', edit_beer_profile_path(@beer_profile), :class => "button push-effect" %>
   </div>
-    
+
   <br><br><br><br><br><br><br><br><br><br>
 </div>
 

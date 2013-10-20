@@ -1,5 +1,8 @@
 .journal-panel {
 	h2, h3 {margin: 0; padding: 0}
+	h2 {
+		border-bottom: none;
+	}
 	&.box {
 		padding: 0;
 		h2 {
