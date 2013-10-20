@@ -1,508 +1,589 @@
 <%= form_for(@beer_profile) do |f| %>
-  <% if @beer_profile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@beer_profile.errors.count, "error") %> prohibited this beer_profile from being saved:</h2>
-
-      <ul>
-      <% @beer_profile.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<div class="lg1-lg3 md2-md3 sm-all">
+  <div class="solo profile box lg-all clearfix">
+    <h2>Profile</h2>
+    <div><img src="<%= @beer_profile.image_path %>" /></div>
+    <div>
+      <h3>Name</h3>
+      <%= @beer_profile.name %>
     </div>
-  <% end %>
-
-  <div id="beer-profile-form">
-
-  <div class="beer-type-profile clearfix lg3-lg6">
-    	<h1>
-    	  <%= @beer.name %>
-    	</h1>
-		<h4><%= @beer.brewery %></h4>
-  	<h2>Profile</h2>
-
-  	<img src="<%= @beer_profile.image_path %>" />
-
-  <div class="field">
-    <h3>Name</h3>
-    <%= f.text_field :name %>
+    <div>
+      <h3>Style</h3>
+      <%= profile_field(f, :style, @beer_profile, @from_untapped) %>
+    </div>
+    <div>
+      <h3>Brewery</h3>
+      <%= profile_field(f, :brewery, @beer_profile, @from_untapped) %>
+    </div>
+    <div>
+      <h3>ABV</h3>
+      <%= profile_field(f, :abv, @beer_profile, @from_untapped) %>
+    </div>
   </div>
-
-  <div class="field">
-    <h3>Style</h3>
-    <%= f.text_field :style %>
-  </div>
-
-  <div class="field">
-    <h3>Brewery</h3>
-    <%= f.text_field :brewery %>
-  </div>
-
-  <div class="field">
-    <h3>ABV</h3>
-    <%= f.text_field :abv %>
-  </div>
- </div>
-  <div class="clearfix"></div>
-  <h1>Appearance</h1>
-  <h2>Head</h2>
-  <div class="field">
-    <h3>Size</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :appearance_head_size,
-      attribute: :size
-    } %>
-  </div>
-  <div class="field">
-    <h3>Texture</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :appearance_head_texture,
-      attribute: :texture
-    } %>
-  </div>
-  <div class="field">
-    <h3>Color</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :appearance_head_color,
-      attribute: :color
-    } %>
-  </div>
-  <div class="field">
-    <h3>Retention</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :appearance_head_retention,
-      attribute: :retention
-    } %>
-  </div>
-  <h2>Lacing</h2>
-  <div class="field">
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :appearance_lacing,
-      attribute: :lacing
-    } %>
-  </div>
-  <h2>Body</h2>
-  <div class="field">
-    <h3>Retention</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :appearance_body_opacity,
-      attribute: :opacity
-    } %>
-  </div>
-  <div class="field">
-    <h3>Carbonation</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :appearance_body_carbonation,
-      attribute: :body_carbonation
-    } %>
-  </div>
-  <h2>Color</h2>
-  <div class="field">
-    <%
-      color_value = @beer_profile.appearance_color || 1
-      color_attribute = BeerProfileHelper::COLOR_ATTRIBUTES[color_value]
-    %>
-    <div id="color-demo" class="color-srm" style="color: #<%= color_attribute[:hex_value] %>"></div>
-    <span id="color-name"><%= color_attribute[:name] %></span>
-    <br />
-    <%= f.range_field :appearance_color, in: 1..12, value: color_value %>
-  </div>
-  <h2>Notes</h2>
-  <div class="field">
-    <%= f.text_area :appearance_notes %>
-  </div>
-
-
-  <h1>Aroma</h1>
-  <div class="field">
-    <h2>Malt</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_malt,
-      attribute: :malt
-    } %>
-  </div>
-  <div class="field">
-    <h2>Hops</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_hops,
-      attribute: :hops
-    } %>
-  </div>
-  <div class="field">
-    <h2>Esters</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_esters,
-      attribute: :esters
-    } %>
-  </div>
-  <div class="field">
-    <h2>Phenols</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_phenols,
-      attribute: :phenols
-    } %>
-  </div>
-  <div class="field">
-    <h2>Bitterness</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_bitterness,
-      attribute: :bitterness
-    } %>
-  </div>
-  <h2>Flavor</h2>
-  <div class="field">
-    <h3>Grain</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_flavor_grain,
-      attribute: :grain
-    } %>
-  </div>
-  <div class="field">
-    <h3>Hops</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_flavor_hops,
-      attribute: :hops
-    } %>
-  </div>
-  <div class="field">
-    <h3>Fruit</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_flavor_fruit,
-      attribute: :fruit
-    } %>
-  </div>
-  <div class="field">
-    <h3>Herbs &amp; Spices</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_flavor_herbs,
-      attribute: :herbs
-    } %>
-  </div>
-  <div class="field">
-    <h3>Funk</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_flavor_funk,
-      attribute: :funk
-    } %>
-  </div>
-  <div class="field">
-    <h3>Mineral</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_flavor_mineral,
-      attribute: :mineral
-    } %>
-  </div>
-  <div class="field">
-    <h3>Other</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :aroma_flavor_other,
-      attribute: :other
-    } %>
-  </div>
-  <h2>Notes</h2>
-  <div class="field">
-    <%= f.text_area :aroma_notes %>
-  </div>
-  <h1>Taste</h1>
-  <div class="field">
-    <h2>Malt</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_malt,
-      attribute: :malt
-    } %>
-  </div>
-  <div class="field">
-    <h2>Hops</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_hops,
-      attribute: :hops
-    } %>
-  </div>
-  <div class="field">
-    <h2>Esters</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_esters,
-      attribute: :esters
-    } %>
-  </div>
-  <div class="field">
-    <h2>Phenols</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_phenols,
-      attribute: :phenols
-    } %>
-  </div>
-  <div class="field">
-    <h2>Bitterness</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_bitterness,
-      attribute: :bitterness
-    } %>
-  </div>
-  <h2>Flavor</h2>
-  <div class="field">
-    <h3>Grain</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_flavor_grain,
-      attribute: :grain
-    } %>
-  </div>
-  <div class="field">
-    <h3>Hops</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_flavor_hops,
-      attribute: :hops
-    } %>
-  </div>
-  <div class="field">
-    <h3>Fruit</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_flavor_fruit,
-      attribute: :fruit
-    } %>
-  </div>
-  <div class="field">
-    <h3>Herbs &amp; Spices</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_flavor_herbs,
-      attribute: :herbs
-    } %>
-  </div>
-  <div class="field">
-    <h3>Funk</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_flavor_funk,
-      attribute: :funk
-    } %>
-  </div>
-  <div class="field">
-    <h3>Mineral</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_flavor_mineral,
-      attribute: :mineral
-    } %>
-  </div>
-  <div class="field">
-    <h3>Other</h3>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :taste_flavor_other,
-      attribute: :other
-    } %>
-  </div>
-  <h2>Notes</h2>
-  <div class="field">
-    <%= f.text_area :taste_notes %>
-  </div>
-  <h1>Mouthfeel</h1>
-  <div class="field">
-    <h2>Body</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :mouth_body,
-      attribute: :body
-    } %>
-  </div>
-  <div class="field">
-    <h2>Carbonation</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :mouth_carbonation,
-      attribute: :mouth_carbonation
-    } %>
-  </div>
-  <div class="field">
-    <h2>Alcohol</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :mouth_alcohol,
-      attribute: :alcohol
-    } %>
-  </div>
-  <div class="field">
-    <h2>Richness</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :mouth_richness,
-      attribute: :richness
-    } %>
-  </div>
-  <div class="field">
-    <h2>Astringency</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :mouth_astringency,
-      attribute: :astringency
-    } %>
-  </div>
-  <div class="field">
-    <h2>Finish</h2>
-    <%= render partial: 'radio_group', locals: {
-      f: f,
-      field: :mouth_finish,
-      attribute: :finish
-    } %>
-  </div>
-  <h2>Notes</h2>
-  <div class="field">
-    <%= f.text_area :mouth_notes %>
-  </div>
-  <h1>Flavors</h1>
-  <div class="field">
-    <h2>Esters</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_esters
-    } %>
-  </div>
-  <div class="field">
-    <h2>Alcoholic</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_alcoholic
-    } %>
-  </div>
-  <div class="field">
-    <h2>Citrus</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_citrus
-    } %>
-  </div>
-  <div class="field">
-    <h2>Hoppy</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_hoppy
-    } %>
-  </div>
-  <div class="field">
-    <h2>Floral</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_floral
-    } %>
-  </div>
-  <div class="field">
-    <h2>Spicy</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_spicy
-    } %>
-  </div>
-  <div class="field">
-    <h2>Malty</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_malty
-    } %>
-  </div>
-  <div class="field">
-    <h2>Toffee</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_toffee
-    } %>
-  </div>
-  <div class="field">
-    <h2>Burnt</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_burnt
-    } %>
-  </div>
-  <div class="field">
-    <h2>Sweet</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_sweet
-    } %>
-  </div>
-  <div class="field">
-    <h2>Sour</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_sour
-    } %>
-  </div>
-  <div class="field">
-    <h2>Bitter</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_bitter
-    } %>
-  </div>
-  <div class="field">
-    <h2>Astringent</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_astringent
-    } %>
-  </div>
-  <div class="field">
-    <h2>Full-Bodied</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_full_bodied
-    } %>
-  </div>
-  <div class="field">
-    <h2>Lingers</h2>
-    <%= render partial: 'slider', locals: {
-      f: f,
-      field: :flavor_lingers
-    } %>
-  </div>
-  <%= f.hidden_field :image_path %>
-  <%= f.hidden_field :beer_id %>
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
 </div>
+
+<div class="journal-panel lg4-lg8 md-all sm-all">
+  <h2>Journal Entry</h2>
+  <h3>Journal what you thought about this beer, and if you're feeling extra frisky, graph your thoughts</h3>
+  <br>
+  <div class="lg-all clearfix">
+    <div class="responsive">
+      <ul class="tiles">
+        <li class="appearance">
+          <div class="front">
+            <div><span data-icon="&#xe610;" aria-hidden="true"></span>Appearance</div>
+          </div>
+          <div class="back">
+            <div><span data-icon="&#xe610;" aria-hidden="true"></span>Rate It!</div>
+          </div>
+          <div class="all-content">
+             <h2>Head</h2>
+              <div class="field clearfix group five-options">
+                <h3>Size</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :appearance_head_size,
+                  attribute: :size
+                } %>
+              </div>
+              <div class="field clearfix group four-options">
+                <h3>Texture</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :appearance_head_texture,
+                  attribute: :texture
+                } %>
+              </div>
+              <div class="field clearfix group four-options">
+                <h3>Color</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :appearance_head_color,
+                  attribute: :color
+                } %>
+              </div>
+              <div class="field clearfix group two-options">
+                <h3>Retention</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :appearance_head_retention,
+                  attribute: :retention
+                } %>
+              </div>
+              <h2>Lacing</h2>
+              <div class="field clearfix group four-options">
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :appearance_lacing,
+                  attribute: :lacing
+                } %>
+              </div>
+              <h2>Body</h2>
+              <div class="field clearfix group four-options">
+                <h3>Retention</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :appearance_body_opacity,
+                  attribute: :opacity
+                } %>
+              </div>
+              <div class="field clearfix group four-options">
+                <h3>Carbonation</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :appearance_body_carbonation,
+                  attribute: :body_carbonation
+                } %>
+              </div>
+              <h2>Color</h2>
+              <div class="field clearfix">
+                <%
+                  color_value = @beer_profile.appearance_color || 1
+                  color_attribute = BeerProfileHelper::COLOR_ATTRIBUTES[color_value]
+                %>
+                <div id="color-demo" class="color-srm" style="color: #<%= color_attribute[:hex_value] %>"></div>
+                <span id="color-name"><%= color_attribute[:name] %></span>
+                <br />
+                <%= f.range_field :appearance_color, in: 1..12, value: color_value %>
+              </div>
+              <h2>Notes</h2>
+              <div class="field clearfix">
+                <%= f.text_area :appearance_notes, :placeholder => 'not enough things to pick from? jot down your own special thoughts' %>
+              </div>
+
+          </div>
+        </li>
+
+        <li class="aroma">
+          <div class="front">
+            <div><span data-icon="&#xe606;" aria-hidden="true"></span>Aroma</div>
+          </div>
+          <div class="back">
+            <div><span data-icon="&#xe606;" aria-hidden="true"></span>Rate It!</div>
+          </div>
+          <div class="all-content">
+            <div class="field clearfix group three-options ">
+                <h2>Malt</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_malt,
+                  attribute: :malt
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h2>Hops</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_hops,
+                  attribute: :hops,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Esters</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_esters,
+                  attribute: :esters
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Phenols</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_phenols,
+                  attribute: :phenols
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Bitterness</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_bitterness,
+                  attribute: :bitterness
+                } %>
+              </div>
+              <h2>Flavor</h2>
+              <div class="field clearfix non-group">
+                <h3>Grain</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_flavor_grain,
+                  attribute: :grain,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Hops</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_flavor_hops,
+                  attribute: :hops,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Fruit</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_flavor_fruit,
+                  attribute: :fruit,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Herbs &amp; Spices</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_flavor_herbs,
+                  attribute: :herbs,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Funk</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_flavor_funk,
+                  attribute: :funk,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Mineral</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_flavor_mineral,
+                  attribute: :mineral,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Other</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :aroma_flavor_other,
+                  attribute: :other,
+                  label_group: true
+                } %>
+              </div>
+              <h2>Notes</h2>
+              <div class="field clearfix non-group">
+                <%= f.text_area :aroma_notes %>
+              </div>
+          </div>
+        </li>
+
+        <li class="taste">
+          <div class="front">
+            <div><span data-icon="&#xe602;" aria-hidden="true"></span>Taste</div>
+          </div>
+          <div class="back">
+            <div><span data-icon="&#xe602;" aria-hidden="true"></span>Rate It!</div>
+          </div>
+          <div class="all-content">
+            <h2>Malt</h2>
+              <div class="field clearfix group three-options">
+                  <%= render partial: 'radio_group', locals: {
+                    f: f,
+                    field: :taste_malt,
+                    attribute: :malt
+                  } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h2>Hops</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_hops,
+                  attribute: :hops,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Esters</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_esters,
+                  attribute: :esters
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Phenols</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_phenols,
+                  attribute: :phenols
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Bitterness</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_bitterness,
+                  attribute: :bitterness
+                } %>
+              </div>
+              <h2>Flavor</h2>
+              <div class="field clearfix non-group">
+                <h3>Grain</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_flavor_grain,
+                  attribute: :grain,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Hops</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_flavor_hops,
+                  attribute: :hops,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Fruit</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_flavor_fruit,
+                  attribute: :fruit,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Herbs &amp; Spices</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_flavor_herbs,
+                  attribute: :herbs,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Funk</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_flavor_funk,
+                  attribute: :funk,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Mineral</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_flavor_mineral,
+                  attribute: :mineral,
+                  label_group: true
+                } %>
+              </div>
+              <div class="field clearfix non-group">
+                <h3>Other</h3>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :taste_flavor_other,
+                  attribute: :other,
+                  label_group: true
+                } %>
+              </div>
+              <h2>Notes</h2>
+              <div class="field clearfix">
+                <%= f.text_area :taste_notes %>
+              </div>
+          </div>
+        </li>
+
+        <li class="mouthfeel">
+          <div class="front">
+            <div><span data-icon="&#xe608;" aria-hidden="true"></span>Mouthfeel</div>
+          </div>
+          <div class="back">
+            <div><span data-icon="&#xe608;" aria-hidden="true"></span>Rate It!</div>
+          </div>
+          <div class="all-content">
+            <div class="field clearfix group three-options">
+                <h2>Body</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :mouth_body,
+                  attribute: :body
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Carbonation</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :mouth_carbonation,
+                  attribute: :mouth_carbonation
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Alcohol</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :mouth_alcohol,
+                  attribute: :alcohol
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Richness</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :mouth_richness,
+                  attribute: :richness
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Astringency</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :mouth_astringency,
+                  attribute: :astringency
+                } %>
+              </div>
+              <div class="field clearfix group three-options">
+                <h2>Finish</h2>
+                <%= render partial: 'radio_group', locals: {
+                  f: f,
+                  field: :mouth_finish,
+                  attribute: :finish
+                } %>
+              </div>
+              <h2>Notes</h2>
+              <div class="field clearfix">
+                <%= f.text_area :mouth_notes %>
+              </div>
+          </div>
+        </li>
+
+        <li class="flavor-chart">
+          <div class="front">
+            <div><span data-icon="&#xe60f;" aria-hidden="true"></span>Flavor-Chart</div>
+          </div>
+          <div class="back">
+            <div><span data-icon="&#xe60f;" aria-hidden="true"></span>Rate It!</div>
+          </div>
+          <div class="all-content">
+            <div class="field clearfix">
+                <h2>Esters</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_esters
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Alcoholic</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_alcoholic
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Citrus</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_citrus
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Hoppy</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_hoppy
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Floral</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_floral
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Spicy</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_spicy
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Malty</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_malty
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Toffee</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_toffee
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Burnt</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_burnt
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Sweet</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_sweet
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Sour</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_sour
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Bitter</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_bitter
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Astringent</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_astringent
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Full-Bodied</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_full_bodied
+                } %>
+              </div>
+              <div class="field clearfix">
+                <h2>Lingers</h2>
+                <%= render partial: 'slider', locals: {
+                  f: f,
+                  field: :flavor_lingers
+                } %>
+              </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= f.hidden_field :image_path %>
+<%= f.hidden_field :beer_id %>
+<% end %>
+
 <script type="text/javascript">
   $(function() {
-    $('.rating-slider').change(function(){
-      slider_value = $(this).val()
-      $(this).prev('.slider-value').text(slider_value)
+    $('.all-content').hide()
+
+    var bgColor
+    var effect = 'animated bounceIn'
+
+    $('.tiles li').click(function(){
+      $('.front, .back').hide()
+      $('.tiles li').removeClass('active').hide().css('border','none')
+      $(this).addClass('active').show()
+      bgColor = $('.active .back').css('background-color')
+      $('.tiles').css('background-color',bgColor)
+      $('.close, .all-content').show()
+      $('.responsive').append('<span class="close">save &amp; continue</span>').addClass(effect)
     })
 
-    color_attributes = <%= BeerProfileHelper::COLOR_ATTRIBUTES.to_json.html_safe %>
+    $('.responsive').on('click', '.close', function(){
 
-    $('#beer_profile_appearance_color').change(function() {
-      slider_value = $(this).val()
-      attribute = color_attributes[slider_value]
-      $('#color-demo').css('color', '#'+attribute['hex_value'])
-      $('#color-name').text(attribute['name'])
+      $('.close').remove()
+      bgColor = $('.active .front').css('background-color')
+      $('.responsive').removeClass(effect)
+      $('.all-content').hide()
+      $('.tiles li').removeClass('active').show().css({ 'border-bottom':'none',
+                                  'border-left':'none' })
+      $('.front, .back').show()
+      $('.tiles').css('background-color',bgColor)
     })
+  })
+
+  $('.rating-slider').change(function(){
+    slider_value = $(this).val()
+    $(this).prev('.slider-value').text(slider_value)
+  })
+
+  color_attributes = <%= BeerProfileHelper::COLOR_ATTRIBUTES.to_json.html_safe %>
+
+  $('#beer_profile_appearance_color').change(function() {
+    slider_value = $(this).val()
+    attribute = color_attributes[slider_value]
+    $('#color-demo').css('background-color', '#'+attribute['hex_value'])
+    $('#color-name').text(attribute['name'])
   })
 </script>
