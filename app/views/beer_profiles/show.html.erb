@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-<div id="result journal-entry">
+<h1>A Selected Entry From My Super Crazy Beer Journal</h1>
+<div id="result" class="journal-entry-single">
   <div class="box lg1-lg4 md1-md2 sm-all">
     <h2>Profile</h2>
     <img src="<%= @beer_profile.image_path %>" />
@@ -23,58 +24,62 @@
 
   <div class="box lg5-lg8 md3-md4 sm-all">
     <h2>Flavor Chart</h2>
-    <canvas id="flavor-wheel" width="400" height="400"></canvas>
+    <div class="dac">
+      <canvas id="flavor-wheel" width="400" height="400"></canvas>
+    </div>
   </div>
 
   <div class="box lg1-lg4 md1-md2 sm-all">
     <h2>Apperance</h2>
     <div class="secondary-section">
+      <h3>Head</h3>
       <div class="tertiary-section">
-        <strong>head size</strong>
+        <h4>size</h4>
         <%= @beer_profile.appearance_head_size %>
       </div>
 
       <div class="tertiary-section">
-        <strong>head texture</strong>
+        <h4>texture</h4>
         <%= @beer_profile.appearance_head_texture %>
       </div>
 
       <div class="tertiary-section">
-        <strong>head color</strong>
+        <h4>color</h4>
         <%= @beer_profile.appearance_head_color %>
       </div>
 
       <div class="tertiary-section">
-        <strong>head retention</strong>
+        <h4>retention</h4>
         <%= @beer_profile.appearance_head_retention %>
       </div>
     </div>
 
     
     <div class="secondary-section">
-      <strong>lacing</strong>
+      <h3>lacing</h3>
       <%= @beer_profile.appearance_lacing %>
     </div>
 
     <div class="secondary-section">
+      <h3>Body</h3>
       <div class="tertiary-section">
-        <strong>body opacity</strong>
+        <h4>opacity</h4>
         <%= @beer_profile.appearance_body_opacity %>
       </div>
 
       <div class="tertiary-section">
-        <strong>body carbonation</strong>
+        <h4>carbonation</h4>
         <%= @beer_profile.appearance_body_carbonation %>
       </div>
 
       <div class="tertiary-section">
-        <strong>color</strong>
+        <h4>color</h4>
         <%= @beer_profile.appearance_color %>
       </div>
     </div>
 
     <div class="secondary-section">
-      <strong>notes</strong>
+      <h3>notes</h3>
       <%= @beer_profile.appearance_notes %>
     </div>
   </div>
@@ -83,68 +88,70 @@
   <div class="box lg5-lg8 md3-md4 sm-all">
   <h2>Aroma</h2>
     <div class="secondary-section">
-      <strong>malt</strong>
+      <h3>malt</h3>
       <%= @beer_profile.aroma_malt %>
     </div>
 
     <div class="secondary-section">
-      <strong>hops</strong>
+      <h3>hops</h3>
       <%= @beer_profile.aroma_hops %>
     </div>
 
     <div class="secondary-section">
-      <strong>esters</strong>
+      <h3>esters</h3>
       <%= @beer_profile.aroma_esters %>
     </div>
 
     <div class="secondary-section">
-      <strong>phenols</strong>
+      <h3>phenols</h3>
       <%= @beer_profile.aroma_phenols %>
     </div>
 
     <div class="secondary-section">
-      <strong>bitterness</strong>
+      <h3>bitterness</h3>
       <%= @beer_profile.aroma_bitterness %>
     </div>
 
     <div class="secondary-section">
+      <h3>Flavor</h3>
       <div class="tertiary-section">
-        <strong>flavor grain</strong>
+        <h4>grain</h4>
         <%= @beer_profile.aroma_flavor_grain %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor hops</strong>
+        <h4>hops</h4>
         <%= @beer_profile.aroma_flavor_hops %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor fruit</strong>
+        <h4>fruit</h4>
         <%= @beer_profile.aroma_flavor_fruit %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor herbs</strong>
+        <h4>herbs</h4>
         <%= @beer_profile.aroma_flavor_herbs %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor funk</strong>
+        <h4>funk</h4>
         <%= @beer_profile.aroma_flavor_funk %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor mineral</strong>
+        <h4>mineral</h4>
         <%= @beer_profile.aroma_flavor_mineral %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor other</strong>
+        <h4>other</h4>
         <%= @beer_profile.aroma_flavor_other %>
       </div>
    </div>
 
     <div class="secondary-section">
+      <h3>Notes</h3>
       <strong>notes</strong>
       <%= @beer_profile.aroma_notes %>
     </div>
@@ -153,68 +160,70 @@
   <div class="box lg1-lg4 md1-md2 sm-all">
     <h2>Taste</h2>
     <div class="secondary-section">
-      <strong>malt</strong>
+      <h3>malt</h3>
       <%= @beer_profile.taste_malt %>
     </div>
 
     <div class="secondary-section">
-      <strong>hops</strong>
+      <h3>hops</h3>
       <%= @beer_profile.taste_hops %>
     </div>
 
     <div class="secondary-section">
-      <strong>esters</strong>
+      <h3>esters</h3>
       <%= @beer_profile.taste_esters %>
     </div>
 
     <div class="secondary-section">
-      <strong>phenols</strong>
+      <h3>phenols</h3>
       <%= @beer_profile.taste_phenols %>
     </div>
 
     <div class="secondary-section">
-      <strong>bitterness</strong>
+      <h3>bitterness</h3>
       <%= @beer_profile.taste_bitterness %>
     </div>
 
     <div class="secondary-section">
+      <h3>Flavor</h3>
       <div class="tertiary-section">
-        <strong>flavor grain</strong>
+        <h4>grain</h4>
         <%= @beer_profile.taste_flavor_grain %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor hops</strong>
+        <h4>hops</h4>
         <%= @beer_profile.taste_flavor_hops %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor fruit</strong>
+        <h4>fruit</h4>
         <%= @beer_profile.taste_flavor_fruit %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor herbs</strong>
+        <h4>herbs</h4>
         <%= @beer_profile.taste_flavor_herbs %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor funk</strong>
+        <h4>funk</h4>
         <%= @beer_profile.taste_flavor_funk %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor mineral</strong>
+        <h4>mineral</h4>
         <%= @beer_profile.taste_flavor_mineral %>
       </div>
 
       <div class="tertiary-section">
-        <strong>flavor other</strong>
+        <h4>other</h4>
         <%= @beer_profile.taste_flavor_other %>
       </div>
    </div>
 
     <div class="secondary-section">
+      <h3>Notes</h3>
       <strong>notes</strong>
       <%= @beer_profile.taste_notes %>
     </div>
@@ -223,37 +232,37 @@
   <div class="box lg5-lg8 md3-md4 sm-all">
     <h2>Mouthfeel</h2>
     <div class="secondary-section">
-      <strong>body</strong>
+      <h3>body</h3>
       <%= @beer_profile.mouth_body %>
     </div>
 
     <div class="secondary-section">
-      <strong>carbonation</strong>
+      <h3>carbonation</h3>
       <%= @beer_profile.mouth_carbonation %>
     </div>
 
     <div class="secondary-section">
-      <strong>alcohol</strong>
+      <h3>alcohol</h3>
       <%= @beer_profile.mouth_alcohol %>
     </div>
 
     <div class="secondary-section">
-      <strong>richness</strong>
+      <h3>richness</h3>
       <%= @beer_profile.mouth_richness %>
     </div>
 
     <div class="secondary-section">
-      <strong>astringency</strong>
+      <h3>astringency</h3>
       <%= @beer_profile.mouth_astringency %>
     </div>
 
     <div class="secondary-section">
-      <strong>finish</strong>
+      <h3>finish</h3>
       <%= @beer_profile.mouth_finish %>
     </div>
 
     <div class="secondary-section">
-      <strong>notes</strong>
+      <h3>notes</h3>
       <%= @beer_profile.mouth_notes %>
     </div>
   </div>
@@ -281,14 +290,18 @@
 
 <div class="clearfix"></div>
 <div class="lg-all md-all sm-all clearfix">
-  <%= link_to 'Edit', edit_beer_profile_path(@beer_profile) %> |
-  <% if @beer_profile.user_id == current_user.id %>
-    <%= link_to 'Back', beer_profiles_path %>
-  <% else %>
-    <%= link_to 'Back', "/beer_profiles/users/" + @beer_profile.user_id.to_s %>
-  <% end %>
+  <div class="lg2-lg4">
+    <% if @beer_profile.user_id == current_user.id %>
+      <%= link_to 'Back to My Journal', beer_profiles_path, :class => "button push-effect" %>
+    <% else %>
+      <%= link_to 'Back', "/beer_profiles/users/" + @beer_profile.user_id.to_s, :class => "button push-effect" %>
+    <% end %>
+  </div>
+
+   <div class="lg5-lg7">
+    <%= link_to 'Edit this Review', edit_beer_profile_path(@beer_profile), :class => "button push-effect" %>
+  </div>
     
   <br><br><br><br><br><br><br><br><br><br>
 </div>
-<div class="clearfix"></div>
-<div class="clearfix"></div><div class="clearfix"></div><div class="clearfix"></div><div class="clearfix"></div>
+

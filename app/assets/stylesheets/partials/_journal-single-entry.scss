@@ -1,0 +1,18 @@
+.journal-entry-single {
+    .box {
+		color: white;
+        background-color: $charcoal;
+        h3 {
+        	color: white;
+        	margin-bottom: 5px;
+        }
+        h4 {
+        	display: inline;
+        	border-right: 1px solid $colorTwo;
+        	padding-right: 5px;
+        }
+        .tertiary-section {
+        	margin-left: 25px;
+        }
+    }
+}
