@@ -7,7 +7,7 @@ $charcoal:			#433E4C;
 $green:				#8A9B0F;
 $yellow:			#F8CA00;
 $orange:			#E97F02;
-$pink:				#BD1550;
+$blue:				#0E8D94;
 $purple:			#490A3D;
 
 $appearance: #8A9B0F;
@@ -45,7 +45,9 @@ $colorTwoTransparent: 		rgba($green, .75);
 
 // Color Three
 $colorThree:             	$yellow;
+$colorThreeLighten:			lighten($colorThree, 7%);
 $colorThreeDarken:			darken($colorThree, 10%);
+$colorThreeDesaturate:		desaturate($colorThree, 50%);
 $colorThreeRGBA:         	rgba($yellow, 1);
 $colorThreeTransparent:  	rgba($yellow, .75);
 
@@ -56,10 +58,10 @@ $colorFourRGBA:         	rgba($purple, 1);
 $colorFourTransparent:  	rgba($purple, .75);
 
 // Color Five
-$colorFive:             	$pink;
+$colorFive:             	$blue;
 $colorFiveDarken:			darken($colorFive, 10%);
-$colorFiveRGBA:         	rgba($pink, 1);
-$colorFiveTransparent:  	rgba($pink, .75);
+$colorFiveRGBA:         	rgba($blue, 1);
+$colorFiveTransparent:  	rgba($blue, .75);
 
 // Color Six
 $colorSix:             		$charcoal;

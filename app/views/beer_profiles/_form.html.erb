@@ -11,10 +11,17 @@
     </div>
   <% end %>
 
-  <h1>Profile</h1>
-
-  <img src="<%= @beer_profile.image_path %>" />
-
+  <div id="beer-profile-form">
+  	
+  <div class="beer-type-profile clearfix lg3-lg6">
+    	<h1>
+    	  <%= @beer.name %>
+    	</h1>
+		<h4><%= @beer.brewery %></h4>
+  	<h2>Profile</h2>
+  	
+  	<img src="<%= @beer_profile.image_path %>" />
+  	
   <div class="field">
     <h3>Name</h3>
     <%= f.text_field :name %>
@@ -34,9 +41,9 @@
     <h3>ABV</h3>
     <%= f.text_field :abv %>
   </div>
-
+ </div>
+  <div class="clearfix"></div>
   <h1>Appearance</h1>
-
   <h2>Head</h2>
   <div class="field">
     <h3>Size</h3>
@@ -101,7 +108,7 @@
       color_value = @beer_profile.appearance_color || 1
       color_attribute = BeerProfileHelper::COLOR_ATTRIBUTES[color_value]
     %>
-    <div id="color-demo" style="width: 30px; height: 30px; background-color: #<%= color_attribute[:hex_value] %>"></div>
+    <div id="color-demo" class="color-srm" style="color: #<%= color_attribute[:hex_value] %>"></div>
     <span id="color-name"><%= color_attribute[:name] %></span>
     <br />
     <%= f.range_field :appearance_color, in: 1..12, value: color_value %>
@@ -110,6 +117,8 @@
   <div class="field">
     <%= f.text_area :appearance_notes %>
   </div>
+  
+  
   <h1>Aroma</h1>
   <div class="field">
     <h2>Malt</h2>
@@ -479,6 +488,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
 <script type="text/javascript">
   $(function() {
     $('.rating-slider').change(function(){
@@ -491,7 +501,7 @@
     $('#beer_profile_appearance_color').change(function() {
       slider_value = $(this).val()
       attribute = color_attributes[slider_value]
-      $('#color-demo').css('background-color', '#'+attribute['hex_value'])
+      $('#color-demo').css('color', '#'+attribute['hex_value'])
       $('#color-name').text(attribute['name'])
     })
   })
