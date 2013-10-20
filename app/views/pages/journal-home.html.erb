@@ -20,6 +20,7 @@
 <div class="journal-panel lg4-lg8 md-all sm-all">
 	<h2>Journal Entry</h2>
 	<h3>Journal what you thought about this beer, and if you're feeling extra frisky, graph your thoughts</h3>
+	<br>
 	<div class="lg-all clearfix">
 		
 		<div class="responsive">
@@ -33,7 +34,7 @@
 					</div>
 					<div class="all-content">
 						 <h2>Head</h2>
-						  <div class="field">
+						  <div class="field clearfix group five-options">
 						    <h3>Size</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -41,7 +42,7 @@
 						      attribute: :size
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group four-options">
 						    <h3>Texture</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -49,7 +50,7 @@
 						      attribute: :texture
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group four-options">
 						    <h3>Color</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -57,7 +58,7 @@
 						      attribute: :color
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group two-options">
 						    <h3>Retention</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -66,7 +67,7 @@
 						    } %>
 						  </div>
 						  <h2>Lacing</h2>
-						  <div class="field">
+						  <div class="field clearfix group four-options">
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :appearance_lacing,
@@ -74,7 +75,7 @@
 						    } %>
 						  </div>
 						  <h2>Body</h2>
-						  <div class="field">
+						  <div class="field clearfix group four-options">
 						    <h3>Retention</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -82,7 +83,7 @@
 						      attribute: :opacity
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group four-options">
 						    <h3>Carbonation</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -91,7 +92,7 @@
 						    } %>
 						  </div>
 						  <h2>Color</h2>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <%
 						      color_value = @beer_profile.appearance_color || 1
 						      color_attribute = BeerProfileHelper::COLOR_ATTRIBUTES[color_value]
@@ -102,9 +103,10 @@
 						    <%= f.range_field :appearance_color, in: 1..12, value: color_value %>
 						  </div>
 						  <h2>Notes</h2>
-						  <div class="field">
-						    <%= f.text_area :appearance_notes %>
+						  <div class="field clearfix">
+						    <%= f.text_area :appearance_notes, :placeholder => 'not enough things to pick from? jot down your own special thoughts' %>
 						  </div>
+
 					</div>
 				</li>
 
@@ -116,7 +118,7 @@
 						<div><span data-icon="&#xe606;" aria-hidden="true"></span>Rate It!</div>
 					</div>
 					<div class="all-content">
-						<div class="field">
+						<div class="field clearfix group three-options ">
 						    <h2>Malt</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -124,15 +126,16 @@
 						      attribute: :malt
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h2>Hops</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :aroma_hops,
-						      attribute: :hops
+						      attribute: :hops,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Esters</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -140,7 +143,7 @@
 						      attribute: :esters
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Phenols</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -148,7 +151,7 @@
 						      attribute: :phenols
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Bitterness</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -157,64 +160,71 @@
 						    } %>
 						  </div>
 						  <h2>Flavor</h2>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Grain</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :aroma_flavor_grain,
-						      attribute: :grain
+						      attribute: :grain,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Hops</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :aroma_flavor_hops,
-						      attribute: :hops
+						      attribute: :hops,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Fruit</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :aroma_flavor_fruit,
-						      attribute: :fruit
+						      attribute: :fruit,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Herbs &amp; Spices</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :aroma_flavor_herbs,
-						      attribute: :herbs
+						      attribute: :herbs,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Funk</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :aroma_flavor_funk,
-						      attribute: :funk
+						      attribute: :funk,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Mineral</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :aroma_flavor_mineral,
-						      attribute: :mineral
+						      attribute: :mineral,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Other</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :aroma_flavor_other,
-						      attribute: :other
+						      attribute: :other,
+						      label_group: true
 						    } %>
 						  </div>
 						  <h2>Notes</h2>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <%= f.text_area :aroma_notes %>
 						  </div>
 					</div>
@@ -229,22 +239,23 @@
 					</div>
 					<div class="all-content">
 						<h2>Malt</h2>
-							<div class="field">
+							<div class="field clearfix group three-options">
 							    <%= render partial: 'beer_profiles/radio_group', locals: {
 							      f: f,
 							      field: :taste_malt,
 							      attribute: :malt
 							    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h2>Hops</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :taste_hops,
-						      attribute: :hops
+						      attribute: :hops,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Esters</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -252,7 +263,7 @@
 						      attribute: :esters
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Phenols</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -260,7 +271,7 @@
 						      attribute: :phenols
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Bitterness</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -269,64 +280,71 @@
 						    } %>
 						  </div>
 						  <h2>Flavor</h2>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Grain</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :taste_flavor_grain,
-						      attribute: :grain
+						      attribute: :grain,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Hops</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :taste_flavor_hops,
-						      attribute: :hops
+						      attribute: :hops,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Fruit</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :taste_flavor_fruit,
-						      attribute: :fruit
+						      attribute: :fruit,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Herbs &amp; Spices</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :taste_flavor_herbs,
-						      attribute: :herbs
+						      attribute: :herbs,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Funk</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :taste_flavor_funk,
-						      attribute: :funk
+						      attribute: :funk,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Mineral</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :taste_flavor_mineral,
-						      attribute: :mineral
+						      attribute: :mineral,
+						      label_group: true
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix non-group">
 						    <h3>Other</h3>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
 						      field: :taste_flavor_other,
-						      attribute: :other
+						      attribute: :other,
+						      label_group: true
 						    } %>
 						  </div>
 						  <h2>Notes</h2>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <%= f.text_area :taste_notes %>
 						  </div>
 					</div>
@@ -340,7 +358,7 @@
 						<div><span data-icon="&#xe608;" aria-hidden="true"></span>Rate It!</div>
 					</div>
 					<div class="all-content">
-						<div class="field">
+						<div class="field clearfix group three-options">
 						    <h2>Body</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -348,7 +366,7 @@
 						      attribute: :body
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Carbonation</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -356,7 +374,7 @@
 						      attribute: :mouth_carbonation
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Alcohol</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -364,7 +382,7 @@
 						      attribute: :alcohol
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Richness</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -372,7 +390,7 @@
 						      attribute: :richness
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Astringency</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -380,7 +398,7 @@
 						      attribute: :astringency
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix group three-options">
 						    <h2>Finish</h2>
 						    <%= render partial: 'beer_profiles/radio_group', locals: {
 						      f: f,
@@ -389,7 +407,7 @@
 						    } %>
 						  </div>
 						  <h2>Notes</h2>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <%= f.text_area :mouth_notes %>
 						  </div>
 					</div>
@@ -403,105 +421,105 @@
 						<div><span data-icon="&#xe60f;" aria-hidden="true"></span>Rate It!</div>
 					</div>
 					<div class="all-content">
-						<div class="field">
+						<div class="field clearfix">
 						    <h2>Esters</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_esters
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Alcoholic</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_alcoholic
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Citrus</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_citrus
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Hoppy</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_hoppy
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Floral</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_floral
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Spicy</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_spicy
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Malty</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_malty
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Toffee</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_toffee
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Burnt</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_burnt
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Sweet</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_sweet
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Sour</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_sour
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Bitter</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_bitter
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Astringent</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_astringent
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Full-Bodied</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,
 						      field: :flavor_full_bodied
 						    } %>
 						  </div>
-						  <div class="field">
+						  <div class="field clearfix">
 						    <h2>Lingers</h2>
 						    <%= render partial: 'beer_profiles/slider', locals: {
 						      f: f,

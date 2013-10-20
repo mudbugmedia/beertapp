@@ -1,4 +1,7 @@
 <% BeerProfileHelper::PROFILE_ATTRIBUTES[attribute].each do |option| %>
+  <% label_group ||= nil %>
+  <% label_class = cycle('lg4', 'lg5', 'lg6', 'lg7', 'lg8') unless label_group.nil? %>
   <%= f.radio_button field, option %>
-  <%= f.label field, option, value: option %>
+  <%= f.label field, option, value: option, class: label_class %>
 <% end %>
+<% reset_cycle %>

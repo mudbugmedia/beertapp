@@ -31,9 +31,8 @@ input[type=radio] {
 */
 input[type=radio] + label {
 	display: inline-block;
-	margin: -4px;
-	padding: 3px 20px;
-	margin-bottom: 0;
+	padding: 10px 20px;
+	margin-bottom: 20px;
 	font-size: 14px;
 	line-height: 20px;
 	color: #333;
@@ -45,16 +44,34 @@ input[type=radio] + label {
 	position: relative;
 }
 
-	.field {
+	.field.group {
+			input[type=radio] + label{margin: -4px;}
+			&.two-options 	{
+				input[type=radio] + label{width: 50%;}
+			}
+
+			&.three-options 	{
+				input[type=radio] + label{width: 33.3333337%;}
+			}
+			&.four-options 	{
+				input[type=radio] + label{width: 25%;}
+			}
+			&.five-options 	{
+				input[type=radio] + label{width: 20%;}
+			}
+			&.six-options 	{
+				input[type=radio] + label{width: 16.6666667%;}
+			}
+			&.seven-options 	{
+				input[type=radio] + label{width: 14.2857143%;}
+			}
+		}
+	.field.non-group {
 		input[type=radio] + label{
-			.two-options 	{width: 50%}
-			.three-options 	{width: 33.3333337%;}
-			.four-options 	{width: 25%};
-			.five-options 	{width: 20%};
-			.six-options 	{width: 16.6666667%}
-			.seven-options 	{width: 14.2857143%}
+			min-height: 65px;
 		}
 	}
+	
 
 	
 /*
@@ -67,9 +84,9 @@ input[type=radio]:checked + label {
     background-color:#d0d0d0;
 }
 
-input[type=radio]:checked + label:before {
+input[type=radio]:checked + label:after {
 		content:'\2713';
 		position: absolute;
-		left: 0px;
-		margin-left: 4px;
+		right: 0px;
+		margin-right: 4px;
 	}
