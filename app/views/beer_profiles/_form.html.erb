@@ -36,7 +36,7 @@
     </div>
     <div class="field lg-all md-all sm-all">
       <h3>Notes</h3>
-      <%= f.text_area :notes %>
+      <%= f.text_area :notes, :placeholder => 'some quick thoughts if you are short on time' %>
     </div>
   </div>
 </div>
@@ -247,7 +247,7 @@
               </div>
               <h2>Notes</h2>
               <div class="field notes-area clearfix non-group">
-                <%= f.text_area :aroma_notes %>
+                <%= f.text_area :aroma_notes, :placeholder => 'not enough things to pick from? jot down your own special thoughts' %>
               </div>
           </div>
         </li>
@@ -366,7 +366,7 @@
               </div>
               <h2>Notes</h2>
               <div class="field notes-area clearfix">
-                <%= f.text_area :taste_notes %>
+                <%= f.text_area :taste_notes, :placeholder => 'not enough things to pick from? jot down your own special thoughts' %>
               </div>
           </div>
         </li>
@@ -429,7 +429,7 @@
               </div>
               <h2>Notes</h2>
               <div class="field notes-area clearfix">
-                <%= f.text_area :mouth_notes %>
+                <%= f.text_area :mouth_notes, :placeholder => 'not enough things to pick from? jot down your own special thoughts' %>
               </div>
           </div>
         </li>
