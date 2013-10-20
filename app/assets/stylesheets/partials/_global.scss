@@ -23,6 +23,8 @@ h2 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid $colorSix;
   u {color: $colorSix;}
 }
 
@@ -46,6 +48,19 @@ h4 {
 	font-size: 18px;
     text-transform: uppercase;
 }
+
+
+//// Borders
+//// -------------------------
+//.double-border {
+//	padding: 2px 0;
+//	border-top: $defaultBorder;
+//	border-bottom: $defaultBorder;
+//	border-left: 1px solid transparent;
+//	border-right: 1px solid transparent;
+//	@include box-sizing(border-box);
+//	margin: 0;
+//}
 
 
 // Paragraphs & Em & Strong
@@ -113,7 +128,7 @@ a:hover, li:hover a {
 	padding: 24px 23px 20px;
 	position: relative;
 	border-radius: 6px;
-	background: $colorSix;
+	background: $grayLighter;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	//border-color: rgba(231, 231, 231, 0.5);

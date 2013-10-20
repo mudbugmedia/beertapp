@@ -1,11 +1,13 @@
 <% unless @json.nil? %>
-  <ul class="search-results">
+
+  <ul class="search-results box clearfix lg-all">
+	  <h2>Search Results</h2>
     <% @json['response']['beers']['items'].each do |item| %>
-      <li class="beer-choice">
+      <li class="<%= cycle 'lg1-lg4 md-all sm-all', 'lg5-lg8 md-all sm-all' %>">
         <img src="<%= item['beer']['beer_label'] %>" />
 		<div class="beer-brewery-names">
-        <h3><%= item['brewery']['brewery_name'] %></h3>
-        <h4><%= item['beer']['beer_name'] %></h4>
+		<h3><%= item['beer']['beer_name'] %></h3>
+        <h4><%= item['brewery']['brewery_name'] %></h4>
 		</div>
         <%= form_for @beer do |f| %>
           <%= f.hidden_field :name, :value => item['beer']['beer_name'] %>
@@ -16,7 +18,8 @@
         <% end %>
       </li>
     <% end %>
-    <li class="beer-choice">
+	<div class="clearfix"></div>
+    <li class="beer-choice clearfix">
       <div>Not found? Input a custom beer.</div>
       <%= form_for @beer do |f| %>
         <%= f.text_field :name, :value => params['q'] %>
