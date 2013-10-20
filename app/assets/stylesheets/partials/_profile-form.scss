@@ -1,7 +1,7 @@
 // Profile Form
 // --------------------------------------------------
  .beer-type-profile {
-		margin-top: 0px;
+		margin-top: 20px;
 		background-color: $colorSix;
 		border-radius: $baseBorderRadius;
 		padding: 20px;
@@ -35,4 +35,7 @@
 	}
 #beer-profile-form  {
 		padding-right: 2.02020202% !important;
+		.beer-type-profile {
+			margin-top: 0px;
+		}
 	}
