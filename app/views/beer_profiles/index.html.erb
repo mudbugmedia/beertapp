@@ -1,9 +1,11 @@
 <% if @beer_profiles.empty? %>
-  <h1>You Haven't Profiled Any Beers Yet</h1>
-  <%= render partial: 'beers/search_again' %>
+  <h1><%= current_user.id == @user.id ? "You Haven't" : "#{@user.email} Has Not" %> Profiled Any Beers Yet</h1>
+  <% if current_user.id == @user.id %>
+    <%= render partial: 'beers/search_again' %>
+  <% end %>
 <% else %>
   <div class="profiled-beers-list">
-  <h1>My Profiled Beers</h1>
+  <h1><%= current_user.id == @user.id ? "My" : "#{@user.email}'s" %> Profiled Beers</h1>
     <ul class="search-results box clearfix lg-all">
       <% @beer_profiles.each do |beer_profile| %>
         <a href="<%= beer_profile_path(beer_profile) %>">

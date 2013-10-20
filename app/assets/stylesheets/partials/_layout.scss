@@ -58,8 +58,15 @@ header {
 	}
 }
 
-footer p {
-	color: black;
+footer {
+	display: block;
+	clear: both;
+	margin-top: 50px;
+	height: 100px;
+	background-color: $white;
+	p {
+		color: black;
+	}
 }
 
 /* ==========================================================================

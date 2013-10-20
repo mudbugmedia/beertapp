@@ -1,19 +1,21 @@
 <div>
   <%= form_tag new_following_path, :method => :get do %>
-    <input type="text" name="email" />
-    <input type="submit" value="Search" />
+    <input placeholder="Search for Friends" type="text" name="email" class="form-text lg4-lg6 md1-md3" />
+    <input type="submit" value="Search" class="button friends-search push-effect lg7-lg8 md4" />
   <% end %>
 </div>
+<div class="clearfix"></div>
+<div class="friends">
 <h1>You are following:</h1>
-
+<div class="clearfix"></div>
 <div>
   <% if @followings.size == 0 %>
     You are following no one.
   <% else %>
     <% @followings.each do |following| %>
-      <div>
-        <%= following.followed.email %>
-        <%= link_to 'Unfollow', following, method: :delete, data: { confirm: 'Are you sure?' } %>
+       <div class="following box clearfix">
+       <%= link_to following.followed.email, "/beer_profiles/users/#{following.id}" %>
+        <%= link_to 'Unfollow', following, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button unfollow push-effect lg7-lg8 md4" %>
       </div>
     <% end %>
   <% end %>
@@ -25,8 +27,10 @@
     No one is following you.
   <% else %>
     <% @followers.each do |follower| %>
-      <%= follower.email %>
+      <div class="following box clearfix">
+<%= link_to follower.email, "/beer_profiles/users/#{follower.id}" %>
+</div>
     <% end %>
   <% end %>
 </div>
-<br>
+</div><br>
