@@ -1,18 +1,31 @@
-<h2>Sign up</h2>
+<div class="lg2-lg7">
+  <div class="hero clearfix">
+  <a href="/"><img src="/images/logo.png" alt="Beer Tap"></a>
+  <h1>Your Personal Beer Journal</h1>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="sign-in clearfix lg2-lg7 lg-padinfull md-all md-padinfull sm-all sm-padinfull">
+  <h3>Sign up</h3>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+   <div><%= f.label :email %>
+  <%= f.email_field :email, :class=> "form-text", :placeholder => "Your Email Address", :autofocus => true %></div>
+  
+  <div class="clearfix"></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+  <div class="lg2-lg4"><%= f.label :password %>
+  <%= f.password_field :password, :class=> "form-text", :placeholder => "Your Password" %></div>
+  
+  <div class="clearfix lg-hide"></div>
+  
+  <div class="lg5-lg7"><%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, :class=> "form-text", :placeholder => "Confirm Your Password" %></div>
+<div class="clearfix"></div>
+<div class="sign-in-buttons">
+  <div><%= f.submit "Sign up", :class => "button push-effect lg5-lg7" %></div>
+</div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</div>

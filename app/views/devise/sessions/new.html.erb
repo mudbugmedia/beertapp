@@ -9,10 +9,19 @@
   <h3>Sign in</h3>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  
+
+  <% unless flash[:alert].blank? %>
+    <div id="error_explanation">
+      <h2>We Were Unable to Authenticate Your Account:</h2>
+      <ul>
+        <li><%= flash[:alert] %></li>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="lg2-lg4"><%= f.label :email %><br />
   <%= f.email_field :email, :class=> "form-text", :placeholder => "Your Email Address", :autofocus => true %></div>
-  
+
 <div class="clearfix lg-hide"></div>
 
   <div class="lg5-lg7"><%= f.label :password %><br />
@@ -20,10 +29,10 @@
 
 <div class="clearfix"></div>
 <div class="sign-in-buttons">
-<%= form_tag(user_guest_sign_in_path) do |f| %>
-  <input type="submit" value="Sign in as a guest" class="button push-effect lg2-lg4" />
+  <div><%= f.submit "Sign in", :class => "button push-effect lg2-lg4" %></div>
 <% end %>
-  <div><%= f.submit "Sign in", :class => "button push-effect lg5-lg7" %></div>
+<%= form_tag(user_guest_sign_in_path) do |f| %>
+  <input type="submit" value="Sign in as a guest" class="button push-effect lg5-lg7" />
 <% end %>
 </div>
 <div class="clearfix"></div>
