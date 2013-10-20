@@ -88,7 +88,24 @@ module BeerProfileHelper
       form.text_field field
     end
   end
+  
+  def aroma_section_blank?
+    @beer_profile.aroma_malt.blank? &&
+      @beer_profile.aroma_hops.blank? &&
+      @beer_profile.aroma_esters.blank? &&
+      @beer_profile.aroma_phenols.blank? &&
+      @beer_profile.aroma_bitterness.blank?
+  end
 
+  def aroma_flavor_section_blank?
+    @beer_profile.aroma_flavor_grain.blank? &&
+      @beer_profile.aroma_flavor_hops.blank? &&
+      @beer_profile.aroma_flavor_fruit.blank? &&
+      @beer_profile.aroma_flavor_herbs.blank? &&
+      @beer_profile.aroma_flavor_funk.blank? &&
+      @beer_profile.aroma_flavor_mineral.blank? &&
+      @beer_profile.aroma_flavor_other.blank?
+  end
   def taste_section_blank?
     taste_flavor_section_blank? &&
       @beer_profile.taste_notes.blank?
