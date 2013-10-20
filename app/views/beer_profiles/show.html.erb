@@ -99,7 +99,7 @@
         <% unless @beer_profile.appearance_color.blank? %>
           <div class="tertiary-section">
             <h4>color</h4>
-            <%= @beer_profile.appearance_color %>
+            <%= BeerProfileHelper::COLOR_ATTRIBUTES[@beer_profile.appearance_color][:name] %>
           </div>
         <% end %>
       </div>
