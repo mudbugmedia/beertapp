@@ -15,12 +15,14 @@
 			<div class="header-links lg4-lg8">
 				<a href="#"><span data-icon="&#xe617;" aria-hidden="true"></span> My Friends</a>
 				<a href="#"><span data-icon="&#xe616;" aria-hidden="true"></span> My Journal</a>
-				<a href="#"><span data-icon="&#xe619;" aria-hidden="true"></span> Sign Out</a>
+				<% if user_signed_in? %>
+          <%= link_to destroy_user_session_path, :method => :delete do %>
+            <span data-icon="&#xe619;" aria-hidden="true"></span> Sign Out</a>
+          <% end %>
+        <% end %>
 			</div>
 		</header>
 	</div>
-
-
 
 <div class="wrapper clearfix">
   <div class="clearfix"></div>
