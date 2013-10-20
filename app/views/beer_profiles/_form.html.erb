@@ -34,7 +34,7 @@
       <span class='slider-value'><%= value %></span>
       <%= f.range_field :rating, in: 1..10, value: value, class: 'rating-slider' %>
     </div>
-    <div class="field">
+    <div class="field lg-all md-all sm-all">
       <h3>Notes</h3>
       <%= f.text_area :notes %>
     </div>
@@ -126,12 +126,10 @@
                 <%= f.range_field :appearance_color, in: 1..12, value: color_value %>
               </div>
               <h2>Notes</h2>
-              <div class="field clearfix">
+              <div class="field clearfix notes-area">
                 <%= f.text_area :appearance_notes, :placeholder => 'not enough things to pick from? jot down your own special thoughts' %>
               </div>
-              <div class="field clearfix">
-                <a href="#" class="button push-effect">save &amp; continue</a>
-              </div>
+              
           </div>
         </li>
 
@@ -248,7 +246,7 @@
                 } %>
               </div>
               <h2>Notes</h2>
-              <div class="field clearfix non-group">
+              <div class="field notes-area clearfix non-group">
                 <%= f.text_area :aroma_notes %>
               </div>
           </div>
@@ -367,7 +365,7 @@
                 } %>
               </div>
               <h2>Notes</h2>
-              <div class="field clearfix">
+              <div class="field notes-area clearfix">
                 <%= f.text_area :taste_notes %>
               </div>
           </div>
@@ -430,7 +428,7 @@
                 } %>
               </div>
               <h2>Notes</h2>
-              <div class="field clearfix">
+              <div class="field notes-area clearfix">
                 <%= f.text_area :mouth_notes %>
               </div>
           </div>
@@ -564,7 +562,7 @@
     $('.all-content').hide()
 
     var bgColor
-    var effect = 'animated bounceIn'
+    var effect = 'animated bounceInRight'
 
     $('.tiles li').click(function(){
       $('.front, .back').hide()
@@ -573,7 +571,7 @@
       bgColor = $('.active .back').css('background-color')
       $('.tiles').css('background-color',bgColor)
       $('.close, .all-content').show()
-      $('.responsive').append('<span class="close">save &amp; continue</span>').addClass(effect)
+      $('.responsive').append('<span class="close">continue</span>').addClass(effect)
     })
 
     $('.responsive').on('click', '.close', function(){

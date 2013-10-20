@@ -1,3 +1,3 @@
 <% value = @beer_profile.send(field) || 1 %>
-<span class='slider-value lg4'><%= value %></span>
+<span class='slider-value'><%= value %></span>
 <%= f.range_field field, in: 1..5, value: value, class: 'rating-slider' %>
