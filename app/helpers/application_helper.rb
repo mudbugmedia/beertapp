@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def homepage?
-    params['controller'] == 'beers' && params['action'] == 'search'
+    params['controller'] == 'beers' && params['action'] == 'search' && params['q'].blank?
   end
 end
