@@ -3,7 +3,7 @@
   <ul class="search-results box clearfix lg-all">
 	  <h2>Search Results</h2>
     <% @json['response']['beers']['items'].each do |item| %>
-      <li class="<%= cycle 'lg1-lg4 md-all sm-all', 'lg5-lg8 md-all sm-all' %>">
+      <li class="beer-choice beer-options <%= cycle 'lg1-lg4 md-all sm-all', 'lg5-lg8 md-all sm-all' %>">
         <img src="<%= item['beer']['beer_label'] %>" />
 		<div class="beer-brewery-names">
 		<h3><%= item['beer']['beer_name'] %></h3>
@@ -20,9 +20,9 @@
     <% end %>
 	<div class="clearfix"></div>
     <li class="beer-choice clearfix">
-      <div>Not found? Input a custom beer.</div>
+		<h2>Not found? Enter a custom beer.</h2>
       <%= form_for @beer do |f| %>
-        <%= f.text_field :name, :value => params['q'] %>
+        <%= f.text_field :name, :class => "form-text", :value => params['q'] %>
       <% end %>
     </li>
   </ul>
