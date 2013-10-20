@@ -88,6 +88,23 @@ module BeerProfileHelper
       form.text_field field
     end
   end
+
+  def appearance_blank?
+    appearance_head_blank? && appearance_body_blank? && @beer_profile.appearance_notes.blank?
+  end
+
+  def appearance_head_blank?
+    @beer_profile.appearance_head_size.blank? &&
+      @beer_profile.appearance_head_texture.blank? &&
+      @beer_profile.appearance_head_color.blank? &&
+      @beer_profile.appearance_head_retention.blank?
+  end
+
+  def appearance_body_blank?
+    @beer_profile.appearance_body_opacity.blank? &&
+      @beer_profile.appearance_body_carbonation.blank? &&
+      @beer_profile.appearance_color.blank?
+  end
   
   def aroma_section_blank?
     @beer_profile.aroma_malt.blank? &&

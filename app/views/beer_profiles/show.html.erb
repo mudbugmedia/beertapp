@@ -39,57 +39,82 @@
 
   <div class="box lg1-lg4 md1-md2 sm-all">
     <h2>Apperance</h2>
-    <div class="secondary-section">
-      <h3>Head</h3>
-      <div class="tertiary-section">
-        <h4>size</h4>
-        <%= @beer_profile.appearance_head_size %>
+    <% unless appearance_head_blank? %>
+      <div class="secondary-section">
+        <h3>Head</h3>
+        <% unless @beer_profile.appearance_head_size.blank? %>
+          <div class="tertiary-section">
+            <h4>size</h4>
+            <%= @beer_profile.appearance_head_size %>
+          </div>
+        <% end %>
+
+        <% unless @beer_profile.appearance_head_texture.blank? %>
+          <div class="tertiary-section">
+            <h4>texture</h4>
+            <%= @beer_profile.appearance_head_texture %>
+          </div>
+        <% end %>
+
+        <% unless @beer_profile.appearance_head_color.blank? %>
+          <div class="tertiary-section">
+            <h4>color</h4>
+            <%= @beer_profile.appearance_head_color %>
+          </div>
+        <% end %>
+
+        <% unless @beer_profile.appearance_head_retention.blank? %>
+          <div class="tertiary-section">
+            <h4>retention</h4>
+            <%= @beer_profile.appearance_head_retention %>
+          </div>
+        <% end %>
       </div>
+    <% end %>
 
-      <div class="tertiary-section">
-        <h4>texture</h4>
-        <%= @beer_profile.appearance_head_texture %>
+    <% unless @beer_profile.appearance_lacing.blank? %>
+      <div class="secondary-section">
+        <h3>lacing</h3>
+        <%= @beer_profile.appearance_lacing %>
       </div>
+    <% end %>
 
-      <div class="tertiary-section">
-        <h4>color</h4>
-        <%= @beer_profile.appearance_head_color %>
+    <% unless appearance_body_blank? %>
+      <div class="secondary-section">
+        <h3>Body</h3>
+        <% unless @beer_profile.appearance_body_opacity.blank? %>
+          <div class="tertiary-section">
+            <h4>opacity</h4>
+            <%= @beer_profile.appearance_body_opacity %>
+          </div>
+        <% end %>
+
+        <% unless @beer_profile.appearance_body_carbonation.blank? %>
+          <div class="tertiary-section">
+            <h4>carbonation</h4>
+            <%= @beer_profile.appearance_body_carbonation %>
+          </div>
+        <% end %>
+
+        <% unless @beer_profile.appearance_color.blank? %>
+          <div class="tertiary-section">
+            <h4>color</h4>
+            <%= @beer_profile.appearance_color %>
+          </div>
+        <% end %>
       </div>
+    <% end %>
 
-      <div class="tertiary-section">
-        <h4>retention</h4>
-        <%= @beer_profile.appearance_head_retention %>
+    <% unless @beer_profile.appearance_notes.blank? %>
+      <div class="secondary-section">
+        <h3>notes</h3>
+        <%= @beer_profile.appearance_notes %>
       </div>
-    </div>
+    <% end %>
 
-
-    <div class="secondary-section">
-      <h3>lacing</h3>
-      <%= @beer_profile.appearance_lacing %>
-    </div>
-
-    <div class="secondary-section">
-      <h3>Body</h3>
-      <div class="tertiary-section">
-        <h4>opacity</h4>
-        <%= @beer_profile.appearance_body_opacity %>
-      </div>
-
-      <div class="tertiary-section">
-        <h4>carbonation</h4>
-        <%= @beer_profile.appearance_body_carbonation %>
-      </div>
-
-      <div class="tertiary-section">
-        <h4>color</h4>
-        <%= @beer_profile.appearance_color %>
-      </div>
-    </div>
-
-    <div class="secondary-section">
-      <h3>notes</h3>
-      <%= @beer_profile.appearance_notes %>
-    </div>
+    <% if appearance_blank? %>
+      No thoughts? Tell us how your heart feels.
+    <% end %>
   </div>
 
 
