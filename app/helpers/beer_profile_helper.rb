@@ -89,4 +89,68 @@ module BeerProfileHelper
     end
   end
 
+  def appearance_blank?
+    appearance_head_blank? && appearance_body_blank? && @beer_profile.appearance_notes.blank?
+  end
+
+  def appearance_head_blank?
+    @beer_profile.appearance_head_size.blank? &&
+      @beer_profile.appearance_head_texture.blank? &&
+      @beer_profile.appearance_head_color.blank? &&
+      @beer_profile.appearance_head_retention.blank?
+  end
+
+  def appearance_body_blank?
+    @beer_profile.appearance_body_opacity.blank? &&
+      @beer_profile.appearance_body_carbonation.blank? &&
+      @beer_profile.appearance_color.blank?
+  end
+  
+  def aroma_section_blank?
+    @beer_profile.aroma_malt.blank? &&
+      @beer_profile.aroma_hops.blank? &&
+      @beer_profile.aroma_esters.blank? &&
+      @beer_profile.aroma_phenols.blank? &&
+      @beer_profile.aroma_bitterness.blank?
+  end
+
+  def aroma_flavor_section_blank?
+    @beer_profile.aroma_flavor_grain.blank? &&
+      @beer_profile.aroma_flavor_hops.blank? &&
+      @beer_profile.aroma_flavor_fruit.blank? &&
+      @beer_profile.aroma_flavor_herbs.blank? &&
+      @beer_profile.aroma_flavor_funk.blank? &&
+      @beer_profile.aroma_flavor_mineral.blank? &&
+      @beer_profile.aroma_flavor_other.blank?
+  end
+  def taste_section_blank?
+    taste_flavor_section_blank? &&
+      @beer_profile.taste_notes.blank?
+      @beer_profile.taste_malt.blank?
+      @beer_profile.taste_hops.blank?
+      @beer_profile.taste_esters.blank?
+      @beer_profile.taste_phenols.blank?
+      @beer_profile.taste_bitterness.blank?
+  end
+
+  def taste_flavor_section_blank?
+    @beer_profile.taste_flavor_grain.blank? &&
+      @beer_profile.taste_flavor_hops.blank? &&
+      @beer_profile.taste_flavor_fruit.blank? &&
+      @beer_profile.taste_flavor_herbs.blank? &&
+      @beer_profile.taste_flavor_funk.blank? &&
+      @beer_profile.taste_flavor_mineral.blank? &&
+      @beer_profile.taste_flavor_other.blank?
+  end
+
+  def mouthfeel_section_blank?
+    @beer_profile.mouth_body.blank? &&
+      @beer_profile.mouth_carbonation.blank? &&
+      @beer_profile.mouth_alcohol.blank? &&
+      @beer_profile.mouth_richness.blank? &&
+      @beer_profile.mouth_astringency.blank? &&
+      @beer_profile.mouth_finish.blank? &&
+      @beer_profile.mouth_notes.blank?
+  end
+
 end
