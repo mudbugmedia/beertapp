@@ -1,4 +1,6 @@
 Beertap::Application.routes.draw do
+  resources :followings
+
   resources :beers do
     collection do
       get 'search'
