@@ -99,7 +99,10 @@ a:hover, li:hover a {
 	background: $colorSix;
 	border-radius: $baseBorderRadius;
 	padding-bottom: 25px;
-	h3 {color: $colorOne;}
+	h3 {
+		color: $colorOne;
+		border-bottom: none;
+	}
 }
 
 .search-container {
