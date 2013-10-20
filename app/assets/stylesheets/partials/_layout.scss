@@ -28,16 +28,20 @@ body {
 }
 
 .header-container {
-	background-color: $grayLighter;
 	height: auto;
 	padding: 10px;
+	img {
+		margin-top: 20px;
+	}
 }
 
 header {
 	.header-links {
+		//background-color: $grayLighter;
 		text-align: right;
 		font-size: 14px;
 		text-transform: uppercase;
+		@media (max-width: 400px) {text-align: center;}
 		a {margin-right: 25px;}
 		[data-icon] {
 			color: $colorFive;

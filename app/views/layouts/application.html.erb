@@ -12,11 +12,12 @@
 	<div class="header-container clearfix">
 		<div class="wrapper">
 		<header class="lg-all md-all sm-all clearfix">
-			<a href="/"><img src="/images/logo.png" alt="Beer Tap" width="100px" height="100px"></a>
-			<div class="header-links lg4-lg8">
-        <% if user_signed_in? %>
-          <a href="#"><span data-icon="&#xe617;" aria-hidden="true"></span> My Friends</a>
-          <a href="<%= beer_profiles_path %>"><span data-icon="&#xe616;" aria-hidden="true"></span> My Journal</a>
+			<a href="/"><img class="lg1-lg2 md1 sm1" src="/images/logo.png" alt="Beer Tap" width="100px" height="100px"></a>
+			<div class="header-links lg4-lg8 md2-md4 sm-all">
+			<% if user_signed_in? %>
+				<a href="#"><span data-icon="&#xe619;" aria-hidden="true"></span> My Friends</a>
+				<a href="<%= beer_profiles_path %>"><span data-icon="&#xe618;" aria-hidden="true"></span> My Journal</a>
+
           <%= link_to destroy_user_session_path, :method => :delete do %>
             <span data-icon="&#xe61b;" aria-hidden="true"></span> Sign Out</a>
           <% end %>

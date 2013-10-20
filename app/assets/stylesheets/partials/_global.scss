@@ -29,16 +29,15 @@ h2 {
 }
 
 h3 {
-    color: $colorSix;
+	color: $white;
+	border-bottom: 2px solid $colorFive;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
     font-family: $sansHeaderFontFamily;
     font-weight: 400;
 	font-size: 22px;
 	line-height: 22px;
     text-transform: uppercase;
-	&.border {
-		border-bottom: $defaultBorder;
-		padding-bottom: 10px;
-	}
 }
 
 h4 { 
@@ -99,10 +98,14 @@ a:hover, li:hover a {
 .search-landing-page {
 	background: $colorSix;
 	border-radius: $baseBorderRadius;
+	padding-bottom: 25px;
 	h3 {color: $colorOne;}
 }
 
-.search-container {margin-top: 20px;}
+.search-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 // Buttons
 // -------------------------  
   .button,
@@ -117,8 +120,7 @@ a:hover, li:hover a {
      font-family: $sansHeaderFontFamily;
 	 text-align: center;
      font-weight: 400;
-     padding: 8px 16px 8px 16px;
-     //margin-bottom: 1.25em;
+     padding: 10px 16px 8px 16px;
      position: relative;
 	 width: 100%;
 	 font-size: 22px;
@@ -126,13 +128,6 @@ a:hover, li:hover a {
 	 text-transform: uppercase;
      @include linear-gradient($colorFiveLighten 0, $colorFive 80%);
 	 @media (max-width: 900px) {margin-top: 15px;}
-   
-     & span {
-  	   text-transform: uppercase;
-  	   font-weight: 400;
-	   font-size: 26px;
-	   line-height: 28px;
-     }
 	
   	 [data-icon] { 
   	 	color: $colorTwo;
@@ -149,23 +144,23 @@ a:hover, li:hover a {
  		// Hover/focus state
  		&:hover,
  		&:focus {
-  			[data-icon] { 
-    			color: $linkColorHover;
-    			@include transition (all, .3s, ease);
-  			}
+	        box-shadow: 1px 0px 1px $colorTwoLighten, 0px 1px 1px $colorTwoDarken, 2px 1px 1px $colorTwoLighten, 1px 2px 1px $colorTwoDarken, 3px 2px 1px $colorTwoLighten, 2px 3px 1px $colorTwoDarken,4px 3px 1px $colorTwoLighten,3px 4px 1px $colorTwoDarken,5px 4px 1px $colorTwoLighten,4px 5px 1px $colorTwoDarken, 6px 5px 1px $colorTwoLighten;
+			@include linear-gradient($colorTwoLighten 0, $colorTwo 80%);
+			@include transition (all, .3s, ease);
 		}
     	
  		// Active state
  		&.active,
  		&:active {
-   			box-shadow:1px 0px 1px $colorFiveLighten,0px 1px 1px $colorFiveDarken,2px 1px 1px $colorFiveLighten,1px 2px 1px $colorFiveDarken,3px 2px 1px $colorFiveLighten;
+			@include linear-gradient($colorTwoLighten 0, $colorTwo 80%);
+   			box-shadow:1px 0px 1px $colorTwoLighten,0px 1px 1px $colorTwoDarken,2px 1px 1px $colorTwoLighten,1px 2px 1px $colorTwoDarken,3px 2px 1px $colorTwoLighten;
  		}
   } // End .callout, a.callout
  
 		// Callout Active state (removes push effect on touch devices)
 		.no-touch .push-effect .active,
 		.no-touch .push-effect:active {
-			box-shadow:1px 0px 1px $colorFiveLighten,0px 1px 1px $colorFiveDarken,2px 1px 1px $colorFiveLighten,1px 2px 1px $colorFiveDarken,3px 2px 1px $colorFiveLighten;
+			box-shadow:1px 0px 1px $colorTwoLighten,0px 1px 1px $colorTwoDarken,2px 1px 1px $colorTwoLighten,1px 2px 1px $colorTwoDarken,3px 2px 1px $colorTwoLighten;
 		 	-webkit-transform:translate(3px, 3px);
 		 	-moz-transform:translate(3px, 3px);
 		 	-ms-transform:translate(3px, 3px);
@@ -173,3 +168,11 @@ a:hover, li:hover a {
 		 	transform:translate(3px, 3px) 
 		} 
 
+
+// Appearance - Beer Color
+// -------------------------  
+.color-srm:before {
+	content: "\e60a";
+	font-family: 'icomoon';
+	font-size: 50px;
+}

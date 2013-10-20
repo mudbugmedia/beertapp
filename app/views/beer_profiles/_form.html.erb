@@ -602,7 +602,7 @@
   $('#beer_profile_appearance_color').change(function() {
     slider_value = $(this).val()
     attribute = color_attributes[slider_value]
-    $('#color-demo').css('background-color', '#'+attribute['hex_value'])
+    $('#color-demo').css('color', '#'+attribute['hex_value'])
     $('#color-name').text(attribute['name'])
   })
 </script>
