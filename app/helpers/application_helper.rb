@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def hide_logo?(params)
+  def hide_logo?
     sign_in_page? || sign_up_page? || forgot_password_page? || homepage?
   end
 
