@@ -25,7 +25,7 @@
     No one is following you.
   <% else %>
     <% @followers.each do |follower| %>
-      <%= follower.email %>
+      <%= link_to follower.email, "/beer_profiles/users/#{follower.id}" %>
     <% end %>
   <% end %>
 </div>

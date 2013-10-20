@@ -4,6 +4,7 @@ class BeerProfilesController < ApplicationController
 
   def index
     @beer_profiles = BeerProfile.where(:user_id => current_user.id)
+    @user = current_user
   end
 
   def show
@@ -57,6 +58,8 @@ class BeerProfilesController < ApplicationController
   def users
     @beer_profiles = BeerProfile.where(:user_id => params[:id])
     @user = User.where(:id => params[:id]).first
+
+    render 'index'
   end
 
   private
