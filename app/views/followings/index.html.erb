@@ -12,7 +12,7 @@
   <% else %>
     <% @followings.each do |following| %>
       <div>
-        <%= following.followed.email %>
+        <%= link_to following.followed.email, "/beer_profiles/users/#{following.id}" %>
         <%= link_to 'Unfollow', following, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     <% end %>

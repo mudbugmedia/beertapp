@@ -24,10 +24,12 @@
       <h3>Rating</h3>
       <%= @beer_profile.rating %>
     </div>
-    <div class="secondary-section">
-      <h3>Notes</h3>
-      <%= @beer_profile.notes %>
-    </div>
+    <% unless @beer_profile.notes.empty? %>
+      <div class="secondary-section">
+        <h3>Notes</h3>
+        <%= @beer_profile.notes %>
+      </div>
+    <% end %>
   </div>
 
   <div class="box lg5-lg8 md3-md4 sm-all">
