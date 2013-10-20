@@ -73,3 +73,20 @@
 		}
 	}
 } // End .search-results
+
+
+.profiled-beers-list {
+	.search-results {
+	li {
+		&.beer-options {
+			&:hover {
+				border: 2px solid $colorTwo;
+				&:after {
+					content: "\e618";
+					font-family: 'icomoon';
+				}
+			} // End &:hover
+		}
+	}
+}
+}
