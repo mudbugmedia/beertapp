@@ -17,17 +17,19 @@ class BeersController < ApplicationController
   end
 
   def search
-    uri = URI("http://api.untappd.com/v4/search/beer")
-    params = { :q => request[:q],
-               :client_id => Rails.application.config.untapped_api['client_id'],
-               :client_secret => Rails.application.config.untapped_api['client_secret'] }
-    uri.query = URI.encode_www_form(params)
+    unless params[:q].nil?
+      uri = URI("http://api.untappd.com/v4/search/beer")
+      untapped_params = { :q => params[:q],
+                 :client_id => Rails.application.config.untapped_api['client_id'],
+                 :client_secret => Rails.application.config.untapped_api['client_secret'] }
+      uri.query = URI.encode_www_form(untapped_params)
 
-    @result = Net::HTTP.get_response(uri)
+      @result = Net::HTTP.get_response(uri)
 
-    if @result.is_a?(Net::HTTPSuccess)
-      @json = JSON.parse(@result.body)
-      @beer = Beer.new
+      if @result.is_a?(Net::HTTPSuccess)
+        @json = JSON.parse(@result.body)
+        @beer = Beer.new
+      end
     end
   end
 

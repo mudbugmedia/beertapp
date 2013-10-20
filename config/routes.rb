@@ -8,7 +8,7 @@ Beertap::Application.routes.draw do
   end
 
   resources :beer_profiles
-  root 'beer_profiles#index'
+  root 'beers#search'
 
   post "user/guest_sign_in"
   devise_for :users

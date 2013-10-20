@@ -1,4 +1,4 @@
-<!-- <h1>Listing beer_profiles</h1>
+<h1>Listing beer_profiles</h1>
 
 <table>
   <thead>
@@ -26,22 +26,5 @@
       </tr>
     <% end %>
   </tbody>
-</table> -->
-
-
-<div class="lg3-lg6">
-	<div class="hero clearfix">
-	<a href="/"><img src="/images/logo.png" alt="Beer Tap"></a>
-	<h1>Your Personal Beer Journal</h1>
-	</div>
-</div>
-<div class="clearfix"></div>
-<div class="search-landing-page lg2-lg7 lg-padinfull md-all md-padinfull sm-all sm-padinfull">
-  <h3>Search for a beer to profile:</h3>
-
-  <%= form_tag search_beers_path, :method => :get do%>
-    <%= text_field_tag 'q', '', :class=> "form-text lg2-lg5"%>
-    <%= submit_tag "Search for beer", :class => "button push-effect lg6-lg7" %>
-  <% end %>
-</div>
+</table>
 
