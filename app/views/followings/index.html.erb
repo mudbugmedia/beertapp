@@ -7,18 +7,26 @@
 <h1>You are following:</h1>
 
 <div>
-  <% @followings.each do |following| %>
-    <div>
-      <%= following.followed.email %>
-      <%= link_to 'Unfollow', following, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
+  <% if @followings.size == 0 %>
+    You are following no one.
+  <% else %>
+    <% @followings.each do |following| %>
+      <div>
+        <%= following.followed.email %>
+        <%= link_to 'Unfollow', following, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
 <h1>People following you:</h1>
 <div>
-  <% @followers.each do |follower| %>
-    <%= follower.email %>
+  <% if @followers.size == 0 %>
+    No one is following you.
+  <% else %>
+    <% @followers.each do |follower| %>
+      <%= follower.email %>
+    <% end %>
   <% end %>
 </div>
 <br>
