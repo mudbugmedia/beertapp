@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131020003040) do
+ActiveRecord::Schema.define(version: 20131020182529) do
 
   create_table "beer_profiles", force: true do |t|
     t.string   "appearance_head_size"
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(version: 20131020003040) do
     t.string   "brewery"
     t.decimal  "abv",                         precision: 7, scale: 2
     t.string   "image_path"
+    t.integer  "rating"
+    t.text     "notes"
   end
 
   create_table "beers", force: true do |t|
