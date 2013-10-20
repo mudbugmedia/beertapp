@@ -11,10 +11,16 @@
     </div>
   <% end %>
 
-  <h1>Profile</h1>
-
-  <img src="<%= @beer_profile.image_path %>" />
-
+  <div id="beer-profile-form">
+  	
+  <div class="beer-type-profile clearfix lg3-lg6">
+    	<h1>
+    	  <%= @beer.name %>
+    	</h1>
+		<h4><%= @beer.brewery %></h4>
+  	<h2>Profile</h2>
+  	
+  	<img src="<%= @beer_profile.image_path %>" />
   <div class="field">
     <h3>Name</h3>
     <%= profile_field(f, :name, @beer_profile, @from_untapped) %>
@@ -34,7 +40,8 @@
     <h3>ABV</h3>
     <%= profile_field(f, :abv, @beer_profile, @from_untapped) %>
   </div>
-
+ </div>
+  <div class="clearfix"></div>
   <h1>Appearance</h1>
   <h2>Head</h2>
   <div class="field">
