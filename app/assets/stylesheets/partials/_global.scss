@@ -105,7 +105,7 @@ a:hover, li:hover a {
 		border-bottom: none;
 	}
 	.form-text {margin-top: 10px;}
-	.sign-in-buttons {margin-top: 20px;}
+	.sign-in-buttons {margin-top: 10px;}
 	.actions {
 		margin-top: 20px;
 		a {
@@ -113,7 +113,6 @@ a:hover, li:hover a {
 			&:hover { color: $colorTwo;}
 		}	
 	}
-	
 }
 
 .search-container {
@@ -198,3 +197,31 @@ a:hover, li:hover a {
 	font-family: 'icomoon';
 	font-size: 96px;
 }
+
+// Hero Image
+// -------------------------  
+.hero {
+	text-align: center;
+	img {
+		width: 200px;
+	}
+	margin-top: 20px;
+}
+
+#error_explanation {
+	padding: 10px;
+	width: 100%;
+	background-color: $white;
+	border-radius: $baseBorderRadius;
+	margin-bottom: 10px;
+	h2 {
+		color: $colorSix;
+		border-bottom: 2px solid $colorFive;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		font-size: 22px;
+		line-height: 22px;
+	}
+	ul {color: $colorSix;}
+}
+

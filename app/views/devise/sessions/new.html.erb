@@ -20,10 +20,10 @@
 
 <div class="clearfix"></div>
 <div class="sign-in-buttons">
-<%= form_tag(user_guest_sign_in_path) do |f| %>
-  <input type="submit" value="Sign in as a guest" class="button push-effect lg2-lg4" />
+  <div><%= f.submit "Sign in", :class => "button push-effect lg2-lg4" %></div>
 <% end %>
-  <div><%= f.submit "Sign in", :class => "button push-effect lg5-lg7" %></div>
+<%= form_tag(user_guest_sign_in_path) do |f| %>
+  <input type="submit" value="Sign in as a guest" class="button push-effect lg5-lg7" />
 <% end %>
 </div>
 <div class="clearfix"></div>
