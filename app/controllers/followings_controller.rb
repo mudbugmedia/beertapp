@@ -1,64 +1,48 @@
 class FollowingsController < ApplicationController
+  before_action :authenticate_any_user
   before_action :set_following, only: [:show, :edit, :update, :destroy]
 
   # GET /followings
-  # GET /followings.json
   def index
-    @followings = Following.all
+    @followings = current_user.followings
+    @followers = current_user.followers
   end
 
   # GET /followings/1
-  # GET /followings/1.json
   def show
   end
 
   # GET /followings/new
   def new
+    following_ids = current_user.followings.select(&:id) 
+    following_ids << current_user.id
+    @users = User.where("email LIKE ? and id not in (?)", "%#{params[:email]}%", following_ids)
     @following = Following.new
   end
 
-  # GET /followings/1/edit
-  def edit
-  end
-
   # POST /followings
-  # POST /followings.json
   def create
     @following = Following.new(following_params)
+    @following.user_id = current_user.id
 
     respond_to do |format|
       if @following.save
-        format.html { redirect_to @following, notice: 'Following was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @following }
+        format.html { redirect_to :action => :index, notice: 'Following was successfully created.' }
       else
         format.html { render action: 'new' }
-        format.json { render json: @following.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /followings/1
-  # PATCH/PUT /followings/1.json
-  def update
-    respond_to do |format|
-      if @following.update(following_params)
-        format.html { redirect_to @following, notice: 'Following was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @following.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /followings/1
-  # DELETE /followings/1.json
   def destroy
     @following.destroy
     respond_to do |format|
       format.html { redirect_to followings_url }
-      format.json { head :no_content }
     end
+  end
+
+  def search
   end
 
   private

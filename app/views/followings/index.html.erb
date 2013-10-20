@@ -1,29 +1,24 @@
-<h1>Listing followings</h1>
+<div>
+  <%= form_tag new_following_path, :method => :get do %>
+    <input type="text" name="email" />
+    <input type="submit" value="Search" />
+  <% end %>
+</div>
+<h1>You are following:</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Followed</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div>
+  <% @followings.each do |following| %>
+    <div>
+      <%= following.followed.email %>
+      <%= link_to 'Unfollow', following, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
+</div>
 
-  <tbody>
-    <% @followings.each do |following| %>
-      <tr>
-        <td><%= following.user_id %></td>
-        <td><%= following.followed_id %></td>
-        <td><%= link_to 'Show', following %></td>
-        <td><%= link_to 'Edit', edit_following_path(following) %></td>
-        <td><%= link_to 'Destroy', following, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h1>People following you:</h1>
+<div>
+  <% @followers.each do |follower| %>
+    <%= follower.email %>
+  <% end %>
+</div>
 <br>
-
-<%= link_to 'New Following', new_following_path %>
