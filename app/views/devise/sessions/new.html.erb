@@ -10,6 +10,15 @@
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
+  <% unless flash[:alert].blank? %>
+    <div id="error_explanation">
+      <h2>We Were Unable to Authenticate Your Account:</h2>
+      <ul>
+        <li><%= flash[:alert] %></li>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="lg2-lg4"><%= f.label :email %><br />
   <%= f.email_field :email, :class=> "form-text", :placeholder => "Your Email Address", :autofocus => true %></div>
 
