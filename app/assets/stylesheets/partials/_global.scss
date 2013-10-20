@@ -49,20 +49,6 @@ h4 {
     text-transform: uppercase;
 }
 
-
-//// Borders
-//// -------------------------
-//.double-border {
-//	padding: 2px 0;
-//	border-top: $defaultBorder;
-//	border-bottom: $defaultBorder;
-//	border-left: 1px solid transparent;
-//	border-right: 1px solid transparent;
-//	@include box-sizing(border-box);
-//	margin: 0;
-//}
-
-
 // Paragraphs & Em & Strong
 // -------------------------
 p { 
@@ -132,4 +118,7 @@ a:hover, li:hover a {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+// Buttons
+// -------------------------
 

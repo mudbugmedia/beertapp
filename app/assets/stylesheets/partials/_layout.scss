@@ -30,7 +30,8 @@ body {
 header {
 	background-color: $grayLighter;
 	border-radius: 0 0 6px 6px;
-	height: 30px;
+	height: auto;
+	padding: 10px;
 }
 
 .hero {

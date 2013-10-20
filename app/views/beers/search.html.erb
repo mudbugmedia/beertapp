@@ -12,7 +12,7 @@
         <img src="<%= item['beer']['beer_label'] %>" />
 		    <div class="beer-brewery-names">
 		      <h3><%= item['beer']['beer_name'] %></h3>
-          <h4><%= item['brewery']['brewery_name'] %></h4>
+          	  <h4><%= item['brewery']['brewery_name'] %></h4>
 		    </div>
         <%= form_for @beer do |f| %>
           <%= f.hidden_field :name, :value => item['beer']['beer_name'] %>
@@ -25,9 +25,9 @@
     <% end %>
     <div class="clearfix"></div>
     <li class="beer-choice beer-options">
-      <div class="beer-brewery-names">
+      <div class="beer-brewery-names beer-help">
 		    <h3>Can't find your beer?</h3>
-        <h4>Add <%= params['q'] %> to the system.</h4>
+        	<h4>Add <%= params['q'] %> to the system.</h4>
       </div>
       <%= form_for @beer do |f| %>
         <%= f.hidden_field :name, :value => params['q'] %>
