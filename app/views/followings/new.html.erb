@@ -1,10 +1,14 @@
+<div class="friends">
 <h1>New following</h1>
 
 <% @users.each do |user| %>
   <%= form_tag followings_path do %>
+  <div class="following box clearfix">
     <%= hidden_field_tag "following[followed_id]", user.id %>
     <%= user.email %>
-    <%= submit_tag "Add "%>
+    <%= submit_tag "Add ", :class => "button push-effect lg7-lg8 md4" %>
+</div>
   <% end %>
 <% end %>
-<%= link_to 'Back', followings_path %>
+<%= link_to 'Back', followings_path, :class => "button add push-effect lg1-lg2" %>
+</div>
