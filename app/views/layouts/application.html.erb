@@ -12,7 +12,9 @@
 	<div class="header-container clearfix">
 		<div class="wrapper">
 		<header class="lg-all md-all sm-all clearfix">
-			<a href="/"><img class="lg1-lg2 md1 sm1" src="/images/horizontal-logo.png" alt="Beer Tap"></a>
+			<% unless hide_logo?(params) %>
+        <a href="/"><img class="lg1-lg2 md1 sm1" src="/images/horizontal-logo.png" alt="Beer Tap"></a>
+      <% end %>
 			<div class="header-links lg4-lg8 md2-md4 sm-all">
         <% if user_signed_in? %>
           <%= link_to followings_path do %>
@@ -26,7 +28,7 @@
           <%= link_to new_user_session_path do%>
             Sign In
           <% end %>
-        <% end %>			
+        <% end %>
       </div>
 		</header>
 	</div>
