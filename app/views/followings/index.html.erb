@@ -14,7 +14,7 @@
   <% else %>
     <% @followings.each do |following| %>
        <div class="following box clearfix">
-       <%= link_to following.followed.email, "/beer_profiles/users/#{following.id}" %>
+       <%= link_to following.followed.email, "/beer_profiles/users/#{following.followed_id}" %>
         <%= link_to 'Unfollow', following, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button unfollow push-effect lg7-lg8 md4" %>
       </div>
     <% end %>
