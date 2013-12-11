@@ -14,7 +14,7 @@ class FollowingsController < ApplicationController
 
   # GET /followings/new
   def new
-    following_ids = current_user.followings.select(&:id) 
+    following_ids = current_user.followings.select(&:id)
     following_ids << current_user.id
     @users = User.where("email LIKE ? and id not in (?)", "%#{params[:email]}%", following_ids)
     @following = Following.new
