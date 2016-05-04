@@ -7,15 +7,11 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "rails-rumble"
+  config.vm.box = "mudbug-precise64-rails-v2"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-
-  config.vm.box_url = "https://proto.mudbugmedia.com/_Archive/Mudbug/Vagrant/rails-rumble.box"
-  # If you are outside of the office, uncomment this line to temporarily
-  # provide your username and password. Make sure not to commit this change.
-  # config.vm.box_url = "https://yournamebug:yourpassword@proto.mudbugmedia.com/_Archive/Mudbug/Vagrant/mudbug-precise64-rails.box"
+  config.vm.box_url = "https://proto.mudbugmedia.com/_Archive/Mudbug/Vagrant/mudbug-precise64-rails-v2.box"
 
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
@@ -42,7 +38,7 @@ Vagrant::Config.run do |config|
   # config.vm.share_folder "v-data", "/vagrant_data", "../data"
   config.vm.share_folder "github", "/github", "~/github" if File.exists?(File.expand_path('~/github'))
 
-  #config.vm.provision :shell, :path => "config/vagrant_provision.sh"
+  config.vm.provision :shell, :path => "vendor/vagrant_provision.sh"
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
