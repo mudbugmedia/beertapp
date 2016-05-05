@@ -1,5 +1,5 @@
 development: &defaults
-  adapter: mysql2
+  adapter: pq
   encoding: utf8
   database: beertap_development
   pool: 5
