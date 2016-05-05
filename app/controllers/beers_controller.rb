@@ -18,7 +18,7 @@ class BeersController < ApplicationController
 
   def search
     unless params[:q].nil?
-      uri = URI("http://api.untappd.com/v4/search/beer")
+      uri = URI("https://api.untappd.com/v4/search/beer")
       untapped_params = { :q => params[:q],
                  :client_id => Rails.application.config.untapped_api['client_id'],
                  :client_secret => Rails.application.config.untapped_api['client_secret'] }
