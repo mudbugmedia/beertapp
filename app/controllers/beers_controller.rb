@@ -20,8 +20,8 @@ class BeersController < ApplicationController
     unless params[:q].nil?
       uri = URI("https://api.untappd.com/v4/search/beer")
       untapped_params = { :q => params[:q],
-                 :client_id => Rails.application.config.untapped_api['client_id'],
-                 :client_secret => Rails.application.config.untapped_api['client_secret'] }
+                 :client_id => ENV['UNTAPPED_CLIENT_ID'],
+                 :client_secret => ENV['UNTAPPED_CLIENT_SECRET'] }
       uri.query = URI.encode_www_form(untapped_params)
 
       @result = Net::HTTP.get_response(uri)
