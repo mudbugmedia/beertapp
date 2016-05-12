@@ -1,3 +1,6 @@
+## About
+Beertapp is a personal project done by several of the developers at Mudbug Media. We started the project during a Rails Rumble Hackathon and are currently spending our free time supporting it.
+
 ## Getting Started
   * Add .env file with UNTAPPED_CLIENT_ID and UNTAPPED_CLIENT_SECRET variables. Should be located in a snippet/gist.
 
