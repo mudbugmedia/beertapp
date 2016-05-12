@@ -35,6 +35,8 @@ gem 'pry-rails'
 gem 'capistrano', '~> 2.15'
 gem 'therubyracer'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'rails_12factor', group: :production
 
 group :doc do

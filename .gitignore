@@ -27,3 +27,5 @@ database.yml
 /app/assets/stylesheets/beertap.css
 
 config.yml
+
+.env
