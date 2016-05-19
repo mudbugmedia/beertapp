@@ -27,12 +27,11 @@ rvm --default use 2.1.8
 gem install bundler
 
 echo "Running 'bundle'"
-bundle
+rvmsudo -u vagrant bundle
+echo "Running 'rake db:setup'"
+rvmsudo -u vagrant bundle exec rake db:setup
 
 # Run rvmsudo as vagrant to allow users run bundle as the vagrant user.
 echo "Switching to 'vagrant' user"
 su vagrant
 rvmsudo rvm get stable
-
-rake db:create
-rake db:migrate
