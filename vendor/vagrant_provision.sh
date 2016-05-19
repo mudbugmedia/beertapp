@@ -21,8 +21,8 @@ fi
 cd /vagrant
 
 rvm get stable
-rvm install 2.1
-rvm --default use 2.1
+rvm install 2.1.8
+rvm --default use 2.1.8
 
 gem install bundler
 
