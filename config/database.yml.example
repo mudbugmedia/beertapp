@@ -1,11 +1,10 @@
 development: &defaults
-  adapter: pq
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   database: beertap_development
   pool: 5
   username: vagrant
   password: vagrant
-  socket: /var/run/mysqld/mysqld.sock
 
 test:
   <<: *defaults
