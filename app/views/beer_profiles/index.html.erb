@@ -12,7 +12,7 @@
           <li class="beer-choice beer-options <%= cycle 'lg1-lg4 md-all sm-all', 'lg5-lg8 md-all sm-all' %>">
             <% image_path = beer_profile.image_path.nil? ? 'https://untappd.s3.amazonaws.com/site/assets/images/temp/badge-beer-default.png' : beer_profile.image_path %>
             <img src="<%= image_path %>" />
-            <div class="beer-brewery-names">
+            <div class="producer">
               <h3><%= beer_profile.name %></h3>
               <% unless beer_profile.brewery.nil? %>
                 <h4><%= beer_profile.brewery %></h4>
