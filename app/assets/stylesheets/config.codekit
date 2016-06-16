@@ -274,14 +274,14 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "vasu",
+"lastSavedByUser": "Ashley Hoyuela",
 "manualImportLinks": {
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "stylesheets",
-	"displayValueWasSetByUser": 0,
-	"iconImageName": "compass_blue"
+	"displayValue": "beertap - stylesheets",
+	"displayValueWasSetByUser": 1,
+	"iconImageName": "harddrive_brown"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
