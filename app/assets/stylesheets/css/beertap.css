@@ -1256,12 +1256,6 @@ input[type=radio]:checked + label:after {
       width: 60%;
       margin: 28px 10px 0 10px; } }
 
-.profiled-beers-list .search-results li.beer-options:hover {
-  border: 2px solid #8A9B0F; }
-  .profiled-beers-list .search-results li.beer-options:hover:after {
-    content: "\e618";
-    font-family: 'icomoon'; }
-
 .beer-type-profile {
   margin-top: 20px;
   background-color: #433E4C;
