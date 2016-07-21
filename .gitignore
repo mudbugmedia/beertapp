@@ -29,3 +29,5 @@ database.yml
 config.yml
 
 .env
+
+css/.sass-cache/*
