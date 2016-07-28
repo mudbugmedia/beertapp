@@ -2,94 +2,11 @@
 // Global Styles
 // --------------------------------------------------
 
-// Headings
-// -------------------------
-h1 { 
-  color: $colorSix;
-  font-family: $sansHeaderFontFamily;
-  font-size: 45px;
-  line-height: 50px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-h2 { 
-  color: $colorOne;
-  font-family: $sansHeaderFontFamily;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 5px solid $colorOneDesaturate;
-  u {color: $colorSix;}
-}
-
-h3 {
-	color: $white;
-	border-bottom: 2px solid $colorFive;
-	padding-bottom: 5px;
-	margin-bottom: 10px;
-    font-family: $sansHeaderFontFamily;
-    font-weight: 400;
-	font-size: 22px;
-	line-height: 22px;
-    text-transform: uppercase;
-}
-
-h4 { 
-    color: $colorTwo;
-    font-family: $sansHeaderFontFamily;
-    font-weight: 400;
-	font-size: 18px;
-    text-transform: uppercase;
-}
-
-// Paragraphs & Em & Strong
-// -------------------------
-p { 
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
-  font-weight: normal;
-  color: $colorSix;
-}
-
-small {color: $colorSix;}
-
-em, i { 
-	font-family: $serifFontFamily;
-	color: $colorOne;
-	font-weight: normal;
-}
-
-strong, b { font-weight: bold; }
-
-// Links
-// -------------------------
-a { 
-  color: $linkColor;
-  text-decoration: none;
-  outline: 0;
-  &:hover { color: $linkColorHover; }
-  &:active { color: $linkColorActive; }
-  &:focus { outline: 0; background-color: transparent; }
-} // End a
-
-// Transitions
-// -------------------------
-a:hover, li:hover a {
-  @include transition (all, .3s, ease);
-}
-
 // Containers
 // -------------------------
 .box {
 	padding: 24px 23px 24px;
 	position: relative;
-	border-radius: $baseBorderRadius;
 	background: $colorFour;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -97,13 +14,11 @@ a:hover, li:hover a {
 .sign-in,
 .search-landing-page {
 	background: $colorSix;
-	border-radius: $baseBorderRadius;
 	color: $white;
 	padding: 0 25px 25px 25px;
 	margin-bottom: 30px;
 	h3 {
 		color: $colorOne;
-		border-bottom: none;
 	}
 	.form-text {
 		margin-top: 10px;
@@ -123,67 +38,6 @@ a:hover, li:hover a {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-// Buttons
-// -------------------------  
-  .button,
-  button {
-     display: inline-block;
-     border: 0;
-     border-radius: 0;
-     outline: 0;
-     box-shadow: 1px 0px 1px $colorFiveLighten, 0px 1px 1px $colorFiveDarken, 2px 1px 1px $colorFiveLighten, 1px 2px 1px $colorFiveDarken, 3px 2px 1px $colorFiveLighten, 2px 3px 1px $colorFiveDarken,4px 3px 1px $colorFiveLighten,3px 4px 1px $colorFiveDarken,5px 4px 1px $colorFiveLighten,4px 5px 1px $colorFiveDarken, 6px 5px 1px $colorFiveLighten;
-     color: $white;
-     white-space: nowrap;
-     font-family: $sansHeaderFontFamily;
-	 text-align: center;
-     font-weight: 400;
-     padding: 10px 16px 8px 16px;
-     position: relative;
-	 width: 100%;
-	 font-size: 22px;
-	 line-height: 25px;
-	 text-transform: uppercase;
-     @include linear-gradient($colorFiveLighten 0, $colorFive 80%);
-	 @media (max-width: 900px) {margin-top: 15px;}
-	
-  	 [data-icon] { 
-  	 	color: $colorTwo;
-  	 	padding-right: 15px;
-		padding-top: 5px;
-  	 	font-size: 45px;
-  	 	position: relative;
-  	 	font-weight: 400;
-  	 	float: left;
-  	 	display: block;
-		text-shadow: $white 1px 1px 0;
-  	 }
-	 
- 		// Hover state
- 		&:hover {
-	        box-shadow: 1px 0px 1px $colorTwoLighten, 0px 1px 1px $colorTwoDarken, 2px 1px 1px $colorTwoLighten, 1px 2px 1px $colorTwoDarken, 3px 2px 1px $colorTwoLighten, 2px 3px 1px $colorTwoDarken,4px 3px 1px $colorTwoLighten,3px 4px 1px $colorTwoDarken,5px 4px 1px $colorTwoLighten,4px 5px 1px $colorTwoDarken, 6px 5px 1px $colorTwoLighten;
-			@include linear-gradient($colorTwoLighten 0, $colorTwo 80%);
-			@include transition (all, .3s, ease);
-		}
-    	
- 		// Active state
- 		&.active,
- 		&:active {
-			@include linear-gradient($colorTwoLighten 0, $colorTwo 80%);
-   			box-shadow:1px 0px 1px $colorTwoLighten,0px 1px 1px $colorTwoDarken,2px 1px 1px $colorTwoLighten,1px 2px 1px $colorTwoDarken,3px 2px 1px $colorTwoLighten;
- 		}
-  } // End .callout, a.callout
- 
-		// Callout Active state (removes push effect on touch devices)
-		.no-touch .push-effect .active,
-		.no-touch .push-effect:active {
-			box-shadow:1px 0px 1px $colorTwoLighten,0px 1px 1px $colorTwoDarken,2px 1px 1px $colorTwoLighten,1px 2px 1px $colorTwoDarken,3px 2px 1px $colorTwoLighten;
-		 	-webkit-transform:translate(3px, 3px);
-		 	-moz-transform:translate(3px, 3px);
-		 	-ms-transform:translate(3px, 3px);
-		 	-o-transform:translate(3px, 3px);
-		 	transform:translate(3px, 3px) 
-		}
-		.beer-search {margin-top: 10px;}
 
 // Appearance - Beer Color
 // -------------------------  
@@ -192,7 +46,6 @@ a:hover, li:hover a {
   margin: 0 auto;
   text-align: center;
   background-color: white;
-  border-radius: 5px;
 }
 
 .color-srm:before {
@@ -218,11 +71,9 @@ a:hover, li:hover a {
 	padding: 10px;
 	width: 100%;
 	background-color: $white;
-	border-radius: $baseBorderRadius;
 	margin-bottom: 10px;
 	h2 {
 		color: $colorSix;
-		border-bottom: 2px solid $colorFive;
 		padding-bottom: 5px;
 		margin-bottom: 10px;
 		font-size: 22px;
@@ -241,7 +92,6 @@ a:hover, li:hover a {
 .friends {
 	h1 {
 		text-align: left;
-		border-bottom: 5px solid $colorOne;
 		@media (max-width: 400px) {font-size: 35px;}
 	}
 	.box {
