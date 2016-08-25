@@ -57,6 +57,7 @@ input[type=checkbox]:checked + label:after {
 		position: absolute;
 		right: 0px;
 		margin-right: 4px;
+    &:hover {cursor: pointer;}
 }
 
 

@@ -52,6 +52,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
+	"\/css\/nina.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/nina.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/gridset.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -207,6 +216,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/partials\/_nina.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/_nina.scss",
+		"outputAbbreviatedPath": "\/css\/_nina.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/partials\/_profile-form.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -270,11 +295,27 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/partials\/input-options.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/input-options.scss",
+		"outputAbbreviatedPath": "\/css\/input-options.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
 		}
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Ashley Hoyuela",
+"lastSavedByUser": "Nina Waring",
 "manualImportLinks": {
 	},
 "projectAttributes": {
